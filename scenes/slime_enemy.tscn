@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://djdjapuns21x3"]
+
+[ext_resource type="Script" path="res://scripts/slime_enemy.gd" id="1_s4frq"]
+[ext_resource type="Texture2D" uid="uid://ciwncnqst2qwd" path="res://assets/sprites/slime_green.png" id="1_yssrh"]
+[ext_resource type="PackedScene" uid="uid://53kn0wf4gsk3" path="res://scenes/killzone.tscn" id="2_at4u3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lft0t"]
+atlas = ExtResource("1_yssrh")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ruvx1"]
+atlas = ExtResource("1_yssrh")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlh4n"]
+atlas = ExtResource("1_yssrh")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yl66t"]
+atlas = ExtResource("1_yssrh")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aqah7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lft0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ruvx1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlh4n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yl66t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yad8q"]
+size = Vector2(10, 15)
+
+[node name="slime_enemy" type="Node2D"]
+script = ExtResource("1_s4frq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -4)
+sprite_frames = SubResource("SpriteFrames_aqah7")
+autoplay = "default"
+frame = 2
+frame_progress = 0.828122
+
+[node name="killzone" parent="." instance=ExtResource("2_at4u3")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_yad8q")
+
+[node name="RaycastRight" type="RayCast2D" parent="."]
+target_position = Vector2(8, 0)
+
+[node name="RaycastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-9, 0)
