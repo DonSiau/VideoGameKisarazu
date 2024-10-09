@@ -1,11 +1,12 @@
 extends Node2D
 
-const SPEED = 60
+const SPEED = 40
 var direction = 1
-
+@export var health: float = 1 # Health variable defined in the enemy node
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var raycast_right: RayCast2D = $RaycastRight
 @onready var raycast_left: RayCast2D = $RaycastLeft
+
 
 func _process(delta: float) -> void:
     if raycast_right.is_colliding():

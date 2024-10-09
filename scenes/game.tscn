@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://7b7smxvsiuxk" path="res://scenes/platform.tscn" id="3_1pnin"]
 [ext_resource type="PackedScene" uid="uid://d1gwyfochnhf3" path="res://scenes/Instakillzone.tscn" id="3_8oxcl"]
 [ext_resource type="PackedScene" uid="uid://b0rcapgdwbs8e" path="res://scenes/coin.tscn" id="4_vsyfm"]
-[ext_resource type="PackedScene" uid="uid://djdjapuns21x3" path="res://scenes/slime_enemy.tscn" id="6_l8vcu"]
+[ext_resource type="PackedScene" uid="uid://cxy0i4rvsn0ds" path="res://scenes/grub_large_B.tscn" id="7_jla07"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iago4"]
 texture = ExtResource("2_itjyr")
@@ -276,5 +276,5 @@ libraries = {
 }
 autoplay = "movePlatform"
 
-[node name="slime_enemy" parent="." instance=ExtResource("6_l8vcu")]
-position = Vector2(600, -38)
+[node name="grub_large_B" parent="." instance=ExtResource("7_jla07")]
+position = Vector2(602, -37)

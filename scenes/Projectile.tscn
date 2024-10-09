@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7thlg1jstij1"]
+
+[ext_resource type="Texture2D" uid="uid://b1oryyaql4e2m" path="res://assets/sprites/bullet.png" id="2_a6kkt"]
+
+[sub_resource type="GDScript" id="GDScript_tf0w4"]
+script/source = "extends CharacterBody2D
+
+const SPEED = 400
+var direction = 1  # 1 for right, -1 for left
+
+func _ready():
+    # Optional: If you have a sprite, flip it based on direction
+    if direction < 0:
+        $Sprite2D.flip_h = true
+
+func init(pos: Vector2, dir: int):
+    position = pos
+    direction = dir
+
+func _physics_process(delta):
+    position.x += SPEED * direction * delta
+
+    # Optional: Delete bullet when it goes too far off screen
+    if abs(position.x) > 1000:
+        queue_free()
+
+func _on_body_entered(body):
+    if body.has_method(\"take_damage\") and body.name != \"Player\":
+        body.take_damage(1)
+    queue_free()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_psfr1"]
+size = Vector2(13, 13)
+
+[node name="projectile" type="Node2D"]
+script = SubResource("GDScript_tf0w4")
+
+[node name="projectile" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="projectile"]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_psfr1")
+
+[node name="Bullet" type="Sprite2D" parent="projectile"]
+position = Vector2(-1, 0)
+texture = ExtResource("2_a6kkt")
