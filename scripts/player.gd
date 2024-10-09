@@ -110,8 +110,16 @@ func handle_wall_slide(delta):
 func handle_sword():
     if Input.is_action_just_pressed("e") and !is_swording:
         is_swording = true
-        sword.start_attack()  # Enable attack area collision
 
+        # Rotate sword based on player direction
+        if animated_sprite.flip_h:
+            sword.rotation_degrees = 180  # Sword points left
+        else:
+            sword.rotation_degrees = 0  # Sword points right
+        sword.start_attack()
+        await get_tree().create_timer(0.2).timeout
+        sword.end_attack()
+        is_swording = false
 func _physics_process(delta: float) -> void:
     if is_dead:
         return

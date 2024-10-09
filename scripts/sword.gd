@@ -2,13 +2,15 @@ extends Area2D
 @export var damage : int=1
 
 
-func _ready():
-    monitoring=false
+
 func _on_body_entered(body: Node2D) -> void:
+    print("Body entered: ", body.name)
     for child in body.get_children():
      if child is Damageable:
-        child.hit(damage)
-        print("hit")
+      child.hit(damage)
+     else:
+        print("No Damageable node found")
+
 
 func start_attack():
     monitoring = true  # Enable collision monitoring

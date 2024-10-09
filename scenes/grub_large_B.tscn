@@ -188,16 +188,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yad8q"]
-size = Vector2(27, 15)
+size = Vector2(25.5, 13.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_utoyj"]
-size = Vector2(27, 13.5)
+size = Vector2(24, 12)
 
 [node name="grub_large_B" type="CharacterBody2D"]
 script = ExtResource("1_x2fpu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-5.96046e-08, 0)
 scale = Vector2(0.548194, 0.63536)
 sprite_frames = SubResource("SpriteFrames_6q03n")
 animation = &"grub_large_B"
@@ -206,7 +205,7 @@ autoplay = "grub_large_B"
 [node name="killzone" parent="." instance=ExtResource("4_x7j1n")]
 
 [node name="killShape" type="CollisionShape2D" parent="killzone"]
-position = Vector2(-1.5, 0.5)
+position = Vector2(-1, 0.75)
 shape = SubResource("RectangleShape2D_yad8q")
 
 [node name="RaycastRight" type="RayCast2D" parent="."]
@@ -218,7 +217,7 @@ position = Vector2(-7, 0)
 target_position = Vector2(-9, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.5, 1)
+position = Vector2(-1, 1)
 shape = SubResource("RectangleShape2D_utoyj")
 
 [node name="Damageable" type="Node" parent="."]

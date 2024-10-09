@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://djdjapuns21x3"]
+[gd_scene load_steps=25 format=3 uid="uid://djdjapuns21x3"]
 
 [ext_resource type="Script" path="res://scripts/grub_large_A.gd" id="1_s4frq"]
 [ext_resource type="PackedScene" uid="uid://53kn0wf4gsk3" path="res://scenes/killzone.tscn" id="2_at4u3"]
@@ -132,13 +132,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yad8q"]
-size = Vector2(27.5, 14.25)
+size = Vector2(24.5625, 12.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6lt3"]
+size = Vector2(24, 12)
 
 [node name="grub_large_A" type="CharacterBody2D"]
 script = ExtResource("1_s4frq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-5.96046e-08, 0)
 scale = Vector2(0.548194, 0.63536)
 sprite_frames = SubResource("SpriteFrames_6q03n")
 animation = &"grub_large_A"
@@ -147,7 +149,7 @@ autoplay = "grub_large_A"
 [node name="killzone" parent="." instance=ExtResource("2_at4u3")]
 
 [node name="Killshape" type="CollisionShape2D" parent="killzone"]
-position = Vector2(-1.5, 0.25)
+position = Vector2(-1, 1)
 shape = SubResource("RectangleShape2D_yad8q")
 
 [node name="RaycastRight" type="RayCast2D" parent="."]
@@ -159,8 +161,8 @@ position = Vector2(-7, 0)
 target_position = Vector2(-9, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.75, 1)
-shape = SubResource("RectangleShape2D_yad8q")
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_o6lt3")
 
 [node name="Damageable" type="Node" parent="."]
 script = ExtResource("5_klrgc")
