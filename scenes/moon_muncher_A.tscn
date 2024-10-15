@@ -413,14 +413,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yad8q"]
-size = Vector2(22, 16)
+size = Vector2(22, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_utoyj"]
 size = Vector2(17, 16)
 
 [node name="moon_muncher_A" type="CharacterBody2D"]
 collision_layer = 2
-collision_mask = 2
 script = ExtResource("1_40vvy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -430,19 +429,17 @@ animation = &"moon_muncher_move"
 autoplay = "moon_muncher_move"
 
 [node name="killzone" parent="." instance=ExtResource("5_j3bcr")]
-collision_layer = 2
-collision_mask = 1
 
 [node name="killShape" type="CollisionShape2D" parent="killzone"]
-position = Vector2(0, 2)
+position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_yad8q")
 
 [node name="RaycastRight" type="RayCast2D" parent="."]
-position = Vector2(8, 0)
+position = Vector2(22, 0)
 target_position = Vector2(8, 0)
 
 [node name="RaycastLeft" type="RayCast2D" parent="."]
-position = Vector2(-7, 0)
+position = Vector2(-26, 0)
 target_position = Vector2(-9, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -458,7 +455,7 @@ exclude_parent = false
 target_position = Vector2(0, 26)
 
 [node name="RaycastDownLeft" type="RayCast2D" parent="."]
-position = Vector2(-13, 0)
+position = Vector2(-12, 0)
 exclude_parent = false
 target_position = Vector2(0, 25)
 
