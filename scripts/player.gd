@@ -1,10 +1,14 @@
 extends CharacterBody2D
 
+@onready var projectile_barrel_Right = $projectile_barrel_Right
+@onready var projectile_barrel_Left = $projectile_barrel_Left
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var sword = $sword
-var bullet = preload("res://scenes/projectile.tscn")  # Adjust path to match your project structure
-const SPEED = 200.0
-const DASH_SPEED = 400
+@onready var Projectile = preload("res://scenes/Projectile.tscn")
+@onready var world = get_tree().current_scene
+
+const SPEED = 170.0
+const DASH_SPEED = 350
 const JUMP_VELOCITY = -250.0
 const wall_jump_pushback = 350  # Increased for more pronounced wall jump
 const wallslide_friction = -800.0
@@ -13,7 +17,7 @@ const wallslide_friction = -800.0
 var is_dead = false
 var is_wall_sliding = false
 var is_dashing = false
-var is_swording=false
+var is_swording = false
 var is_running = false
 var is_falling = false
 var is_hurt = false
@@ -23,6 +27,10 @@ const WALL_JUMP_BUFFER_TIME = 0.2  # Seconds to wait before allowing wall slide 
 
 # Health system
 var health = 5
+
+func _ready():
+    # Initialize the player
+    add_to_group("Player")  # Add the player to the "Player" group
 
 func take_damage(amount: int):
     health -= amount
@@ -69,9 +77,6 @@ func update_animation():
     else:
         animated_sprite.play("idle")
 
-
-
-
 func jump():
     if is_on_floor():
         velocity.y = JUMP_VELOCITY
@@ -107,8 +112,32 @@ func handle_wall_slide(delta):
     if is_wall_sliding and velocity.y > 0:
         velocity.y += (wallslide_friction * delta)
         velocity.y = min(velocity.y, get_gravity().y)
+
+func handle_shoot():
+    if Input.is_action_just_pressed("q") and !is_swording and !is_hurt and !is_wall_sliding:
+        print("shoot")
+        var projectile = Projectile.instantiate()
+        if projectile:
+            get_tree().current_scene.add_child(projectile)
+
+            var direction: Vector2
+            var active_barrel: Node2D
+
+            if animated_sprite.flip_h:
+                # Player is facing left
+                direction = Vector2.LEFT
+                active_barrel = projectile_barrel_Left
+            else:
+                # Player is facing right
+                direction = Vector2.RIGHT
+                active_barrel = projectile_barrel_Right
+
+            # Set the position to the active barrel's global position
+            projectile.global_position = active_barrel.global_position
+            projectile.launch(direction)
+
 func handle_sword():
-    if Input.is_action_just_pressed("e") and !is_swording:
+    if Input.is_action_just_pressed("e") and !is_swording and !is_hurt:
         is_swording = true
 
         # Rotate sword based on player direction
@@ -120,6 +149,7 @@ func handle_sword():
         await get_tree().create_timer(0.2).timeout
         sword.end_attack()
         is_swording = false
+
 func _physics_process(delta: float) -> void:
     if is_dead:
         return
@@ -162,6 +192,7 @@ func _physics_process(delta: float) -> void:
 
     move_and_slide()
     handle_wall_slide(delta)
+    handle_shoot()
     handle_sword()
     update_animation()
 

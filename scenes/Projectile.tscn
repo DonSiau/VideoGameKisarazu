@@ -1,47 +1,25 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7thlg1jstij1"]
 
-[ext_resource type="Texture2D" uid="uid://b1oryyaql4e2m" path="res://assets/sprites/bullet.png" id="2_a6kkt"]
+[ext_resource type="Script" path="res://scripts/player_projectile.gd" id="1_2ywgm"]
+[ext_resource type="Texture2D" uid="uid://dnxqkygo418ir" path="res://assets/sprites/playerProjectile.png" id="2_xvkkd"]
 
-[sub_resource type="GDScript" id="GDScript_tf0w4"]
-script/source = "extends CharacterBody2D
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drnpq"]
+size = Vector2(10, 12)
 
-const SPEED = 400
-var direction = 1  # 1 for right, -1 for left
+[node name="playerProjectile" type="Area2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_2ywgm")
 
-func _ready():
-    # Optional: If you have a sprite, flip it based on direction
-    if direction < 0:
-        $Sprite2D.flip_h = true
+[node name="collision_shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_drnpq")
 
-func init(pos: Vector2, dir: int):
-    position = pos
-    direction = dir
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_xvkkd")
 
-func _physics_process(delta):
-    position.x += SPEED * direction * delta
+[node name="Projectile_timeout" type="Timer" parent="."]
+wait_time = 0.9
+one_shot = true
 
-    # Optional: Delete bullet when it goes too far off screen
-    if abs(position.x) > 1000:
-        queue_free()
-
-func _on_body_entered(body):
-    if body.has_method(\"take_damage\") and body.name != \"Player\":
-        body.take_damage(1)
-    queue_free()
-"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_psfr1"]
-size = Vector2(13, 13)
-
-[node name="projectile" type="Node2D"]
-script = SubResource("GDScript_tf0w4")
-
-[node name="projectile" type="CharacterBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="projectile"]
-position = Vector2(-0.5, -0.5)
-shape = SubResource("RectangleShape2D_psfr1")
-
-[node name="Bullet" type="Sprite2D" parent="projectile"]
-position = Vector2(-1, 0)
-texture = ExtResource("2_a6kkt")
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Projectile_timeout" to="." method="_on_projectile_timeout_timeout"]
