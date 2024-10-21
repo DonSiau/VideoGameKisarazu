@@ -1,5 +1,5 @@
-extends Node2D  # Based on Node2D
-@export var health: float = 2  # Health variable defined in the enemy node
+extends Node2D
+@export var health: float = 9  # Health variable defined in the enemy node
 var submerge_speed = 30
 var move_speed = 120
 var player_pos: Vector2  # Position of the player
@@ -28,6 +28,7 @@ func _physics_process(delta: float) -> void:
     # Edge detection based on raycasts
     if !raycast_down_right.is_colliding():
         direction = -1  # Change direction to left
+        animated_sprite_2d.flip_h = true
         animated_sprite_2d.scale.x = -1  # Flip the sprite horizontally
         attack_mode = false
         follow_mode = false
@@ -35,6 +36,7 @@ func _physics_process(delta: float) -> void:
         position.x -= 3
     elif !raycast_down_left.is_colliding():
         direction = 1  # Change direction to right
+        animated_sprite_2d.flip_h = true
         animated_sprite_2d.scale.x = 1  # Reset to normal orientation
         attack_mode = false
         follow_mode = false
@@ -67,6 +69,12 @@ func _physics_process(delta: float) -> void:
                 if follow_mode == true and !at_edge:
                     target_pos = (player_pos - position).normalized()  # Calculate direction towards the player
                     position += target_pos * move_speed * delta  # Move horizontally towards the player
+                    if target_pos.x > 0:
+
+                         animated_sprite_2d.flip_h = true
+                    elif target_pos.x < 0:
+
+                          animated_sprite_2d.flip_h = false
 
             # Check if the enemy is close enough to trigger attack mode (only if not at edge)
             if difference_between_player_enemy < 5 and !at_edge:

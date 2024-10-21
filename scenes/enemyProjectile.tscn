@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bec1xs4lmgg6t"]
+
+[ext_resource type="Script" path="res://scripts/enemy_projectile.gd" id="1_dmmhn"]
+[ext_resource type="Texture2D" uid="uid://dnxqkygo418ir" path="res://assets/sprites/playerProjectile.png" id="2_ia2hf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drnpq"]
+size = Vector2(10, 12)
+
+[node name="enemyProjectile" type="Area2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_dmmhn")
+
+[node name="collision_shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_drnpq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ia2hf")
+
+[node name="Projectile_timeout" type="Timer" parent="."]
+wait_time = 0.9
+one_shot = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Projectile_timeout" to="." method="_on_projectile_timeout_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

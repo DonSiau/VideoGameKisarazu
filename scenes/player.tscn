@@ -629,6 +629,7 @@ shape = SubResource("CapsuleShape2D_t0378")
 wait_time = 0.2
 
 [node name="sword" type="Area2D" parent="."]
+visible = false
 collision_mask = 2
 monitoring = false
 script = ExtResource("13_s404n")
@@ -638,10 +639,10 @@ position = Vector2(20, -1)
 shape = SubResource("RectangleShape2D_b241h")
 
 [node name="projectile_barrel_Left" type="Marker2D" parent="."]
-position = Vector2(-11, -15)
+position = Vector2(-10, -7)
 
 [node name="projectile_barrel_Right" type="Marker2D" parent="."]
-position = Vector2(14, -15)
+position = Vector2(11, -7)
 
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="body_entered" from="sword" to="sword" method="_on_body_entered"]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://cmmoy2pibkuw8"]
+
+[ext_resource type="Script" path="res://scripts/spikes_Q_up.gd" id="1_jp1vy"]
+[ext_resource type="Texture2D" uid="uid://be54ni7btfurs" path="res://assets/sprites/spikes_Q_up.png" id="2_vr1mf"]
+[ext_resource type="PackedScene" uid="uid://53kn0wf4gsk3" path="res://scenes/killzone.tscn" id="3_yptax"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yad8q"]
+size = Vector2(12, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utoyj"]
+size = Vector2(14, 19)
+
+[node name="spike_Q_up" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_jp1vy")
+
+[node name="sprite2d" type="Sprite2D" parent="."]
+scale = Vector2(0.548194, 0.63536)
+texture = ExtResource("2_vr1mf")
+
+[node name="killzone" parent="." instance=ExtResource("3_yptax")]
+
+[node name="killShape" type="CollisionShape2D" parent="killzone"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_yad8q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_utoyj")

@@ -2,7 +2,7 @@ extends Node2D
 
 const SPEED = 70
 var direction = 1
-@export var health: float = 3  # Health variable defined in the enemy node
+@export var health: float = 9 # Health variable defined in the enemy node
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var raycast_right: RayCast2D = $RaycastRight
@@ -31,4 +31,3 @@ func _process(delta: float) -> void:
         animated_sprite_2d.scale.x = 1  # Reset sprite orientation
 
     # Move the enemy
-    position.x += direction * SPEED * delta

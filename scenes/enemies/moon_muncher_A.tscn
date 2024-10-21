@@ -1,6 +1,6 @@
 [gd_scene load_steps=64 format=3 uid="uid://drkratb7ctu3n"]
 
-[ext_resource type="Script" path="res://scripts/moon_muncher_A.gd" id="1_40vvy"]
+[ext_resource type="Script" path="res://scripts/enemies/moon_muncher_A.gd" id="1_40vvy"]
 [ext_resource type="Texture2D" uid="uid://c8dd1fkmyv2ne" path="res://assets/sprites/hoclops_large_A.png" id="2_tkhp3"]
 [ext_resource type="Texture2D" uid="uid://dtaw7mc4kovwl" path="res://assets/sprites/grub_large_A.png" id="3_oyyrk"]
 [ext_resource type="Texture2D" uid="uid://be81s6rmjein1" path="res://assets/sprites/grub_large_B.png" id="4_6i3hm"]

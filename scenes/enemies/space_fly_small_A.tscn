@@ -1,6 +1,6 @@
 [gd_scene load_steps=64 format=3 uid="uid://c6qmh3quao58p"]
 
-[ext_resource type="Script" path="res://scripts/space_fly_small_a.gd" id="1_tjhvl"]
+[ext_resource type="Script" path="res://scripts/enemies/space_fly_small_a.gd" id="1_tjhvl"]
 [ext_resource type="Texture2D" uid="uid://c8dd1fkmyv2ne" path="res://assets/sprites/hoclops_large_A.png" id="2_tsxge"]
 [ext_resource type="Texture2D" uid="uid://dtaw7mc4kovwl" path="res://assets/sprites/grub_large_A.png" id="3_uc3yp"]
 [ext_resource type="Texture2D" uid="uid://be81s6rmjein1" path="res://assets/sprites/grub_large_B.png" id="4_wuq0d"]

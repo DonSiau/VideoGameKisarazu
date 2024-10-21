@@ -1,6 +1,6 @@
 [gd_scene load_steps=55 format=3 uid="uid://dw8llumdyavwk"]
 
-[ext_resource type="Script" path="res://scripts/hopclops_large_a.gd" id="1_jwtnh"]
+[ext_resource type="Script" path="res://scripts/enemies/hopclops_large_a.gd" id="1_jwtnh"]
 [ext_resource type="Texture2D" uid="uid://c8dd1fkmyv2ne" path="res://assets/sprites/hoclops_large_A.png" id="2_6xbbh"]
 [ext_resource type="Texture2D" uid="uid://dtaw7mc4kovwl" path="res://assets/sprites/grub_large_A.png" id="2_juq6f"]
 [ext_resource type="Texture2D" uid="uid://be81s6rmjein1" path="res://assets/sprites/grub_large_B.png" id="3_heosy"]
@@ -375,11 +375,11 @@ shape = SubResource("RectangleShape2D_yad8q")
 
 [node name="RaycastRight" type="RayCast2D" parent="."]
 position = Vector2(8, 0)
-target_position = Vector2(8, 0)
+target_position = Vector2(8, -4)
 
 [node name="RaycastLeft" type="RayCast2D" parent="."]
 position = Vector2(-7, 0)
-target_position = Vector2(-9, 0)
+target_position = Vector2(-9, -5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
@@ -391,12 +391,22 @@ script = ExtResource("5_b8v00")
 [node name="RaycastDownRight" type="RayCast2D" parent="."]
 position = Vector2(11, 0)
 exclude_parent = false
-target_position = Vector2(0, 26)
+target_position = Vector2(-2, 92)
 
 [node name="RaycastDownLeft" type="RayCast2D" parent="."]
-position = Vector2(-13, 0)
+position = Vector2(-11, 0)
 exclude_parent = false
-target_position = Vector2(0, 25)
+target_position = Vector2(-3, 94)
 
 [node name="jumpTimer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 2.5
+
+[node name="JumpPreventionRight" type="RayCast2D" parent="."]
+position = Vector2(21, -1)
+exclude_parent = false
+target_position = Vector2(0, 38)
+
+[node name="JumpPreventionLeft" type="RayCast2D" parent="."]
+position = Vector2(-19, 0)
+exclude_parent = false
+target_position = Vector2(-1, 38)

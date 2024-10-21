@@ -4,12 +4,12 @@ extends CharacterBody2D
 @onready var projectile_barrel_Left = $projectile_barrel_Left
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var sword = $sword
-@onready var Projectile = preload("res://scenes/Projectile.tscn")
+@onready var Projectile = preload("res://scenes/playerProjectile.tscn")
 @onready var world = get_tree().current_scene
 
 const SPEED = 170.0
 const DASH_SPEED = 350
-const JUMP_VELOCITY = -250.0
+const JUMP_VELOCITY = -270.0
 const wall_jump_pushback = 350  # Increased for more pronounced wall jump
 const wallslide_friction = -800.0
 
