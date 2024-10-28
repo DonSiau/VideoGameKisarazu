@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmmoy2pibkuw8"]
+[gd_scene load_steps=6 format=3 uid="uid://p8edl8pyku"]
 
-[ext_resource type="Script" path="res://scripts/spikes_Q_up.gd" id="1_jp1vy"]
+[ext_resource type="Script" path="res://scripts/enemies/spikes_Q_up.gd" id="1_jp1vy"]
 [ext_resource type="Texture2D" uid="uid://be54ni7btfurs" path="res://assets/sprites/spikes_Q_up.png" id="2_vr1mf"]
 [ext_resource type="PackedScene" uid="uid://53kn0wf4gsk3" path="res://scenes/killzone.tscn" id="3_yptax"]
 

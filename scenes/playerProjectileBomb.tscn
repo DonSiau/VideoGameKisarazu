@@ -1,0 +1,119 @@
+[gd_scene load_steps=18 format=3 uid="uid://bvvw8ik8r651m"]
+
+[ext_resource type="Script" path="res://scripts/player_projectile_bomb.gd" id="1_6cc35"]
+[ext_resource type="Texture2D" uid="uid://d0luq0a7ai2n1" path="res://assets/sprites/bomb.png" id="2_bu5th"]
+[ext_resource type="PackedScene" uid="uid://dx7ktrw7fgerr" path="res://scenes/Bombkillzone.tscn" id="3_hgdus"]
+[ext_resource type="Texture2D" uid="uid://dkk3ogxbpj1l" path="res://assets/sprites/bombExplosion.png" id="4_twmx3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drnpq"]
+size = Vector2(10, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pw067"]
+size = Vector2(52, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6tre"]
+atlas = ExtResource("4_twmx3")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jyjq"]
+atlas = ExtResource("4_twmx3")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgylh"]
+atlas = ExtResource("4_twmx3")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjiry"]
+atlas = ExtResource("4_twmx3")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jx3ck"]
+atlas = ExtResource("4_twmx3")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7l4kj"]
+atlas = ExtResource("4_twmx3")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sq2ws"]
+atlas = ExtResource("4_twmx3")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itxps"]
+atlas = ExtResource("4_twmx3")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpocd"]
+atlas = ExtResource("4_twmx3")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukc26"]
+atlas = ExtResource("4_twmx3")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_djacr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6tre")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jyjq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgylh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjiry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jx3ck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7l4kj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sq2ws")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itxps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpocd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukc26")
+}],
+"loop": false,
+"name": &"explosion",
+"speed": 10.0
+}]
+
+[node name="playerProjectileBomb" type="Area2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_6cc35")
+
+[node name="collision_shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_drnpq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_bu5th")
+
+[node name="Projectile_timeout" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="bombKillzone" parent="." instance=ExtResource("3_hgdus")]
+position = Vector2(11.5, 7.5)
+
+[node name="blast_radius" type="CollisionShape2D" parent="bombKillzone"]
+position = Vector2(-11.5, -7.5)
+shape = SubResource("RectangleShape2D_pw067")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_djacr")
+animation = &"explosion"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Projectile_timeout" to="." method="_on_projectile_timeout_timeout"]

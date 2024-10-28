@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx7ktrw7fgerr"]
+
+[ext_resource type="Script" path="res://scripts/bombkillzone.gd" id="1_83ibr"]
+
+[node name="bombKillzone" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_83ibr")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[node name="damage_again" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="damage_again" to="." method="_on_damage_again_timeout"]

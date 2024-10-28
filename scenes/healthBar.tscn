@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cdc1hofrtsuq6"]
+
+[node name="HealthBar" type="ProgressBar"]
+max_value = 5.0
+step = 1.0
+page = 0.03
+show_percentage = false

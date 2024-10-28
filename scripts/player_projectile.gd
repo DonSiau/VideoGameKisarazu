@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void:
     position += velocity * MOVE_SPEED * delta
 
 func _on_body_entered(body: Node2D) -> void:
-    print("Body entered: ", body.name)
+
     for child in body.get_children():
         if child is Damageable:
             child.hit(damage)

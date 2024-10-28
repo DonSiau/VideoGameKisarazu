@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvvw8ik8r651m"]
+
+[ext_resource type="Script" path="res://scripts/player_projectile_bomb.gd" id="1_6cc35"]
+[ext_resource type="Texture2D" uid="uid://dnxqkygo418ir" path="res://assets/sprites/playerProjectile.png" id="2_ln18l"]
+[ext_resource type="PackedScene" uid="uid://dx7ktrw7fgerr" path="res://scenes/Bombkillzone.tscn" id="3_hgdus"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drnpq"]
+size = Vector2(10, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pw067"]
+size = Vector2(103, 101)
+
+[node name="playerProjectileBomb" type="Area2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_6cc35")
+
+[node name="collision_shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_drnpq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ln18l")
+
+[node name="Projectile_timeout" type="Timer" parent="."]
+wait_time = 0.9
+one_shot = true
+
+[node name="blast_radius" type="CollisionShape2D" parent="."]
+position = Vector2(11.5, 7.5)
+shape = SubResource("RectangleShape2D_pw067")
+
+[node name="bombKillzone" parent="blast_radius" instance=ExtResource("3_hgdus")]
+
+[node name="blast_timeout" type="Timer" parent="."]
+wait_time = 0.05
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Projectile_timeout" to="." method="_on_projectile_timeout_timeout"]
+[connection signal="timeout" from="blast_timeout" to="." method="_on_blast_tiimeout_timeout"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlcv1nx7qk5rx"]
+
+[ext_resource type="Script" path="res://scripts/healZone.gd" id="1_gasat"]
+
+[node name="healZone" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_gasat")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

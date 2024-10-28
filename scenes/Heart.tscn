@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b543bdlj4unj"]
+
+[ext_resource type="Texture2D" uid="uid://d4jhvtmuokrj6" path="res://assets/sprites/heart.png" id="1_5r1iq"]
+[ext_resource type="PackedScene" uid="uid://dlcv1nx7qk5rx" path="res://scenes/healZone.tscn" id="2_faqas"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_04f4g"]
+size = Vector2(16, 15)
+
+[node name="Heart" type="Sprite2D"]
+texture = ExtResource("1_5r1iq")
+
+[node name="healZone" parent="." instance=ExtResource("2_faqas")]
+
+[node name="healShape" type="CollisionShape2D" parent="healZone"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_04f4g")

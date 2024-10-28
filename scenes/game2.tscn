@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://buu0jrnbptlwf"]
+
+[node name="Game2" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 36.0
+offset_top = -84.0
+offset_right = 158.0
+offset_bottom = -30.0

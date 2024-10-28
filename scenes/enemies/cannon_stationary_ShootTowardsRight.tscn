@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_utoyj"]
 size = Vector2(15, 20)
 
-[node name="cannon_stationary_ShootRight" type="CharacterBody2D"]
+[node name="cannon_stationary_ShootTowardsRight" type="CharacterBody2D"]
 script = ExtResource("1_i1p3j")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -450,12 +450,12 @@ shape = SubResource("RectangleShape2D_utoyj")
 script = ExtResource("6_kuiwo")
 
 [node name="RaycastDownRight" type="RayCast2D" parent="."]
-position = Vector2(11, 0)
+position = Vector2(20, 0)
 exclude_parent = false
 target_position = Vector2(0, 26)
 
 [node name="RaycastDownLeft" type="RayCast2D" parent="."]
-position = Vector2(-12, 0)
+position = Vector2(-19, 0)
 exclude_parent = false
 target_position = Vector2(0, 25)
 

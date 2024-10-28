@@ -2,9 +2,10 @@ extends CharacterBody2D
 
 @onready var projectile_barrel_Right = $projectile_barrel_Right
 @onready var projectile_barrel_Left = $projectile_barrel_Left
-@onready var animated_sprite = $AnimatedSprite2D
+@onready var animated_sprite = $AnimationPlayer
+@onready var sprite = $AnimatedSprite2D  # Changed to AnimatedSprite2D
 @onready var sword = $sword
-@onready var Projectile = preload("res://scenes/playerProjectile.tscn")
+@onready var Projectile = preload("res://scenes/playerProjectileBomb.tscn")
 @onready var world = get_tree().current_scene
 
 const SPEED = 170.0
@@ -28,13 +29,21 @@ const WALL_JUMP_BUFFER_TIME = 0.2  # Seconds to wait before allowing wall slide 
 # Health system
 var health = 5
 
+func set_healthBar()->void:
+    $CanvasLayer/HealthBar.value = max(health, 0)
+
 func _ready():
     # Initialize the player
     add_to_group("Player")  # Add the player to the "Player" group
+    set_healthBar()
+
+func gain_health(amount: int):
+    health+=amount
+    set_healthBar()
 
 func take_damage(amount: int):
     health -= amount
-    print(health)
+    set_healthBar()
 
     if health <= 0:
         die()
@@ -53,7 +62,7 @@ func update_animation():
     if is_dead:
         animated_sprite.play("death")
         return
-     # Animation priority order
+    # Animation priority order
     if is_hurt:
         animated_sprite.play("hurt")
     elif is_swording and is_running:
@@ -89,7 +98,7 @@ func wall_jump():
     velocity.y = JUMP_VELOCITY * 0.8  # Slightly reduced vertical jump for wall jumps
 
     # Determine wall jump direction based on which direction player is facing
-    if animated_sprite.flip_h:  # If facing left
+    if sprite.flip_h:  # If facing left
         velocity.x = wall_jump_pushback  # Jump right
     else:
         velocity.x = -wall_jump_pushback  # Jump left
@@ -123,7 +132,7 @@ func handle_shoot():
             var direction: Vector2
             var active_barrel: Node2D
 
-            if animated_sprite.flip_h:
+            if sprite.flip_h:
                 # Player is facing left
                 direction = Vector2.LEFT
                 active_barrel = projectile_barrel_Left
@@ -141,7 +150,7 @@ func handle_sword():
         is_swording = true
 
         # Rotate sword based on player direction
-        if animated_sprite.flip_h:
+        if sprite.flip_h:
             sword.rotation_degrees = 180  # Sword points left
         else:
             sword.rotation_degrees = 0  # Sword points right
@@ -184,7 +193,8 @@ func _physics_process(delta: float) -> void:
 
         # Only flip sprite if not wall sliding
         if !is_wall_sliding:
-            animated_sprite.flip_h = direction < 0
+            sprite.flip_h = (direction < 0)
+
     else:
         # Don't reset horizontal velocity during wall jump
         if wall_jump_buffer <= 0:
