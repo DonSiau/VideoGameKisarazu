@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgagki4n4acui"]
+
+[ext_resource type="Script" path="res://scripts/weapon_select.gd" id="1_nge2v"]
+
+[node name="WeaponSelect" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -599.0
+offset_top = 2.0
+offset_right = -599.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nge2v")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 140.0
+offset_right = 1052.0
+offset_bottom = 670.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="playerProjectile" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../playerProjectileBomb")
+text = "blaster"
+
+[node name="playerProjectileBomb" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../playerProjectile")
+text = "bomb"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/playerProjectile" to="." method="_on_player_projectile_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/playerProjectileBomb" to="." method="_on_player_projectile_bomb_pressed"]

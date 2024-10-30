@@ -1,9 +1,9 @@
 extends Control
 
-@onready var pause_menu: Control = $PauseMenu  # If you add it directly to the scene
+@onready var pause_menu: Control = $PauseMenu
 # Or keep your packed scene
 @export var pause_menu_scene: PackedScene = preload("res://scenes/menus/pauseMenu.tscn")
-
+@export var weapon_select_scene: PackedScene = preload("res://scenes/menus/weaponSelect.tscn")
 func _ready() -> void:
     # If using packed scene, instantiate it right away and hide it
     if pause_menu_scene and not pause_menu:

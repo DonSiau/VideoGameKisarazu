@@ -3,15 +3,17 @@ extends CharacterBody2D
 @onready var projectile_barrel_Right = $projectile_barrel_Right
 @onready var projectile_barrel_Left = $projectile_barrel_Left
 @onready var animated_sprite = $AnimationPlayer
-@onready var sprite = $AnimatedSprite2D  # Changed to AnimatedSprite2D
+@onready var sprite = $AnimatedSprite2D
 @onready var sword = $sword
-@onready var Projectile = preload("res://scenes/playerProjectileBomb.tscn")
+@onready var Projectile = preload("res://scenes/playerProjectile.tscn")
+@onready var ProjectileSpecialBomb = preload("res://scenes/playerProjectileBomb.tscn")
+@onready var weapon_select_instance = $"../CanvasLayer/WeaponSelect"
 @onready var world = get_tree().current_scene
 
 const SPEED = 170.0
 const DASH_SPEED = 350
 const JUMP_VELOCITY = -270.0
-const wall_jump_pushback = 350  # Increased for more pronounced wall jump
+const wall_jump_pushback = 350
 const wallslide_friction = -800.0
 
 # State flags
@@ -23,28 +25,29 @@ var is_running = false
 var is_falling = false
 var is_hurt = false
 var is_jumping = false
-var wall_jump_buffer = 0.0  # Time before wall sliding can resume after wall jump
-const WALL_JUMP_BUFFER_TIME = 0.2  # Seconds to wait before allowing wall slide again
+var wall_jump_buffer = 0.0
+const WALL_JUMP_BUFFER_TIME = 0.2
 
-# Health system
+# Player stats
 var health = 5
+var projectileSelected = Projectile
+var ammo = 6
 
-func set_healthBar()->void:
+func set_healthBar() -> void:
     $CanvasLayer/HealthBar.value = max(health, 0)
 
 func _ready():
-    # Initialize the player
-    add_to_group("Player")  # Add the player to the "Player" group
+    add_to_group("Player")
     set_healthBar()
+    projectileSelected = Projectile
 
 func gain_health(amount: int):
-    health+=amount
+    health += amount
     set_healthBar()
 
 func take_damage(amount: int):
     health -= amount
     set_healthBar()
-
     if health <= 0:
         die()
     else:
@@ -58,23 +61,21 @@ func die():
         update_animation()
 
 func update_animation():
-    # Return early if dead - death animation takes precedence
     if is_dead:
         animated_sprite.play("death")
         return
-    # Animation priority order
     if is_hurt:
         animated_sprite.play("hurt")
     elif is_swording and is_running:
         animated_sprite.play("run_sword")
         await animated_sprite.animation_finished
-        sword.end_attack()  # Call to end attack after animation
-        is_swording = false  # Reset swording after animation plays
+        sword.end_attack()
+        is_swording = false
     elif is_swording:
         animated_sprite.play("idle_sword")
         await animated_sprite.animation_finished
         sword.end_attack()
-        is_swording = false  # Reset swording after animation plays
+        is_swording = false
     elif is_dashing:
         animated_sprite.play("dash")
     elif is_wall_sliding:
@@ -94,15 +95,12 @@ func jump():
         wall_jump()
 
 func wall_jump():
-    wall_jump_buffer = WALL_JUMP_BUFFER_TIME  # Set buffer time
-    velocity.y = JUMP_VELOCITY * 0.8  # Slightly reduced vertical jump for wall jumps
-
-    # Determine wall jump direction based on which direction player is facing
-    if sprite.flip_h:  # If facing left
-        velocity.x = wall_jump_pushback  # Jump right
+    wall_jump_buffer = WALL_JUMP_BUFFER_TIME
+    velocity.y = JUMP_VELOCITY * 0.8
+    if sprite.flip_h:
+        velocity.x = wall_jump_pushback
     else:
-        velocity.x = -wall_jump_pushback  # Jump left
-
+        velocity.x = -wall_jump_pushback
     is_wall_sliding = false
     is_jumping = true
 
@@ -112,7 +110,6 @@ func handle_wall_slide(delta):
         return
 
     is_wall_sliding = false
-
     if is_on_wall() and !is_on_floor():
         if Input.is_action_pressed("a") or Input.is_action_pressed("d"):
             if !is_hurt and wall_jump_buffer <= 0:
@@ -123,37 +120,29 @@ func handle_wall_slide(delta):
         velocity.y = min(velocity.y, get_gravity().y)
 
 func handle_shoot():
+    var projectile
     if Input.is_action_just_pressed("q") and !is_swording and !is_hurt and !is_wall_sliding:
-        print("shoot")
-        var projectile = Projectile.instantiate()
-        if projectile:
-            get_tree().current_scene.add_child(projectile)
-
-            var direction: Vector2
-            var active_barrel: Node2D
-
-            if sprite.flip_h:
-                # Player is facing left
-                direction = Vector2.LEFT
-                active_barrel = projectile_barrel_Left
-            else:
-                # Player is facing right
-                direction = Vector2.RIGHT
-                active_barrel = projectile_barrel_Right
-
-            # Set the position to the active barrel's global position
-            projectile.global_position = active_barrel.global_position
-            projectile.launch(direction)
+        projectile = projectileSelected.instantiate()
+    if projectile:
+        get_tree().current_scene.add_child(projectile)
+        var direction: Vector2
+        var active_barrel: Node2D
+        if sprite.flip_h:
+            direction = Vector2.LEFT
+            active_barrel = projectile_barrel_Left
+        else:
+            direction = Vector2.RIGHT
+            active_barrel = projectile_barrel_Right
+        projectile.global_position = active_barrel.global_position
+        projectile.launch(direction)
 
 func handle_sword():
     if Input.is_action_just_pressed("e") and !is_swording and !is_hurt:
         is_swording = true
-
-        # Rotate sword based on player direction
         if sprite.flip_h:
-            sword.rotation_degrees = 180  # Sword points left
+            sword.rotation_degrees = 180
         else:
-            sword.rotation_degrees = 0  # Sword points right
+            sword.rotation_degrees = 0
         sword.start_attack()
         await get_tree().create_timer(0.2).timeout
         sword.end_attack()
@@ -162,26 +151,16 @@ func handle_sword():
 func _physics_process(delta: float) -> void:
     if is_dead:
         return
-
-    # Reset state flags
     is_running = false
     is_falling = false
-
-    # Apply gravity
     if not is_on_floor():
         velocity += get_gravity() * delta
         is_falling = true
-
-    # Handle jump
     if Input.is_action_just_pressed("ui_select"):
         jump()
-
-    # Handle dash
-    if Input.is_action_just_pressed("w"):
+    if Input.is_action_just_pressed("alt"):
         is_dashing = true
         $dash_timer.start()
-
-    # Handle movement
     var direction := Input.get_axis("a", "d")
     if direction != 0:
         if is_dashing:
@@ -190,13 +169,9 @@ func _physics_process(delta: float) -> void:
             velocity.x = direction * SPEED
             if is_on_floor():
                 is_running = true
-
-        # Only flip sprite if not wall sliding
         if !is_wall_sliding:
             sprite.flip_h = (direction < 0)
-
     else:
-        # Don't reset horizontal velocity during wall jump
         if wall_jump_buffer <= 0:
             velocity.x = move_toward(velocity.x, 0, SPEED)
 

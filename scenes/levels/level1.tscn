@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dali8d51gmvkj"]
+[gd_scene load_steps=35 format=3 uid="uid://dali8d51gmvkj"]
 
 [ext_resource type="PackedScene" uid="uid://7b7smxvsiuxk" path="res://scenes/platform.tscn" id="1_etg6u"]
 [ext_resource type="PackedScene" uid="uid://dql06euexqj2c" path="res://scenes/player.tscn" id="2_rdemd"]
@@ -17,8 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://b543bdlj4unj" path="res://scenes/Heart.tscn" id="15_5ypli"]
 [ext_resource type="PackedScene" uid="uid://civc6i1wg2d3c" path="res://scenes/menus/pause.tscn" id="16_gvvfe"]
 [ext_resource type="PackedScene" uid="uid://bddb88ersb008" path="res://scenes/menus/pauseMenu.tscn" id="17_l16hr"]
+[ext_resource type="PackedScene" uid="uid://dgagki4n4acui" path="res://scenes/menus/weaponSelect.tscn" id="18_l6myj"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ipadj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_11ymq"]
 texture = ExtResource("3_1ip4d")
 51:0/0 = 0
 52:0/0 = 0
@@ -4304,7 +4305,7 @@ texture = ExtResource("3_1ip4d")
 
 [sub_resource type="TileSet" id="TileSet_id86l"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ipadj")
+sources/0 = SubResource("TileSetAtlasSource_11ymq")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sovop"]
 
@@ -4660,3 +4661,10 @@ offset_right = 594.0
 offset_bottom = -31.0
 
 [node name="pauseMenu" parent="CanvasLayer" instance=ExtResource("17_l16hr")]
+
+[node name="WeaponSelect" parent="CanvasLayer" instance=ExtResource("18_l6myj")]
+visible = false
+offset_left = 1.0
+offset_top = 5.0
+offset_right = 1.0
+offset_bottom = 5.0
