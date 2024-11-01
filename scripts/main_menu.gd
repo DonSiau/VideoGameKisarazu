@@ -3,7 +3,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-    pass # Replace with function body.
+ pass;
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,4 +16,5 @@ func _on_play_pressed() -> void:
 
 
 func _on_exit_pressed() -> void:
+    SaveState.save_game()
     get_tree().quit()

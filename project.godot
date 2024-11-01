@@ -12,15 +12,22 @@ config_version=5
 
 config/name="KisarazuGame"
 run/main_scene="res://scenes/menus/MainMenu.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="SaveSystem"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SaveState="*res://scripts/Save/save_state.gd"
 
 [display]
 
 window/size/viewport_width=1536
 window/size/viewport_height=864
 window/size/mode=1
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [file_customization]
 

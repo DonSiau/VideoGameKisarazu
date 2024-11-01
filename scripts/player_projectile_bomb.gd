@@ -17,8 +17,7 @@ func _ready():
 
     if kill_zone:
         kill_zone.monitoring = false
-    else:
-        print("Warning: Kill zone not found!")
+
 
 func _physics_process(delta: float) -> void:
     if velocity != Vector2.ZERO:

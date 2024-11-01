@@ -18,9 +18,8 @@ func _on_body_entered(body: Node2D) -> void:
         if child is Damageable:
             child.hit(damage)
             queue_free()
-        else:
 
-            print("No Damageable node found")
+
 
 
 func _on_projectile_timeout_timeout() -> void:

@@ -4,9 +4,17 @@ extends Control
 @onready var ProjectileSpecialBomb = preload("res://scenes/playerProjectileBomb.tscn")
 @onready var player = get_tree().get_first_node_in_group("Player")
 
+@onready var button_projectile = $MarginContainer/VBoxContainer/playerProjectile
+@onready var button_projectile_bomb = $MarginContainer/VBoxContainer/playerProjectileBomb
+
+var default_color = Color(1, 1, 1) # White or original color
+var selected_color = Color(1, 0.5, 0) # Orange
+var selected_button = null # Initially no button is selected
+
 func _ready() -> void:
     process_mode = Node.PROCESS_MODE_ALWAYS
     hide()
+    select_button(button_projectile)  #
 
 func _input(event: InputEvent):
     if event.is_action_pressed("x"):
@@ -22,15 +30,19 @@ func _on_player_projectile_pressed() -> void:
         player.projectileSelected = Projectile
         hide()
         get_tree().paused = false
-        print("Regular projectile selected")
-    else:
-        print("Player reference is null")
+        select_button(button_projectile)
+
 
 func _on_player_projectile_bomb_pressed() -> void:
     if player:
         player.projectileSelected = ProjectileSpecialBomb
         hide()
         get_tree().paused = false
-        print("Bomb projectile selected")
-    else:
-        print("Player reference is null")
+
+        select_button(button_projectile_bomb)
+
+func select_button(button):
+    if selected_button:
+        selected_button.modulate = default_color
+    selected_button = button
+    selected_button.modulate = selected_color
