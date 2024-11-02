@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://civc6i1wg2d3c"]
+[gd_scene load_steps=4 format=3 uid="uid://civc6i1wg2d3c"]
 
 [ext_resource type="Script" path="res://scripts/pause.gd" id="1_6ucuw"]
 [ext_resource type="Texture2D" uid="uid://cmkv0cfyx7quu" path="res://assets/sprites/pause.png" id="2_t2bnd"]
+
+[sub_resource type="Theme" id="Theme_j3f4i"]
 
 [node name="pause" type="Control"]
 layout_mode = 3
@@ -11,6 +13,7 @@ anchor_bottom = 1.0
 offset_top = -2.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_j3f4i")
 script = ExtResource("1_6ucuw")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

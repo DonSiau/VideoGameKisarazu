@@ -4,8 +4,8 @@ extends Control
 @onready var ProjectileSpecialBomb = preload("res://scenes/playerProjectileBomb.tscn")
 @onready var player = get_tree().get_first_node_in_group("Player")
 
-@onready var button_projectile = $MarginContainer/VBoxContainer/playerProjectile
-@onready var button_projectile_bomb = $MarginContainer/VBoxContainer/playerProjectileBomb
+@onready var button_projectile =$MarginContainer/weaponsPanel/weaponsMargin/weapons/blasterContainer/playerProjectile
+@onready var button_projectile_bomb = $MarginContainer/weaponsPanel/weaponsMargin/weapons/bombContainer/playerProjectileBomb
 
 var default_color = Color(1, 1, 1) # White or original color
 var selected_color = Color(1, 0.5, 0) # Orange
@@ -25,24 +25,27 @@ func _input(event: InputEvent):
             show()
             get_tree().paused = true
 
-func _on_player_projectile_pressed() -> void:
-    if player:
-        player.projectileSelected = Projectile
-        hide()
-        get_tree().paused = false
-        select_button(button_projectile)
-
-
-func _on_player_projectile_bomb_pressed() -> void:
-    if player:
-        player.projectileSelected = ProjectileSpecialBomb
-        hide()
-        get_tree().paused = false
-
-        select_button(button_projectile_bomb)
 
 func select_button(button):
     if selected_button:
         selected_button.modulate = default_color
     selected_button = button
     selected_button.modulate = selected_color
+
+
+func _on_player_projectile_bomb_pressed() -> void:
+    if player:
+        player.projectileSelected = ProjectileSpecialBomb
+        get_tree().paused = false
+        select_button(button_projectile_bomb)
+        hide()
+
+
+
+
+func _on_player_projectile_pressed() -> void:
+     if player:
+        player.projectileSelected = Projectile
+        get_tree().paused = false
+        select_button(button_projectile)
+        hide()

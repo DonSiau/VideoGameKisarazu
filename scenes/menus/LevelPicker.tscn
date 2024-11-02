@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhaeutid586fo"]
+[gd_scene load_steps=10 format=3 uid="uid://dhaeutid586fo"]
 
 [ext_resource type="Script" path="res://scripts/level_picker.gd" id="1_r6jfr"]
+[ext_resource type="Texture2D" uid="uid://cgd18rvjy4bl6" path="res://assets/sprites/area.png" id="2_6tb2e"]
+[ext_resource type="Texture2D" uid="uid://dpjr5jesnpblm" path="res://assets/sprites/window.png" id="3_8oyep"]
+[ext_resource type="Texture2D" uid="uid://iv1a1btlbt5i" path="res://assets/sprites/button_default_orange.png" id="4_hw38w"]
+[ext_resource type="Texture2D" uid="uid://cev4jti12dl6b" path="res://assets/sprites/button_pressed_orange.png" id="5_n75fp"]
+[ext_resource type="Texture2D" uid="uid://dcf1178stjbi3" path="res://assets/sprites/button_default.png" id="6_tiil4"]
+[ext_resource type="Texture2D" uid="uid://3qq5yufbgop" path="res://assets/sprites/button_pressed.png" id="7_y4ed2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6nh0x"]
+texture = ExtResource("2_6tb2e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_06nxt"]
+texture = ExtResource("3_8oyep")
 
 [node name="LevelPicker" type="Control"]
 layout_mode = 3
@@ -17,33 +29,120 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 514.0
-offset_top = 90.0
-offset_right = -522.0
-offset_bottom = -274.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6nh0x")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
 layout_mode = 2
 
-[node name="Quit_Main_Menu" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
-text = "Exit to main menu"
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_06nxt")
 
-[node name="Level1" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer"]
 layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Quit_Main_Menu" type="TextureButton" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_hw38w")
+texture_pressed = ExtResource("5_n75fp")
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Quit_Main_Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -11.5
+offset_right = 23.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Exit to Menu"
+
+[node name="Level1" type="TextureButton" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_tiil4")
+texture_pressed = ExtResource("7_y4ed2")
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -11.5
+offset_right = 23.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
 text = "Level 1"
 
-[node name="Level2" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Level2" type="TextureButton" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+texture_normal = ExtResource("6_tiil4")
+texture_pressed = ExtResource("7_y4ed2")
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -11.5
+offset_right = 23.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
 text = "Level 2"
 
-[node name="Level3" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Level3" type="TextureButton" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Level 3"
+texture_normal = ExtResource("6_tiil4")
+texture_pressed = ExtResource("7_y4ed2")
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit_Main_Menu" to="." method="_on_quit_main_menu_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Level2" to="." method="_on_level_2_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Level3" to="." method="_on_level_3_pressed"]
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -11.5
+offset_right = 23.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Level 3
+"
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Quit_Main_Menu" to="." method="_on_quit_main_menu_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level3" to="." method="_on_level_3_pressed"]

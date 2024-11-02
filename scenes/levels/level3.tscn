@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cu7ut6j2xqt58"]
+[gd_scene load_steps=36 format=3 uid="uid://cu7ut6j2xqt58"]
 
 [ext_resource type="PackedScene" uid="uid://7b7smxvsiuxk" path="res://scenes/platform.tscn" id="1_qasf1"]
 [ext_resource type="PackedScene" uid="uid://dql06euexqj2c" path="res://scenes/player.tscn" id="2_wbguw"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://civc6i1wg2d3c" path="res://scenes/menus/pause.tscn" id="16_0tovq"]
 [ext_resource type="PackedScene" uid="uid://bddb88ersb008" path="res://scenes/menus/pauseMenu.tscn" id="17_03kok"]
 [ext_resource type="PackedScene" uid="uid://dgagki4n4acui" path="res://scenes/menus/weaponSelect.tscn" id="18_w5b84"]
+[ext_resource type="PackedScene" uid="uid://c5vkxhlxxmaqf" path="res://scenes/save/levelEnd.tscn" id="19_1cj63"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bjufa"]
 texture = ExtResource("3_mh633")
@@ -4673,3 +4674,6 @@ offset_bottom = 6.0
 visible = false
 offset_top = 5.0
 offset_bottom = 5.0
+
+[node name="LevelEnd" parent="." instance=ExtResource("19_1cj63")]
+position = Vector2(-154, -7)

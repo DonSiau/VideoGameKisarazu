@@ -1,13 +1,11 @@
 extends Control
-@onready var level1=$MarginContainer/VBoxContainer/Level1
-@onready var level2=$MarginContainer/VBoxContainer/Level2
-@onready var level3=$MarginContainer/VBoxContainer/Level3
+@onready var level1=$MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level1
+@onready var level2=$MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level2
+@onready var level3=$MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
     SaveState.levelUnlock(1)
-    SaveState.levelUnlock(2)
-    SaveState.levelUnlock(3)
 
     if SaveState.save_dict["level1Unlocked"]:
         level1.visible=true

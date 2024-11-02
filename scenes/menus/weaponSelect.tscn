@@ -1,6 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgagki4n4acui"]
+[gd_scene load_steps=13 format=3 uid="uid://dgagki4n4acui"]
 
 [ext_resource type="Script" path="res://scripts/weapon_select.gd" id="1_nge2v"]
+[ext_resource type="Texture2D" uid="uid://dpjr5jesnpblm" path="res://assets/sprites/window.png" id="2_5wgnn"]
+[ext_resource type="Texture2D" uid="uid://dcf1178stjbi3" path="res://assets/sprites/button_default.png" id="2_frmj8"]
+[ext_resource type="Texture2D" uid="uid://3qq5yufbgop" path="res://assets/sprites/button_pressed.png" id="3_m5gly"]
+[ext_resource type="Texture2D" uid="uid://cbyanyk051kcj" path="res://assets/sprites/window_undecorated.png" id="3_n1pe6"]
+[ext_resource type="Texture2D" uid="uid://dnxqkygo418ir" path="res://assets/sprites/playerProjectile.png" id="4_fag6a"]
+[ext_resource type="Texture2D" uid="uid://d0luq0a7ai2n1" path="res://assets/sprites/bomb.png" id="7_b8gg3"]
+
+[sub_resource type="Theme" id="Theme_isdti"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p0rl4"]
+
+[sub_resource type="Theme" id="Theme_2p207"]
+/styles/panel = SubResource("StyleBoxTexture_p0rl4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_revda"]
+texture = ExtResource("2_5wgnn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sbnyb"]
+texture = ExtResource("3_n1pe6")
 
 [node name="WeaponSelect" type="Control"]
 process_mode = 3
@@ -8,35 +27,142 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_right = 1.0
+offset_left = -28.0
+offset_top = -3.0
+offset_right = -28.0
+offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
+tooltip_text = "
+"
 script = ExtResource("1_nge2v")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 490.0
-offset_top = 140.0
-offset_right = -484.0
-offset_bottom = -194.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -142.0
+offset_right = 220.0
+offset_bottom = 142.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_isdti")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="weaponsPanel" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_2p207")
+theme_override_styles/panel = SubResource("StyleBoxTexture_revda")
+
+[node name="weaponsMargin" type="MarginContainer" parent="MarginContainer/weaponsPanel"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="weapons" type="VBoxContainer" parent="MarginContainer/weaponsPanel/weaponsMargin"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="blasterContainer" type="HBoxContainer" parent="MarginContainer/weaponsPanel/weaponsMargin/weapons"]
 layout_mode = 2
 
-[node name="playerProjectile" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="blasterProjectileFrame" type="Panel" parent="MarginContainer/weaponsPanel/weaponsMargin/weapons/blasterContainer"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../playerProjectileBomb")
-theme_override_colors/icon_normal_color = Color(0.745166, 0.638753, 0.370346, 1)
-text = "blaster"
+theme_override_styles/panel = SubResource("StyleBoxTexture_sbnyb")
 
-[node name="playerProjectileBomb" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="blasterProjectileImage" type="TextureRect" parent="MarginContainer/weaponsPanel/weaponsMargin/weapons/blasterContainer/blasterProjectileFrame"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_fag6a")
+
+[node name="playerProjectile" type="TextureButton" parent="MarginContainer/weaponsPanel/weaponsMargin/weapons/blasterContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../playerProjectile")
-text = "bomb"
+texture_normal = ExtResource("2_frmj8")
+texture_pressed = ExtResource("3_m5gly")
+stretch_mode = 0
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/playerProjectile" to="." method="_on_player_projectile_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/playerProjectileBomb" to="." method="_on_player_projectile_bomb_pressed"]
+[node name="Label" type="Label" parent="MarginContainer/weaponsPanel/weaponsMargin/weapons/blasterContainer/playerProjectile"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -11.5
+offset_right = 23.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Blaster"
+
+[node name="bombContainer" type="HBoxContainer" parent="MarginContainer/weaponsPanel/weaponsMargin/weapons"]
+layout_mode = 2
+
+[node name="bombProjectileFrame" type="Panel" parent="MarginContainer/weaponsPanel/weaponsMargin/weapons/bombContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_sbnyb")
+
+[node name="bombProjectileImage" type="TextureRect" parent="MarginContainer/weaponsPanel/weaponsMargin/weapons/bombContainer/bombProjectileFrame"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_b8gg3")
+
+[node name="playerProjectileBomb" type="TextureButton" parent="MarginContainer/weaponsPanel/weaponsMargin/weapons/bombContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_frmj8")
+texture_pressed = ExtResource("3_m5gly")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/weaponsPanel/weaponsMargin/weapons/bombContainer/playerProjectileBomb"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -11.5
+offset_right = 23.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Bomb"
+
+[connection signal="pressed" from="MarginContainer/weaponsPanel/weaponsMargin/weapons/blasterContainer/playerProjectile" to="." method="_on_player_projectile_pressed"]
+[connection signal="pressed" from="MarginContainer/weaponsPanel/weaponsMargin/weapons/bombContainer/playerProjectileBomb" to="." method="_on_player_projectile_bomb_pressed"]
