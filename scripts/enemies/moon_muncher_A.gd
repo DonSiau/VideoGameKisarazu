@@ -1,7 +1,7 @@
 extends Node2D
 @export var health: float = 9  # Health variable defined in the enemy node
 var submerge_speed = 30
-var move_speed = 120
+var SPEED = 120
 var player_pos: Vector2  # Position of the player
 var target_pos: Vector2  # Direction towards the player
 var original_y_pos: float
@@ -20,9 +20,13 @@ var direction = 1
 @onready var player = get_parent().get_node("player")  # Reference to the Player node
 
 func _ready():
-    at_edge = false
-    animated_sprite_2d.scale = Vector2(1, 1)
-    original_y_pos = global_position.y  # Store the original Y position of the enemy
+      animated_sprite_2d.scale = Vector2(1, 1)
+      var shader_material = ShaderMaterial.new()
+      shader_material.shader = preload("res://shader/flashShader.gdshader")
+      shader_material.set_shader_parameter("active", false)
+      animated_sprite_2d.material = shader_material
+      at_edge = false
+      original_y_pos = global_position.y  # Store the original Y position of the enemy
 
 func _physics_process(delta: float) -> void:
     # Edge detection based on raycasts
@@ -68,7 +72,7 @@ func _physics_process(delta: float) -> void:
             else:
                 if follow_mode == true and !at_edge:
                     target_pos = (player_pos - position).normalized()  # Calculate direction towards the player
-                    position += target_pos * move_speed * delta  # Move horizontally towards the player
+                    position += target_pos * SPEED * delta  # Move horizontally towards the player
                     if target_pos.x > 0:
 
                          animated_sprite_2d.flip_h = true

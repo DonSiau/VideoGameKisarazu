@@ -10,7 +10,7 @@ extends CharacterBody2D
 @onready var weapon_select_instance = $"../CanvasLayer/WeaponSelect"
 @onready var world = get_tree().current_scene
 
-const SPEED = 170.0
+const SPEED = 150.0
 const DASH_SPEED = 350
 const JUMP_VELOCITY = -270.0
 const wall_jump_pushback = 350

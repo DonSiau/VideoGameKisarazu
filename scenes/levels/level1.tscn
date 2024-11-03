@@ -4482,6 +4482,7 @@ position = Vector2(-82, -10)
 zoom = Vector2(5, 5)
 
 [node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
 position = Vector2(9, 2)
 tile_set = SubResource("TileSet_id86l")
 format = 2
@@ -4518,7 +4519,7 @@ position = Vector2(753, -171)
 position = Vector2(753, -144)
 
 [node name="grub_large_A" parent="." instance=ExtResource("6_as4lt")]
-position = Vector2(153, -7)
+position = Vector2(10, -7)
 
 [node name="hoclops_large_A" parent="." instance=ExtResource("7_uj0em")]
 position = Vector2(356, -55)
@@ -4680,3 +4681,9 @@ offset_bottom = 5.0
 
 [node name="LevelEnd" parent="." instance=ExtResource("19_jrsyq")]
 position = Vector2(-160, -7)
+
+[node name="space_fly_small_A5" parent="." instance=ExtResource("8_j47er")]
+position = Vector2(-29, -52)
+
+[node name="moon_muncher_A3" parent="." instance=ExtResource("14_bb02n")]
+position = Vector2(87, -9)

@@ -4,8 +4,8 @@ const SPEED = 40
 const GRAVITY = 200
 var direction = 1
 @export var health: float = 9  # Health variable defined in the enemy node
-
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animationPlayer: AnimationPlayer = $AnimatedSprite2D/AnimationPlayer
 @onready var raycast_right: RayCast2D = $RaycastRight
 @onready var raycast_left: RayCast2D = $RaycastLeft
 @onready var raycast_down_right: RayCast2D = $RaycastDownRight
@@ -21,6 +21,11 @@ var jump_duration = 1.0
 var jump_timer = 0.0
 
 func _ready():
+    animated_sprite_2d.scale = Vector2(1, 1)
+    var shader_material = ShaderMaterial.new()
+    shader_material.shader = preload("res://shader/flashShader.gdshader")
+    shader_material.set_shader_parameter("active", false)
+    animated_sprite_2d.material = shader_material
     $jumpTimer.connect("timeout", Callable(self, "_on_jump_timer_timeout"))
     $jumpTimer.start()
     # Ensure the sprite's scale is set to (1, 1) initially
@@ -42,12 +47,12 @@ func _process(delta: float) -> void:
 
         if jump_progress < 0.5:
             # Moving up and forward
-            animated_sprite_2d.play("Hoclops_large_A_jump")
+            animationPlayer.play("Hoclops_large_A_jump")
             velocity.y = -jump_height  # Apply upward velocity
             velocity.x = direction * jump_width
         elif jump_progress < 1.0:
             # Moving down and forward
-            animated_sprite_2d.play("Hoclops_large_A_fall")
+            animationPlayer.play("Hoclops_large_A_fall")
             velocity.y += GRAVITY * delta  # Simulate gravity during the fall
             velocity.x = direction * jump_width
         else:
@@ -55,7 +60,7 @@ func _process(delta: float) -> void:
             is_jumping = false
             velocity.y = 0
     else:
-        animated_sprite_2d.play("Hoclops_large_A_move")
+        animationPlayer.play("Hoclops_large_A_move")
         if raycast_right.is_colliding():
             direction = -1
             animated_sprite_2d.flip_h = true

@@ -1,12 +1,18 @@
-[gd_scene load_steps=64 format=3 uid="uid://drkratb7ctu3n"]
+[gd_scene load_steps=69 format=3 uid="uid://drkratb7ctu3n"]
 
 [ext_resource type="Script" path="res://scripts/enemies/moon_muncher_A.gd" id="1_40vvy"]
+[ext_resource type="Shader" path="res://shader/flashShader.gdshader" id="2_13ahy"]
 [ext_resource type="Texture2D" uid="uid://c8dd1fkmyv2ne" path="res://assets/sprites/hoclops_large_A.png" id="2_tkhp3"]
 [ext_resource type="Texture2D" uid="uid://dtaw7mc4kovwl" path="res://assets/sprites/grub_large_A.png" id="3_oyyrk"]
 [ext_resource type="Texture2D" uid="uid://be81s6rmjein1" path="res://assets/sprites/grub_large_B.png" id="4_6i3hm"]
 [ext_resource type="Texture2D" uid="uid://30fjfbcef1un" path="res://assets/sprites/moon_muncher_A.png" id="5_67ddg"]
 [ext_resource type="PackedScene" uid="uid://53kn0wf4gsk3" path="res://scenes/killzone.tscn" id="5_j3bcr"]
 [ext_resource type="Script" path="res://scripts/damageable.gd" id="6_kuiwo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h44qd"]
+resource_local_to_scene = true
+shader = ExtResource("2_13ahy")
+shader_parameter/active = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7slxe"]
 atlas = ExtResource("2_tkhp3")
@@ -418,11 +424,50 @@ size = Vector2(22, 17)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_utoyj"]
 size = Vector2(17, 16)
 
+[sub_resource type="Animation" id="Animation_mbxgy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ikm1q"]
+resource_name = "flash"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rvweh"]
+_data = {
+"RESET": SubResource("Animation_mbxgy"),
+"flash": SubResource("Animation_ikm1q")
+}
+
 [node name="moon_muncher_A" type="CharacterBody2D"]
+z_index = -1
 collision_layer = 2
 script = ExtResource("1_40vvy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_h44qd")
 scale = Vector2(0.548194, 0.63536)
 sprite_frames = SubResource("SpriteFrames_6q03n")
 animation = &"moon_muncher_move"
@@ -460,4 +505,13 @@ exclude_parent = false
 target_position = Vector2(0, 25)
 
 [node name="attackTimer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 3.0
+one_shot = true
+
+[node name="Flash" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedSprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_rvweh")
+}
+
+[connection signal="timeout" from="attackTimer" to="." method="_on_attack_timer_timeout"]

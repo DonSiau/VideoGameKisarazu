@@ -12,6 +12,10 @@ var direction = 1
 
 func _ready() -> void:
         animated_sprite_2d.scale = Vector2(1, 1)
+        var shader_material = ShaderMaterial.new()
+        shader_material.shader = preload("res://shader/flashShader.gdshader")
+        shader_material.set_shader_parameter("active", false)
+        animated_sprite_2d.material = shader_material
 func _process(delta: float) -> void:
     # Check if the enemy hits a wall (left or right)
     if raycast_right.is_colliding():

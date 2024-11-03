@@ -1,10 +1,14 @@
 shader_type canvas_item;
 
-uniform vec4 flash_color : source_color;
-uniform float flash_value : hint_range(0.0, 1.0, 0.1);
+uniform bool active = false;
 
 void fragment() {
-	vec4 texture_color = texture(TEXTURE, UV);
-	COLOR = mix(texture_color, flash_color, flash_value);
-	COLOR.a = texture_color.a;
+	vec4 previous_color = texture(TEXTURE, UV);
+	vec4 white_color = vec4(1.0, 1.0, 1.0, previous_color.a);
+	vec4 new_color = previous_color;
+	if (active == true)
+	{
+		new_color = white_color;
+	}
+	COLOR = new_color;
 }

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmtrteuwjfpyu"]
+
+[ext_resource type="Script" path="res://scripts/enemies/hit_effect.gd" id="1_15a37"]
+
+[node name="HitEffect" type="Node"]
+script = ExtResource("1_15a37")
+
+[node name="HitTimer" type="Timer" parent="."]
