@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmtrteuwjfpyu"]
+[gd_scene load_steps=2 format=3 uid="uid://cs84hgxktw0fi"]
 
 [ext_resource type="Script" path="res://scripts/enemies/hit_effect.gd" id="1_15a37"]
 

@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 SaveState="*res://scripts/Save/save_state.gd"
+LevelState="*res://scripts/Save/level_state.gd"
 
 [display]
 

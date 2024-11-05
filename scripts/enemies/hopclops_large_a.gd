@@ -4,8 +4,8 @@ const SPEED = 40
 const GRAVITY = 200
 var direction = 1
 @export var health: float = 9  # Health variable defined in the enemy node
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var animationPlayer: AnimationPlayer = $AnimatedSprite2D/AnimationPlayer
 @onready var raycast_right: RayCast2D = $RaycastRight
 @onready var raycast_left: RayCast2D = $RaycastLeft
 @onready var raycast_down_right: RayCast2D = $RaycastDownRight
@@ -15,21 +15,22 @@ var direction = 1
 
 # Jump variables
 var is_jumping = false
-var jump_height = 100
+var jump_height = 85
 var jump_width = 40
-var jump_duration = 1.0
+var jump_duration = 1
 var jump_timer = 0.0
 
 func _ready():
+    # Shader setup
     animated_sprite_2d.scale = Vector2(1, 1)
     var shader_material = ShaderMaterial.new()
     shader_material.shader = preload("res://shader/flashShader.gdshader")
     shader_material.set_shader_parameter("active", false)
     animated_sprite_2d.material = shader_material
-    $jumpTimer.connect("timeout", Callable(self, "_on_jump_timer_timeout"))
+
+    # Timer setup
+
     $jumpTimer.start()
-    # Ensure the sprite's scale is set to (1, 1) initially
-    animated_sprite_2d.scale = Vector2(1, 1)
 
 func _on_jump_timer_timeout():
     if not is_jumping:
@@ -45,14 +46,16 @@ func _process(delta: float) -> void:
         jump_timer += delta
         var jump_progress = jump_timer / jump_duration
 
-        if jump_progress < 0.5:
+        if jump_progress < 0.2:
             # Moving up and forward
-            animationPlayer.play("Hoclops_large_A_jump")
+            animated_sprite_2d.play("Hoclops_large_A_jump")
             velocity.y = -jump_height  # Apply upward velocity
             velocity.x = direction * jump_width
-        elif jump_progress < 1.0:
+
+        elif jump_progress < 1.6:
             # Moving down and forward
-            animationPlayer.play("Hoclops_large_A_fall")
+
+            animated_sprite_2d.play("Hoclops_large_A_fall")
             velocity.y += GRAVITY * delta  # Simulate gravity during the fall
             velocity.x = direction * jump_width
         else:
@@ -60,7 +63,7 @@ func _process(delta: float) -> void:
             is_jumping = false
             velocity.y = 0
     else:
-        animationPlayer.play("Hoclops_large_A_move")
+        animated_sprite_2d.play("Hoclops_large_A_move")
         if raycast_right.is_colliding():
             direction = -1
             animated_sprite_2d.flip_h = true

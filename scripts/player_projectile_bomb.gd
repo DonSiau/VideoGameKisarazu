@@ -1,5 +1,5 @@
 extends Area2D
-
+@onready var sprite =$Sprite2D
 @onready var projectile_timeout = $Projectile_timeout
 @export var damage: int = 3
 const MOVE_SPEED = 180
@@ -12,7 +12,8 @@ func launch(direction: Vector2):
     velocity.x = direction.x * MOVE_SPEED
     velocity.y = -170
     $Projectile_timeout.start()
-
+func _process(delta: float) -> void:
+    sprite.rotate(8*delta)
 func _ready():
 
     if kill_zone:

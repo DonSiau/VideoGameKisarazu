@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://dw8llumdyavwk"]
+[gd_scene load_steps=62 format=3 uid="uid://dw8llumdyavwk"]
 
 [ext_resource type="Script" path="res://scripts/enemies/hopclops_large_a.gd" id="1_jwtnh"]
 [ext_resource type="Shader" path="res://shader/flashShader.gdshader" id="1_p8q1u"]
@@ -36,22 +36,6 @@ region = Rect2(216, 0, 72, 34)
 [sub_resource type="AtlasTexture" id="AtlasTexture_sdxm8"]
 atlas = ExtResource("2_6xbbh")
 region = Rect2(288, 0, 72, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jdg2j"]
-atlas = ExtResource("2_6xbbh")
-region = Rect2(0, 68, 72, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mtldf"]
-atlas = ExtResource("2_6xbbh")
-region = Rect2(72, 68, 72, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g8m37"]
-atlas = ExtResource("2_6xbbh")
-region = Rect2(144, 68, 72, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jqxl6"]
-atlas = ExtResource("2_6xbbh")
-region = Rect2(216, 68, 72, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wkrxa"]
 atlas = ExtResource("2_6xbbh")
@@ -214,24 +198,30 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sdxm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdxm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdxm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdxm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdxm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdxm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdxm8")
 }],
 "loop": false,
 "name": &"Hoclops_large_A_fall",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jdg2j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mtldf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g8m37")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jqxl6")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wkrxa")
 }, {
@@ -273,7 +263,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_x1e5e")
 }],
-"loop": false,
+"loop": true,
 "name": &"Hoclops_large_A_move",
 "speed": 10.0
 }, {
@@ -360,10 +350,41 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="Animation" id="Animation_clukv"]
+resource_name = "Hoclops_large_A_fall"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_oix5a"]
+resource_name = "Hoclops_large_A_jump"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
 [sub_resource type="Animation" id="Animation_32vvc"]
 resource_name = "Hoclops_large_A_move"
 length = 0.7
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -390,38 +411,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_oix5a"]
-resource_name = "Hoclops_large_A_jump"
-length = 0.7
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7]
-}
-
-[sub_resource type="Animation" id="Animation_clukv"]
-resource_name = "Hoclops_large_A_fall"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g0g85"]
@@ -482,19 +471,19 @@ script = ExtResource("1_jwtnh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_u12wu")
-scale = Vector2(0.548194, 0.63536)
+position = Vector2(0.132509, 0)
+scale = Vector2(0.551875, 0.63536)
 sprite_frames = SubResource("SpriteFrames_6q03n")
-animation = &"Hoclops_large_A_move"
+animation = &"Hoclops_large_A_jump"
+autoplay = "Hoclops_large_A_move"
 frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
 libraries = {
 "": SubResource("AnimationLibrary_g0g85")
 }
-autoplay = "Hoclops_large_A_move"
 
 [node name="killzone" parent="." instance=ExtResource("4_goa87")]
-visible = false
 
 [node name="killShape" type="CollisionShape2D" parent="killzone"]
 position = Vector2(0, 1)
@@ -518,12 +507,12 @@ script = ExtResource("5_b8v00")
 [node name="RaycastDownRight" type="RayCast2D" parent="."]
 position = Vector2(11, 0)
 exclude_parent = false
-target_position = Vector2(-2, 92)
+target_position = Vector2(-2, 115)
 
 [node name="RaycastDownLeft" type="RayCast2D" parent="."]
 position = Vector2(-11, 0)
 exclude_parent = false
-target_position = Vector2(-3, 94)
+target_position = Vector2(-3, 119)
 
 [node name="jumpTimer" type="Timer" parent="."]
 wait_time = 2.5
@@ -531,15 +520,17 @@ wait_time = 2.5
 [node name="JumpPreventionRight" type="RayCast2D" parent="."]
 position = Vector2(21, -1)
 exclude_parent = false
-target_position = Vector2(0, 38)
+target_position = Vector2(-1, 86)
 
 [node name="JumpPreventionLeft" type="RayCast2D" parent="."]
 position = Vector2(-19, 0)
 exclude_parent = false
-target_position = Vector2(-1, 38)
+target_position = Vector2(-2, 85)
 
 [node name="Flash" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimatedSprite2D")
 libraries = {
 "": SubResource("AnimationLibrary_rvweh")
 }
+
+[connection signal="timeout" from="jumpTimer" to="." method="_on_jump_timer_timeout"]

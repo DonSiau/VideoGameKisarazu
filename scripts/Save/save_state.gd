@@ -7,7 +7,7 @@ var save_dict={
     "playerProjectileUnlocked":true,
     "playerProjectileBombUnlocked":false,
  }
-
+var current_checkpoint: Vector2
 func _ready():
     load_game()
 func save():

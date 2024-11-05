@@ -29,6 +29,7 @@ var wall_jump_buffer = 0.0
 const WALL_JUMP_BUFFER_TIME = 0.2
 
 # Player stats
+var last_checkpoint=Vector2.ZERO
 var health = 5
 var projectileSelected = Projectile
 var ammo = 6
@@ -39,7 +40,10 @@ func set_healthBar() -> void:
 func _ready():
     add_to_group("Player")
     set_healthBar()
+
+    global_position=LevelState.current_checkpoint
     projectileSelected = Projectile
+
 
 func gain_health(amount: int):
     health += amount
