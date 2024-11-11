@@ -8,4 +8,3 @@ void fragment() {
     COLOR = mix(texture_color, flash_color, flash_value);  // Mix with the flash color
     COLOR.a = texture_color.a;  // Preserve the original alpha
 }
-

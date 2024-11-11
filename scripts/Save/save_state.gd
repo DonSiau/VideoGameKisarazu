@@ -35,6 +35,14 @@ func levelLock(level: int):
     save_dict["level" + str(level) + "Unlocked"] = false
     save()
     save_game()
+func resetLevels():
+    for key in save_dict.keys():
+     if key.begins_with("level"):
+      save_dict[key] = false
+    levelUnlock(1)
+    save()
+    save_game()
+
 func _notification(what):
     if what == NOTIFICATION_WM_CLOSE_REQUEST:  # When game is closing
         save_game()

@@ -13,7 +13,7 @@ func launch(direction: Vector2):
     velocity.y = -170
     $Projectile_timeout.start()
 func _process(delta: float) -> void:
-    sprite.rotate(8*delta)
+    sprite.rotate(5*delta)
 func _ready():
 
     if kill_zone:

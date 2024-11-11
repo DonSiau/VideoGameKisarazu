@@ -24,8 +24,8 @@ LevelState="*res://scripts/Save/level_state.gd"
 
 [display]
 
-window/size/viewport_width=1536
-window/size/viewport_height=864
+window/size/viewport_width=1366
+window/size/viewport_height=768
 window/size/mode=1
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
@@ -33,6 +33,7 @@ window/stretch/aspect="expand"
 [file_customization]
 
 folder_colors={
+"res://Export/": "pink",
 "res://assets/sprites/": "yellow",
 "res://scenes/": "red",
 "res://scripts/": "blue"

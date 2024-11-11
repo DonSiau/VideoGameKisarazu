@@ -21,10 +21,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1495.0
-offset_top = 31.0
-offset_right = -15.0
-offset_bottom = -809.0
+offset_left = 1329.0
+offset_top = 11.0
+offset_right = -11.0
+offset_bottom = -733.0
 grow_horizontal = 2
 grow_vertical = 2
 

@@ -17,6 +17,7 @@ const wall_jump_pushback = 350
 const wallslide_friction = -800.0
 
 # State flags
+var dash_direction = 0
 var is_dead = false
 var is_wall_sliding = false
 var is_dashing = false
@@ -162,23 +163,29 @@ func _physics_process(delta: float) -> void:
         is_falling = true
     if Input.is_action_just_pressed("ui_select"):
         jump()
+
+    var direction := Input.get_axis("a", "d")
     if Input.is_action_just_pressed("alt"):
         is_dashing = true
-        $dash_timer.start()
-    var direction := Input.get_axis("a", "d")
-    if direction != 0:
-        if is_dashing:
-            velocity.x = direction * DASH_SPEED
+        if direction != 0:
+            dash_direction = direction
         else:
-            velocity.x = direction * SPEED
-            if is_on_floor():
-                is_running = true
+            if sprite.flip_h:
+                dash_direction = -1
+            else:
+                dash_direction = 1
+        $dash_timer.start()
+    if is_dashing:
+        velocity.x = dash_direction * DASH_SPEED
+    elif direction != 0:
+        velocity.x = direction * SPEED
+        if is_on_floor():
+            is_running = true
         if !is_wall_sliding:
             sprite.flip_h = (direction < 0)
     else:
         if wall_jump_buffer <= 0:
             velocity.x = move_toward(velocity.x, 0, SPEED)
-
     move_and_slide()
     handle_wall_slide(delta)
     handle_shoot()

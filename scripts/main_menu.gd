@@ -18,3 +18,7 @@ func _on_play_pressed() -> void:
 func _on_exit_pressed() -> void:
     SaveState.save_game()
     get_tree().quit()
+
+
+func _on_reset_pressed() -> void:
+    SaveState.resetLevels()
