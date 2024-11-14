@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://cv33slohfi21t"]
+
+[ext_resource type="Script" path="res://scripts/enemies/dummy.gd" id="1_38ic7"]
+[ext_resource type="Shader" path="res://shader/flashShader.gdshader" id="2_uxvyc"]
+[ext_resource type="Texture2D" uid="uid://c3r76qtitdcyk" path="res://assets/sprites/dummy.png" id="3_78xlf"]
+[ext_resource type="Script" path="res://scripts/damageable.gd" id="4_35mvu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7cppo"]
+resource_local_to_scene = true
+shader = ExtResource("2_uxvyc")
+shader_parameter/active = false
+
+[sub_resource type="Animation" id="Animation_n5414"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_clx61"]
+resource_name = "flash"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tuwxv"]
+_data = {
+"RESET": SubResource("Animation_n5414"),
+"flash": SubResource("Animation_clx61")
+}
+
+[sub_resource type="AnimationRootNode" id="AnimationRootNode_it54i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f73pp"]
+size = Vector2(29, 55)
+
+[node name="Dummy" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_38ic7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_7cppo")
+texture = ExtResource("3_78xlf")
+
+[node name="Flash" type="AnimationTree" parent="Sprite2D"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_tuwxv")
+}
+tree_root = SubResource("AnimationRootNode_it54i")
+advance_expression_base_node = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 5.5)
+shape = SubResource("RectangleShape2D_f73pp")
+
+[node name="Damageable" type="Node" parent="."]
+script = ExtResource("4_35mvu")

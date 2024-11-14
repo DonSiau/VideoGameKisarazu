@@ -1,0 +1,11 @@
+[style name="visualNovel"]
+join Rose (Rose_Angry) left
+Rose: Ugh! why is this darn thing not booting up! It's been hours!
+join Mary right
+Mary: Just be patient, he will be up soon
+update Rose [animation="Heartbeat" length="0.2" repeat="8"]
+Rose: Well i'm trying to, but easier said than done!!!
+Mary: Look... his eyes are lighting up.
+Mary: He is booting up
+Rose (Rose_LookAside): Ugh... finally.
+blah blah blah 

@@ -17,6 +17,7 @@ func hit(damage: int):
         parent.queue_free()  # Remove the parent if health is 0 or less
 
 func take_damage(damage: int):
+
     var parent = get_parent()
     parent.health -= damage
     var anim_player = parent.get_node("AnimationPlayer")

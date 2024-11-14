@@ -1,0 +1,47 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "Rose_neutral",
+"description": "",
+"display_name": "Rose",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"Rose_Angry": {
+"export_overrides": {
+"image": "\"res://DialogicStuff/characters/Rose_angry.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Rose_LookAside": {
+"export_overrides": {
+"image": "\"res://DialogicStuff/characters/Rose_LookAside.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Rose_neutral": {
+"export_overrides": {
+"image": "\"res://DialogicStuff/characters/Rose.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

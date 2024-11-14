@@ -34,6 +34,11 @@ var last_checkpoint=Vector2.ZERO
 var health = 5
 var projectileSelected = Projectile
 var ammo = 6
+func set_healthBarInvisible()-> void:
+    $CanvasLayer.visible=false;
+func set_healthBarVisible()-> void:
+    $CanvasLayer.visible=true;
+
 
 func set_healthBar() -> void:
     $CanvasLayer/HealthBar.value = max(health, 0)

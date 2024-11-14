@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbtfn4i4xa8ia"]
+
+[ext_resource type="Script" path="res://scripts/cutscenes/level_2_intro_cutscene.gd" id="1_uqbk5"]
+
+[node name="Level2IntroCutscene" type="Node2D"]
+script = ExtResource("1_uqbk5")
