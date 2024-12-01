@@ -9,10 +9,10 @@ extends CharacterBody2D
 @onready var ProjectileSpecialBomb = preload("res://scenes/playerProjectileBomb.tscn")
 @onready var weapon_select_instance = $"../CanvasLayer/WeaponSelect"
 @onready var world = get_tree().current_scene
-
-const SPEED = 150.0
+@onready var currentWeapon="projectile"
+const SPEED = 135.0
 const DASH_SPEED = 350
-const JUMP_VELOCITY = -270.0
+const JUMP_VELOCITY = -290.0
 const wall_jump_pushback = 350
 const wallslide_friction = -800.0
 
@@ -33,24 +33,32 @@ const WALL_JUMP_BUFFER_TIME = 0.2
 var last_checkpoint=Vector2.ZERO
 var health = 5
 var projectileSelected = Projectile
-var ammo = 6
+var ammo = 10
 func set_healthBarInvisible()-> void:
-    $CanvasLayer.visible=false;
+    $CanvasLayerHealth.visible=false;
 func set_healthBarVisible()-> void:
-    $CanvasLayer.visible=true;
-
-
+    $CanvasLayerHealth.visible=true;
 func set_healthBar() -> void:
-    $CanvasLayer/HealthBar.value = max(health, 0)
+    $CanvasLayerHealth/HealthBar.value = max(health, 0)
+
+func set_ammoBarInvisible()-> void:
+    $CanvasLayerAmmo.visible=false;
+func set_ammoBarVisible()-> void:
+    $CanvasLayerAmmo.visible=true;
+func set_ammoBar() -> void:
+    $CanvasLayerAmmo/AmmoBar.value = max(ammo, 0)
 
 func _ready():
     add_to_group("Player")
     set_healthBar()
+    set_ammoBar()
 
     global_position=LevelState.current_checkpoint
     projectileSelected = Projectile
 
-
+func decreaseAmmo(amount: int):
+    ammo -= amount
+    set_ammoBar()
 func gain_health(amount: int):
     health += amount
     set_healthBar()
@@ -98,7 +106,7 @@ func update_animation():
         animated_sprite.play("idle")
 
 func jump():
-    if is_on_floor():
+    if is_on_floor() or $RayCast2D.is_colliding():
         velocity.y = JUMP_VELOCITY
         is_jumping = true
     elif is_wall_sliding and Input.is_action_just_pressed("ui_select"):
@@ -132,19 +140,22 @@ func handle_wall_slide(delta):
 func handle_shoot():
     var projectile
     if Input.is_action_just_pressed("q") and !is_swording and !is_hurt and !is_wall_sliding:
-        projectile = projectileSelected.instantiate()
-    if projectile:
-        get_tree().current_scene.add_child(projectile)
-        var direction: Vector2
-        var active_barrel: Node2D
-        if sprite.flip_h:
-            direction = Vector2.LEFT
-            active_barrel = projectile_barrel_Left
-        else:
-            direction = Vector2.RIGHT
-            active_barrel = projectile_barrel_Right
-        projectile.global_position = active_barrel.global_position
-        projectile.launch(direction)
+     projectile = projectileSelected.instantiate()
+     if currentWeapon=="projectile" or ammo >0:
+      if projectile:
+          if currentWeapon=="bombProjectile" or currentWeapon=="areaBlastProjectile":
+           decreaseAmmo(1)
+          get_tree().current_scene.add_child(projectile)
+          var direction: Vector2
+          var active_barrel: Node2D
+          if sprite.flip_h:
+              direction = Vector2.LEFT
+              active_barrel = projectile_barrel_Left
+          else:
+              direction = Vector2.RIGHT
+              active_barrel = projectile_barrel_Right
+          projectile.global_position = active_barrel.global_position
+          projectile.launch(direction)
 
 func handle_sword():
     if Input.is_action_just_pressed("e") and !is_swording and !is_hurt:
@@ -165,7 +176,8 @@ func _physics_process(delta: float) -> void:
     is_falling = false
     if not is_on_floor():
         velocity += get_gravity() * delta
-        is_falling = true
+        if !$RayCast2D.is_colliding():
+         is_falling = true
     if Input.is_action_just_pressed("ui_select"):
         jump()
 
@@ -184,7 +196,7 @@ func _physics_process(delta: float) -> void:
         velocity.x = dash_direction * DASH_SPEED
     elif direction != 0:
         velocity.x = direction * SPEED
-        if is_on_floor():
+        if is_on_floor() or $RayCast2D.is_colliding():
             is_running = true
         if !is_wall_sliding:
             sprite.flip_h = (direction < 0)

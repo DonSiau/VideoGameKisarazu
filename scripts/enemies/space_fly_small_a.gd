@@ -1,6 +1,6 @@
 extends Node2D
 @export var health: float = 6  # Health variable defined in the enemy node
-var SPEED = 20  # Speed of the enemy
+var SPEED = 35  # Speed of the enemy
 var player_pos: Vector2  # Position of the player
 var target_pos: Vector2  # Direction towards the player
 

@@ -1,12 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsl7yimh76c80"]
+[gd_scene load_steps=3 format=3 uid="uid://ckoctm1qnn4d7"]
 
-[ext_resource type="Script" path="res://scripts/Save/checkpoint.gd" id="1_8fvuk"]
+[ext_resource type="Script" path="res://scripts/cutscenes/chat_player_end_lvl.gd" id="1_446ou"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cqcc"]
 size = Vector2(32, 87)
 
-[node name="Checkpoint" type="Node2D"]
-script = ExtResource("1_8fvuk")
+[node name="chatPlayerEndLevel" type="Node2D"]
+script = ExtResource("1_446ou")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_mask = 2

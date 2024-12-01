@@ -4,8 +4,9 @@ func _ready() -> void:
     start_dialog()
 func start_dialog():
     Dialogic.timeline_ended.connect(_on_timeline_ended)
-    Dialogic.start("Level2Intro")
+    Dialogic.start("Level3Intro")
+
 
 func _on_timeline_ended():
     Dialogic.timeline_ended.disconnect(_on_timeline_ended)
-    get_tree().change_scene_to_file("res://scenes/levels/level1.tscn")
+    get_tree().change_scene_to_file("res://scenes/levels/level3.tscn")

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmllab74uh2bm"]
+
+[ext_resource type="Script" path="res://scripts/enemies/glacier.gd" id="1_5df63"]
+[ext_resource type="Texture2D" uid="uid://dltvpomtnx30p" path="res://assets/sprites/spikes_A_down.png" id="2_f2xwj"]
+[ext_resource type="PackedScene" uid="uid://53kn0wf4gsk3" path="res://scenes/killzone.tscn" id="3_2yp83"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvjj7"]
+size = Vector2(10, 13)
+
+[node name="Glacier" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_5df63")
+
+[node name="killzone" parent="." instance=ExtResource("3_2yp83")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_fvjj7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visibility_layer = 3
+texture = ExtResource("2_f2xwj")
+
+[node name="attackCast" type="RayCast2D" parent="."]
+target_position = Vector2(0, 110)
+collision_mask = 3

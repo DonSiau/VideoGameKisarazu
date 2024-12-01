@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://dx5tqq5j0h3mb"]
+
+[ext_resource type="Texture2D" uid="uid://6e624rvrnowm" path="res://assets/sprites/laboratory.png" id="1_no2r6"]
+[ext_resource type="Script" path="res://scripts/platform_down.gd" id="1_qf6gc"]
+[ext_resource type="Texture2D" uid="uid://bsvnk5xkhxg0" path="res://assets/sprites/arrow_double_down.png" id="2_w7nfk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1q0m"]
+size = Vector2(39, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7suyk"]
+size = Vector2(36, 3)
+
+[node name="platformDown" type="AnimatableBody2D"]
+script = ExtResource("1_qf6gc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_no2r6")
+region_enabled = true
+region_rect = Rect2(320, 80, 41, 15)
+
+[node name="TextureRect" type="TextureRect" parent="Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -6.0
+offset_right = -7.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+size_flags_horizontal = 4
+texture = ExtResource("2_w7nfk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_r1q0m")
+one_way_collision = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0.5, 0)
+
+[node name="dropDetectorShape" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, -6.5)
+shape = SubResource("RectangleShape2D_7suyk")
+
+[node name="dropTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="dropTimer" to="." method="_on_drop_timer_timeout"]

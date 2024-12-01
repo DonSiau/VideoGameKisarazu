@@ -1,0 +1,16 @@
+[background arg="res://DialogicStuff/bluePortalSwirl.jpg" fade="0.0"]
+[style name="visualNovelRose"]
+join Rose (Rose_grit) left
+Rose: ugggghhhhh...... are we stuck?
+join Mary right
+[style name="visualNovelMary"]
+Mary (Mary_serious): Guardian any information?
+[style name="visualNovel"]
+Guardian: I sense am sensing a change in GPS location, it seems we are being taken to somewhere far away, perhaps to a secret base
+Guardian: We should reach the target destination in approximaetly 38 seconds
+[style name="visualNovelRose"]
+Rose (Rose_LookAside): phew.....
+[style name="visualNovelMary"]
+Mary (Mary_serious): be prepared guardian for what's on the other side.
+[style name="visualNovel"]
+Guardian: Affirmative.

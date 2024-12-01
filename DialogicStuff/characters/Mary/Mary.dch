@@ -8,34 +8,34 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "Rose_neutral",
+"default_portrait": "Mary_neutral",
 "description": "",
-"display_name": "Rose",
+"display_name": "Mary",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"Rose_Angry": {
+"Mary_happy": {
 "export_overrides": {
-"image": "\"res://DialogicStuff/characters/Rose_angry.png\""
+"image": "\"res://DialogicStuff/characters/Mary_happy.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
-"Rose_LookAside": {
+"Mary_neutral": {
 "export_overrides": {
-"image": "\"res://DialogicStuff/characters/Rose_LookAside.png\""
+"image": "\"res://DialogicStuff/characters/Mary.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
-"scale": 1,
+"scale": 1.0,
 "scene": ""
 },
-"Rose_neutral": {
+"Mary_serious": {
 "export_overrides": {
-"image": "\"res://DialogicStuff/characters/Rose.png\""
+"image": "\"res://DialogicStuff/characters/Mary_serious.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

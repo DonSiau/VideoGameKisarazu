@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://2um8bsmlgrux"]
+
+[ext_resource type="Script" path="res://scripts/enemies/spikes_Q_up.gd" id="1_d2sve"]
+[ext_resource type="Texture2D" uid="uid://djyir00wx1mpb" path="res://assets/sprites/spikes_A_up.png" id="2_iynv7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utoyj"]
+size = Vector2(5, 7.5)
+
+[node name="spike_glacier_up" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_d2sve")
+
+[node name="sprite2d" type="Sprite2D" parent="."]
+scale = Vector2(0.548194, 0.63536)
+texture = ExtResource("2_iynv7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_utoyj")

@@ -8,22 +8,12 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "Mary_neutral",
+"default_portrait": "",
 "description": "",
-"display_name": "Mary",
+"display_name": "Guardian",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
-"portraits": {
-"Mary_neutral": {
-"export_overrides": {
-"image": "\"res://DialogicStuff/characters/Mary.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1.0,
-"scene": ""
-}
-},
+"portraits": {},
 "scale": 1.0
 }

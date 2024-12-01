@@ -33,6 +33,8 @@ layout_mode = 2
 
 [node name="pause" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
 icon = ExtResource("2_t2bnd")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/pause" to="." method="_on_pause_pressed"]

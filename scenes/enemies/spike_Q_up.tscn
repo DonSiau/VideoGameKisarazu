@@ -1,11 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dq206ij6q4qn"]
+[gd_scene load_steps=4 format=3 uid="uid://dq206ij6q4qn"]
 
 [ext_resource type="Script" path="res://scripts/enemies/spikes_Q_up.gd" id="1_ukagm"]
 [ext_resource type="Texture2D" uid="uid://be54ni7btfurs" path="res://assets/sprites/spikes_Q_up.png" id="4_h7sas"]
-[ext_resource type="PackedScene" uid="uid://53kn0wf4gsk3" path="res://scenes/killzone.tscn" id="4_wf4dt"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yad8q"]
-size = Vector2(12, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_utoyj"]
 size = Vector2(14, 19)
@@ -18,14 +14,6 @@ script = ExtResource("1_ukagm")
 scale = Vector2(0.548194, 0.63536)
 texture = ExtResource("4_h7sas")
 
-[node name="killzone" parent="." instance=ExtResource("4_wf4dt")]
-
-[node name="killShape" type="CollisionShape2D" parent="killzone"]
-visible = false
-position = Vector2(0, 1.5)
-shape = SubResource("RectangleShape2D_yad8q")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_utoyj")

@@ -1,0 +1,27 @@
+[style name="visualNovelRose"]
+[background arg="res://DialogicStuff/laboratory.jpg" fade="0.0"]
+[wait time="2.0"]
+join Rose (Rose_Grin) left
+Rose: Well that was fun!
+join Mary (Mary_happy) right
+[style name="visualNovelMary"]
+Mary: Agreed.
+[style name="visualNovelRose"]
+Rose: Hehe, even you agree!
+[style name="visualNovelMary"]
+Mary (Mary_serious): Well now it's time to get serious. We need to figure out how to deal with the alien threat.
+[style name="visualNovelRose"]
+Rose (Rose_confused): Hmmm... any ideas?
+[style name="visualNovelMary"]
+Mary: None at the moment. We don't even know where these aliens come from, or how their portals work.
+[style name="visualNovelRose"]
+Rose (Rose_confused): Any ideas Guardian?
+[style name="visualNovel"]
+Guardian: I am sensing abnormal energy readings in a cave just 2 Kilometers north of here, A new portal might have popped up.
+[style name="visualNovelMary"]
+Mary: Thats where city X is.... I sense they are arming for an attack soon. We need to stop them
+[style name="visualNovelRose"]
+Rose (Rose_Grin): Well what are we waiting? let's go! 
+[style name="visualNovel"]
+Guardian: Affirmative.
+leave --All--

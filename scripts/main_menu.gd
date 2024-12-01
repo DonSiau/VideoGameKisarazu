@@ -22,3 +22,4 @@ func _on_exit_pressed() -> void:
 
 func _on_reset_pressed() -> void:
     SaveState.resetLevels()
+    SaveState.resetWeapons()
