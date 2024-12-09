@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://be81s6rmjein1" path="res://assets/sprites/grub_large_B.png" id="4_6i3hm"]
 [ext_resource type="Texture2D" uid="uid://30fjfbcef1un" path="res://assets/sprites/moon_muncher_A.png" id="5_67ddg"]
 [ext_resource type="PackedScene" uid="uid://53kn0wf4gsk3" path="res://scenes/killzone.tscn" id="5_j3bcr"]
-[ext_resource type="Script" path="res://scripts/damageable.gd" id="6_kuiwo"]
+[ext_resource type="PackedScene" uid="uid://c31mvjap8amod" path="res://scenes/enemies/damageable.tscn" id="8_74j8p"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h44qd"]
 resource_local_to_scene = true
@@ -491,9 +491,6 @@ target_position = Vector2(-9, 0)
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_utoyj")
 
-[node name="Damageable" type="Node" parent="."]
-script = ExtResource("6_kuiwo")
-
 [node name="RaycastDownRight" type="RayCast2D" parent="."]
 position = Vector2(20, 0)
 exclude_parent = false
@@ -513,5 +510,7 @@ root_node = NodePath("../AnimatedSprite2D")
 libraries = {
 "": SubResource("AnimationLibrary_rvweh")
 }
+
+[node name="Damageable" parent="." instance=ExtResource("8_74j8p")]
 
 [connection signal="timeout" from="attackTimer" to="." method="_on_attack_timer_timeout"]

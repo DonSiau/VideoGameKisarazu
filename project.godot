@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="KisarazuGame"
-run/main_scene="res://scenes/levels/level3.tscn"
+run/main_scene="res://scenes/cutscene/level3/level3_OutroCutscene.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="SaveSystem"
 config/features=PackedStringArray("4.3", "GL Compatibility")
@@ -22,11 +22,13 @@ config/icon="res://icon.svg"
 SaveState="*res://scripts/Save/save_state.gd"
 LevelState="*res://scripts/Save/level_state.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+SoundManager="*res://scripts/sound_manager.gd"
 
 [dialogic]
 
 directories/dch_directory={
 "Guardian": "res://DialogicStuff/characters/Guardian.dch",
+"HeartHoarder": "res://DialogicStuff/characters/HeartHoarder/HeartHoarder.dch",
 "Mary": "res://DialogicStuff/characters/Mary/Mary.dch",
 "Rose": "res://DialogicStuff/characters/Rose/Rose.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
@@ -38,7 +40,10 @@ directories/dtl_directory={
 "Level1Intro": "res://DialogicStuff/Cutscenes/Level1Intro.dtl",
 "Level2Intro": "res://DialogicStuff/Cutscenes/Level2Intro.dtl",
 "Level3Intro": "res://DialogicStuff/Cutscenes/Level3Intro.dtl",
+"Level3Outro": "res://DialogicStuff/Cutscenes/level3/Level3Outro.dtl",
+"Level4Intro": "res://DialogicStuff/Cutscenes/Level4Intro.dtl",
 "jumpTutorialDialogue_Lvl1": "res://DialogicStuff/Cutscenes/Level1/jumpTutorialDialogue_Lvl1.dtl",
+"level3IntroChat": "res://DialogicStuff/Cutscenes/level3/level3IntroChat.dtl",
 "moveTutorialDialogue_Lvl1": "res://DialogicStuff/Cutscenes/Level1/moveTutorialDialogue_Lvl1.dtl",
 "outro_Lvl1": "res://DialogicStuff/Cutscenes/Level1/outro_Lvl1.dtl",
 "outro_Lvl2": "res://DialogicStuff/Cutscenes/Level2/outro_Lvl2.dtl",
@@ -68,7 +73,7 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 variables={}
-layout/style_list=["res://DialogicStuff/styles/chatbox.tres", "res://DialogicStuff/styles/visualNovel.tres", "res://DialogicStuff/styles/VisualNovelRose.tres", "res://DialogicStuff/styles/VisualNovelMary.tres", "res://DialogicStuff/styles/chatboxRose.tres", "res://DialogicStuff/styles/chatboxMary.tres"]
+layout/style_list=["res://DialogicStuff/styles/chatbox.tres", "res://DialogicStuff/styles/visualNovel.tres", "res://DialogicStuff/styles/VisualNovelRose.tres", "res://DialogicStuff/styles/VisualNovelMary.tres", "res://DialogicStuff/styles/chatboxRose.tres", "res://DialogicStuff/styles/chatboxMary.tres", "res://DialogicStuff/styles/VisualNovelHeartHoarder.tres", "res://DialogicStuff/styles/chatboxHeartHoarder.tres"]
 layout/default_style="res://DialogicStuff/styles/chatbox.tres"
 glossary/default_case_sensitive=true
 

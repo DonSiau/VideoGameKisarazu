@@ -1,13 +1,16 @@
-[gd_scene load_steps=112 format=3 uid="uid://dql06euexqj2c"]
+[gd_scene load_steps=116 format=3 uid="uid://dql06euexqj2c"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_hs32l"]
 [ext_resource type="Texture2D" uid="uid://b8efk5tuswtnb" path="res://assets/sprites/Player Death 64x64.png" id="2_0usdg"]
 [ext_resource type="Texture2D" uid="uid://ck8jxnakygpom" path="res://assets/sprites/meter_center.png" id="2_bxle1"]
 [ext_resource type="Texture2D" uid="uid://c5jpkoaethiys" path="res://assets/sprites/player run 48x48.png" id="2_ehjfe"]
+[ext_resource type="AudioStream" uid="uid://iquptjockbx6" path="res://sfx/jump12.wav" id="2_n8dl2"]
 [ext_resource type="Texture2D" uid="uid://bq87ssfitnljg" path="res://assets/sprites/dash.png" id="2_tvydr"]
+[ext_resource type="AudioStream" uid="uid://byvulcs0ecwrw" path="res://sfx/damage3.wav" id="3_3beqt"]
 [ext_resource type="Texture2D" uid="uid://c7wkt6y3vs10g" path="res://assets/sprites/healthProgress.png" id="3_g4p05"]
 [ext_resource type="Texture2D" uid="uid://brf33bbgdueur" path="res://assets/sprites/Player Hurt 48x48.png" id="3_ir18o"]
 [ext_resource type="Texture2D" uid="uid://c7rt8n4rlmwdg" path="res://assets/sprites/meter_left.png" id="4_cy76p"]
+[ext_resource type="AudioStream" uid="uid://b5dmpkh67xh8o" path="res://sfx/gameover.wav" id="4_edr2i"]
 [ext_resource type="Texture2D" uid="uid://cexlwsexo3g5t" path="res://assets/sprites/lower_healthbar.png" id="5_4x7bq"]
 [ext_resource type="Texture2D" uid="uid://gnuu3emwhexb" path="res://assets/sprites/BulletAmmo.png" id="6_7hm07"]
 [ext_resource type="Texture2D" uid="uid://c0njmj0veisdj" path="res://assets/sprites/meter_center_Ammo.png" id="6_xrjh3"]
@@ -21,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://20cblvllf8he" path="res://assets/sprites/fall.png" id="12_lpdlf"]
 [ext_resource type="Script" path="res://scripts/sword.gd" id="13_s404n"]
 [ext_resource type="Texture2D" uid="uid://crjslmqyvq8b3" path="res://assets/sprites/Player Idle.png" id="14_1ct8p"]
+[ext_resource type="AudioStream" uid="uid://dsymjg1a77o3" path="res://sfx/sword12.wav" id="23_x3146"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n2dle"]
 
@@ -748,6 +752,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id="Animation_2uqcd"]
 resource_name = "idle"
 length = 0.9
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -804,6 +809,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id="Animation_hdlkl"]
 resource_name = "run"
 length = 0.7
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -910,6 +916,8 @@ size = Vector2(44, 26)
 collision_layer = 2
 script = ExtResource("1_hs32l")
 
+[node name="Audio" type="Node" parent="."]
+
 [node name="CanvasLayerHealth" type="CanvasLayer" parent="."]
 process_priority = 1
 
@@ -1011,6 +1019,10 @@ visible = false
 position = Vector2(20, -1)
 shape = SubResource("RectangleShape2D_b241h")
 
+[node name="AudioStreamPlayer2D_sword" type="AudioStreamPlayer2D" parent="sword"]
+stream = ExtResource("23_x3146")
+bus = &"SFX"
+
 [node name="projectile_barrel_Left" type="Marker2D" parent="."]
 position = Vector2(-14, -7)
 
@@ -1019,6 +1031,16 @@ position = Vector2(11, -7)
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(-1, 27)
+
+[node name="AudioStreamPlayer_Jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_n8dl2")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2D_hurt" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_3beqt")
+
+[node name="AudioStreamPlayer2D_die" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_edr2i")
 
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="body_entered" from="sword" to="sword" method="_on_body_entered"]

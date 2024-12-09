@@ -5,7 +5,7 @@
 [ext_resource type="Shader" path="res://shader/flashShader.gdshader" id="2_lovgq"]
 [ext_resource type="Texture2D" uid="uid://be81s6rmjein1" path="res://assets/sprites/grub_large_B.png" id="3_31orx"]
 [ext_resource type="PackedScene" uid="uid://53kn0wf4gsk3" path="res://scenes/killzone.tscn" id="4_svv35"]
-[ext_resource type="Script" path="res://scripts/damageable.gd" id="5_y3s3k"]
+[ext_resource type="PackedScene" uid="uid://c31mvjap8amod" path="res://scenes/enemies/damageable.tscn" id="6_tow6o"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_14unv"]
 resource_local_to_scene = true
@@ -340,9 +340,6 @@ target_position = Vector2(-9, 0)
 position = Vector2(-1, 0.5)
 shape = SubResource("RectangleShape2D_utoyj")
 
-[node name="Damageable" type="Node" parent="."]
-script = ExtResource("5_y3s3k")
-
 [node name="RaycastDownRight" type="RayCast2D" parent="."]
 position = Vector2(11, 0)
 exclude_parent = false
@@ -358,3 +355,5 @@ root_node = NodePath("../AnimatedSprite2D")
 libraries = {
 "": SubResource("AnimationLibrary_rvweh")
 }
+
+[node name="Damageable" parent="." instance=ExtResource("6_tow6o")]

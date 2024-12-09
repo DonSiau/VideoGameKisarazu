@@ -26,11 +26,11 @@ func _on_timeline_ended():
         get_tree().paused = false
         var levelNumber=int(str(get_parent().get_parent().name)[5])+1
         print(levelNumber)
-        if levelNumber < 4: #change values if there are more than 3 levels
+        if levelNumber < 5: #if there are currently 3 levels, value here is 4
          SaveState.levelUnlock(levelNumber)
          SaveState.load_game()
          get_tree().change_scene_to_file("res://scenes/menus/LevelPicker.tscn")
         else:
-         SaveState.levelUnlock(3) #change values if there are more than 3 levels
+         SaveState.levelUnlock(4) #if there are currently 3 levels, value here is 4
          SaveState.load_game()
          get_tree().change_scene_to_file("res://scenes/menus/LevelPicker.tscn")

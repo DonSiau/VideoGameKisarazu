@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="DialogicStyle" load_steps=18 format=3 uid="uid://dp08ec6th2tfw"]
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=19 format=3 uid="uid://dp08ec6th2tfw"]
 
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_6l45w"]
+[ext_resource type="PackedScene" uid="uid://cqpb3ie51rwl5" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn" id="1_j5drq"]
 [ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_pis4j"]
 [ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="3_cbph0"]
 [ext_resource type="PackedScene" uid="uid://by6waso0mjpjp" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/textbox_with_speaker_portrait.tscn" id="4_5xof6"]
@@ -12,6 +13,7 @@
 
 [sub_resource type="Resource" id="Resource_q30fm"]
 script = ExtResource("1_6l45w")
+scene = ExtResource("1_j5drq")
 overrides = {}
 
 [sub_resource type="Resource" id="Resource_1p858"]
@@ -70,4 +72,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_6l45w")]([])
-metadata/_latest_layer = "12"
+metadata/_latest_layer = "10"

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c31mvjap8amod"]
+
+[ext_resource type="Script" path="res://scripts/damageable.gd" id="1_a246e"]
+[ext_resource type="AudioStream" uid="uid://cgj4026y1e87v" path="res://sfx/damage6.wav" id="2_fwmoy"]
+
+[node name="Damageable" type="Node"]
+script = ExtResource("1_a246e")
+
+[node name="AudioStreamPlayer_Damaged" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_fwmoy")
+bus = &"SFX"

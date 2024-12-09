@@ -4,6 +4,7 @@ var save_dict={
     "level1Unlocked":false,
     "level2Unlocked":false,
     "level3Unlocked":false,
+    "level4Unlocked":false,
     "playerProjectileUnlocked":true,
     "playerProjectileBombUnlocked":false,
     "playerProjectileAreaBlastUnlocked":false

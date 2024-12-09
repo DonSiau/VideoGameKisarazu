@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhsqikqhngg0j"]
+
+[ext_resource type="AudioStream" uid="uid://cgj4026y1e87v" path="res://sfx/damage6.wav" id="1_wm7jl"]
+
+[node name="EnemyDamageAudio" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_wm7jl")

@@ -1,0 +1,156 @@
+[gd_scene load_steps=22 format=3 uid="uid://kcy6vxmsua5n"]
+
+[ext_resource type="Texture2D" uid="uid://dswp2ra2y4bww" path="res://assets/sprites/The Heart Hoarder Sprite sheet 222x119.png" id="1_amek0"]
+[ext_resource type="Script" path="res://scripts/enemies/heart_hoarder.gd" id="1_b3frn"]
+[ext_resource type="Shader" path="res://shader/flashShader.gdshader" id="2_yshei"]
+[ext_resource type="Script" path="res://scripts/damageable.gd" id="3_44k38"]
+[ext_resource type="PackedScene" uid="uid://53kn0wf4gsk3" path="res://scenes/killzone.tscn" id="4_a3utq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5oquy"]
+resource_local_to_scene = true
+shader = ExtResource("2_yshei")
+shader_parameter/active = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfhth"]
+atlas = ExtResource("1_amek0")
+region = Rect2(0, 0, 222, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enjrq"]
+atlas = ExtResource("1_amek0")
+region = Rect2(222, 0, 222, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vbio"]
+atlas = ExtResource("1_amek0")
+region = Rect2(444, 0, 222, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcir3"]
+atlas = ExtResource("1_amek0")
+region = Rect2(666, 0, 222, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3uan"]
+atlas = ExtResource("1_amek0")
+region = Rect2(888, 0, 222, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctrqt"]
+atlas = ExtResource("1_amek0")
+region = Rect2(1110, 0, 222, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcqix"]
+atlas = ExtResource("1_amek0")
+region = Rect2(1332, 0, 222, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qiybi"]
+atlas = ExtResource("1_amek0")
+region = Rect2(1554, 0, 222, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apmdg"]
+atlas = ExtResource("1_amek0")
+region = Rect2(1776, 0, 222, 119)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e3val"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfhth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enjrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vbio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcir3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3uan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctrqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcqix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qiybi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apmdg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddy8w"]
+size = Vector2(48, 57)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ip6vb"]
+size = Vector2(54, 59)
+
+[sub_resource type="Animation" id="Animation_lwra5"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_v4tw1"]
+resource_name = "flash"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oq54f"]
+_data = {
+"RESET": SubResource("Animation_lwra5"),
+"flash": SubResource("Animation_v4tw1")
+}
+
+[node name="HeartHoarder" type="CharacterBody2D"]
+material = SubResource("ShaderMaterial_5oquy")
+collision_layer = 2
+script = ExtResource("1_b3frn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+use_parent_material = true
+sprite_frames = SubResource("SpriteFrames_e3val")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.0957863
+
+[node name="damageable" type="Node" parent="."]
+script = ExtResource("3_44k38")
+
+[node name="killzone" parent="." instance=ExtResource("4_a3utq")]
+
+[node name="collisionKill" type="CollisionShape2D" parent="killzone"]
+position = Vector2(0, 29)
+shape = SubResource("RectangleShape2D_ddy8w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 29)
+shape = SubResource("RectangleShape2D_ip6vb")
+
+[node name="Flash" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_oq54f")
+}

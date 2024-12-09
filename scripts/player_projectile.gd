@@ -1,11 +1,15 @@
 extends Area2D
+
+@onready var audio_stream_player_2d_shoot: AudioStreamPlayer2D = $AudioStreamPlayer2D_Shoot
 @onready var projectile_timeout = $Projectile_timeout
 @export var damage: int = 1
+
 const MOVE_SPEED = 180
 var velocity = Vector2.ZERO
 
 func launch(direction: Vector2):
     velocity = direction
+    audio_stream_player_2d_shoot.play()
     $Projectile_timeout.start()
 
 

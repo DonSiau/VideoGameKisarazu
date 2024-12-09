@@ -1,0 +1,80 @@
+[style name="visualNovelRose"]
+join HeartHoarder center
+[wait time="1.0"]
+join Rose (Rose_Angry2) leftmost
+Rose: H..hey! Who are you!
+join Mary (Mary_serious) rightmost
+[style name="visualNovelMary"]
+Mary: Calm down rose.
+[style name="visualNovelRose"]
+Rose: He seems like the main baddie, what are your motivations?!
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: Hmm... my goal? to harvest your sick and twisted world.
+[style name="visualNovelRose"]
+Rose: Excuse me?! Who do you think you are, calling our world twisted?!
+[style name="visualNovelMary"]
+Mary: That's not true...
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: Such indignation, little ones. Your world thrives on conflict. Greed. Betrayal. It’s rotting from the inside out.
+[style name="visualNovelMary"]
+Mary: Even if what you said is true... How would this cruel invasion of yours solve anything?
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: Well... before i continue, let me introduce myself. I am what others call the "Heart Hoarder", although my real name, i do not remember.
+[style name="visualNovelRose"]
+Rose: Big surprise. Sounds like you’re all talk anyway.
+leave --All--
+[signal arg="cutscene1"]
+[style name="chatboxHeartHoarder"]
+HeartHoarder: Once, long ago, my home planet, Valeria, was a peaceful and humble planet.
+HeartHoarder: It was beautiful......
+[signal arg="cutscene2"]
+HeartHoarder: But trouble came in the form of invaders—foreign aliens who descended upon our lands, demanding our submission.
+[style name="chatboxMary"]
+Mary: And your people refused...
+[style name="chatboxHeartHoarder"]
+[signal arg="cutscene3"]
+HeartHoarder: Yes, and for that defiance, they unleashed their wrath. War swept across Valeria, consuming everything in its path. They slaughtered our people, burned our cities.
+HeartHoarder: ... and stole from me the two things I held most dear—my wife... and my child.
+[style name="chatboxMary"]
+Mary: So, you were a victim.
+[style name="chatboxRose"]
+Rose: Well that's no excuse for what you are doing!
+[style name="chatboxHeartHoarder"]
+[signal arg="cutscene4"]
+HeartHoarder: In those dark days, I was no warrior. I was a scientist, cowering in the shadows while the world crumbled around me.
+HeartHoarder: I was desperate, Desperate to build something—anything—that could save us.
+HeartHoarder: Then, I made my breakthrough. In my desperation, I uncovered a source of limitless power—an energy so vast it could have turned the tide of war.
+HeartHoarder: I discovered that the essence of the soul itself could be harvested... and the emotions tied to those souls could be transformed into pure, unyielding energy.
+[style name="chatboxRose"]
+Rose: You... harvested souls?! That’s monstrous!
+[style name="chatboxMary"]
+Mary: So you’re saying you turned your people into fuel? Is that how you won?
+[style name="chatboxHeartHoarder"]
+HeartHoarder: Do not misunderstand. It was a choice born of necessity. The enemy would have annihilated us if I had not acted.
+HeartHoarder: I created the first Heart Engine, a machine capable of converting emotions into energy. With its power, we turned the tide.
+[signal arg="cutscene5"]
+join HeartHoarder center
+join Rose leftmost
+join Mary rightmost
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: The invaders were driven back, and Valeria was saved.
+HeartHoarder: In the aftermath, we used the engine’s energy to rebuild what had been lost. We forged a utopia, powered by the very emotions of our people.
+[style name="visualNovelRose"]
+Rose: That doesn’t sound like it ended well...
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: You are correct. Over time, the energy reserves dwindled. The same emotions that fueled our prosperity waned....
+[style name="visualNovelMary"]
+Mary: So instead of fixing your own problems, you decided to take it out on others?
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: It was not a decision made lightly. But we faced a harsh truth. To preserve our way of life, the Heart Engine required souls.
+HeartHoarder: We resolved to act as arbiters of morality. Through the portals, we would seek out foreign worlds and judge their worth.
+HeartHoarder: Those we deemed virtuous, we left untouched. But for those we found corrupted, immoral, or dangerous...
+[style name="visualNovelMary"]
+Mary: You harvested them.
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: Yes. We intervened. The souls of such worlds were collected to fuel the Heart Engine, ensuring that their destruction served a greater purpose.
+[style name="visualNovelRose"]
+Rose: Well aren't you a hypocrite for invading our planet, the same way yours was? And who gave you the right to decide which worlds live and which die?!
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: It is not about right or wrong. It is about survival.
+HeartHoarder: I do not wish to speak to you. I shall leave now. You can follow me through this portal, although by the time you come out the other side, i'll be long gone.

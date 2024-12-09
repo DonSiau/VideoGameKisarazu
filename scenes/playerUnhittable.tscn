@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://de3s4oh31054a"]
+
+[ext_resource type="AudioStream" uid="uid://iquptjockbx6" path="res://sfx/jump12.wav" id="2_po07y"]
+[ext_resource type="AudioStream" uid="uid://byvulcs0ecwrw" path="res://sfx/damage3.wav" id="3_ek57k"]
+[ext_resource type="AudioStream" uid="uid://b5dmpkh67xh8o" path="res://sfx/gameover.wav" id="4_kytlt"]
+
+[node name="player" type="CharacterBody2D"]
+collision_layer = 2
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="AudioStreamPlayer_Jump" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("2_po07y")
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2D_hurt" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("3_ek57k")
+
+[node name="AudioStreamPlayer2D_die" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("4_kytlt")

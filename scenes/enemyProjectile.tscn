@@ -18,7 +18,7 @@ shape = SubResource("RectangleShape2D_drnpq")
 texture = ExtResource("2_ia2hf")
 
 [node name="Projectile_timeout" type="Timer" parent="."]
-wait_time = 0.9
+wait_time = 1.3
 one_shot = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

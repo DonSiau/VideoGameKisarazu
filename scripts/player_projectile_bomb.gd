@@ -1,14 +1,18 @@
 extends Area2D
 @onready var sprite =$Sprite2D
 @onready var projectile_timeout = $Projectile_timeout
+@onready var audio_stream_player_2d_shoot: AudioStreamPlayer2D = $AudioStreamPlayer2D_Shoot
 @export var damage: int = 3
+
 const MOVE_SPEED = 180
 var GRAVITY = 800
 var velocity = Vector2.ZERO
 
+
 @onready var kill_zone = $bombKillzone
 
 func launch(direction: Vector2):
+    audio_stream_player_2d_shoot.play()
     velocity.x = direction.x * MOVE_SPEED
     velocity.y = -170
     $Projectile_timeout.start()

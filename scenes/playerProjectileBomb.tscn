@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://bvvw8ik8r651m"]
+[gd_scene load_steps=19 format=3 uid="uid://bvvw8ik8r651m"]
 
 [ext_resource type="Script" path="res://scripts/player_projectile_bomb.gd" id="1_6cc35"]
 [ext_resource type="Texture2D" uid="uid://d0luq0a7ai2n1" path="res://assets/sprites/bomb.png" id="2_bu5th"]
 [ext_resource type="PackedScene" uid="uid://dx7ktrw7fgerr" path="res://scenes/Bombkillzone.tscn" id="3_hgdus"]
 [ext_resource type="Texture2D" uid="uid://dkk3ogxbpj1l" path="res://assets/sprites/bombExplosion.png" id="4_twmx3"]
+[ext_resource type="AudioStream" uid="uid://qc3r28b2d4p5" path="res://sfx/shoot5.wav" id="5_3djme"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drnpq"]
 size = Vector2(10, 12)
@@ -114,6 +115,9 @@ shape = SubResource("RectangleShape2D_pw067")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_djacr")
 animation = &"explosion"
+
+[node name="AudioStreamPlayer2D_Shoot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_3djme")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Projectile_timeout" to="." method="_on_projectile_timeout_timeout"]

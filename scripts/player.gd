@@ -10,6 +10,13 @@ extends CharacterBody2D
 @onready var weapon_select_instance = $"../CanvasLayer/WeaponSelect"
 @onready var world = get_tree().current_scene
 @onready var currentWeapon="projectile"
+
+#audio
+@onready var audio_stream_player_jump: AudioStreamPlayer2D = $AudioStreamPlayer_Jump
+@onready var audio_stream_player_2d_hurt: AudioStreamPlayer2D = $AudioStreamPlayer2D_hurt
+@onready var audio_stream_player_2d_die: AudioStreamPlayer2D = $AudioStreamPlayer2D_die
+
+
 const SPEED = 135.0
 const DASH_SPEED = 350
 const JUMP_VELOCITY = -290.0
@@ -52,8 +59,8 @@ func _ready():
     add_to_group("Player")
     set_healthBar()
     set_ammoBar()
-
-    global_position=LevelState.current_checkpoint
+    #comment out below to change spawn position
+    #global_position=LevelState.current_checkpoint
     projectileSelected = Projectile
 
 func decreaseAmmo(amount: int):
@@ -66,6 +73,7 @@ func gain_health(amount: int):
 func take_damage(amount: int):
     health -= amount
     set_healthBar()
+    audio_stream_player_2d_hurt.play()
     if health <= 0:
         die()
     else:
@@ -76,6 +84,7 @@ func take_damage(amount: int):
 func die():
     if not is_dead:
         is_dead = true
+        audio_stream_player_2d_die.play()
         update_animation()
 
 func update_animation():
@@ -108,6 +117,7 @@ func update_animation():
 func jump():
     if is_on_floor() or $RayCast2D.is_colliding():
         velocity.y = JUMP_VELOCITY
+        audio_stream_player_jump.play()
         is_jumping = true
     elif is_wall_sliding and Input.is_action_just_pressed("ui_select"):
         wall_jump()
@@ -115,6 +125,7 @@ func jump():
 func wall_jump():
     wall_jump_buffer = WALL_JUMP_BUFFER_TIME
     velocity.y = JUMP_VELOCITY * 0.8
+    audio_stream_player_jump.play()
     if sprite.flip_h:
         velocity.x = wall_jump_pushback
     else:

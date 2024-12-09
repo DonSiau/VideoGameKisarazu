@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/enemies/dummy.gd" id="1_38ic7"]
 [ext_resource type="Shader" path="res://shader/flashShader.gdshader" id="2_uxvyc"]
 [ext_resource type="Texture2D" uid="uid://c3r76qtitdcyk" path="res://assets/sprites/dummy.png" id="3_78xlf"]
-[ext_resource type="Script" path="res://scripts/damageable.gd" id="4_35mvu"]
+[ext_resource type="PackedScene" uid="uid://c31mvjap8amod" path="res://scenes/enemies/damageable.tscn" id="4_03xlw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7cppo"]
 resource_local_to_scene = true
@@ -71,5 +71,4 @@ advance_expression_base_node = NodePath("..")
 position = Vector2(0.5, 5.5)
 shape = SubResource("RectangleShape2D_f73pp")
 
-[node name="Damageable" type="Node" parent="."]
-script = ExtResource("4_35mvu")
+[node name="Damageable" parent="." instance=ExtResource("4_03xlw")]

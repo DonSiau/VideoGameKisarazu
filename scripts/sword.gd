@@ -1,5 +1,6 @@
 extends Area2D
 @export var damage : int=3
+@onready var audio_stream_player_2d_sword: AudioStreamPlayer2D = $AudioStreamPlayer2D_sword
 
 
 func _on_body_entered(body: Node2D) -> void:
@@ -14,6 +15,7 @@ func _on_body_entered(body: Node2D) -> void:
 
 func start_attack():
     monitoring = true  # Enable collision monitoring
+    audio_stream_player_2d_sword.play()
 
 
 func end_attack():

@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bhaqc1bdfgspk"]
+[gd_scene load_steps=8 format=3 uid="uid://bhaqc1bdfgspk"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_5xxb5"]
 [ext_resource type="Texture2D" uid="uid://cgd18rvjy4bl6" path="res://assets/sprites/area.png" id="2_kqtmf"]
 [ext_resource type="Texture2D" uid="uid://dcf1178stjbi3" path="res://assets/sprites/button_default.png" id="3_kxjyt"]
 [ext_resource type="Texture2D" uid="uid://3qq5yufbgop" path="res://assets/sprites/button_pressed.png" id="4_koxko"]
+[ext_resource type="AudioStream" uid="uid://ccwpi15toqxfc" path="res://sfx/MenuAccept.wav" id="5_8epia"]
 
 [sub_resource type="Theme" id="Theme_hye1y"]
 
@@ -109,6 +110,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 text = "Reset Game"
+
+[node name="AudioStreamPlayer2D_MenuAccept" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_8epia")
+volume_db = -10.0
+bus = &"SFX"
 
 [connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

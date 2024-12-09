@@ -8,7 +8,7 @@
 size = Vector2(39, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7suyk"]
-size = Vector2(36, 3)
+size = Vector2(36, 1.5)
 
 [node name="platformDown" type="AnimatableBody2D"]
 script = ExtResource("1_qf6gc")
@@ -39,13 +39,15 @@ one_way_collision = true
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0.5, 0)
+collision_mask = 2
 
 [node name="dropDetectorShape" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-0.5, -6.5)
+position = Vector2(-0.5, -7.25)
 shape = SubResource("RectangleShape2D_7suyk")
 
 [node name="dropTimer" type="Timer" parent="."]
 one_shot = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="dropTimer" to="." method="_on_drop_timer_timeout"]

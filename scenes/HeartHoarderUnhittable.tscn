@@ -1,0 +1,91 @@
+[gd_scene load_steps=14 format=3 uid="uid://vd1pa84likw2"]
+
+[ext_resource type="Shader" path="res://shader/flashShader.gdshader" id="1_yn4mk"]
+[ext_resource type="Texture2D" uid="uid://dswp2ra2y4bww" path="res://assets/sprites/The Heart Hoarder Sprite sheet 222x119.png" id="3_jcjcs"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5oquy"]
+resource_local_to_scene = true
+shader = ExtResource("1_yn4mk")
+shader_parameter/active = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfhth"]
+atlas = ExtResource("3_jcjcs")
+region = Rect2(0, 0, 222, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enjrq"]
+atlas = ExtResource("3_jcjcs")
+region = Rect2(222, 0, 222, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vbio"]
+atlas = ExtResource("3_jcjcs")
+region = Rect2(444, 0, 222, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcir3"]
+atlas = ExtResource("3_jcjcs")
+region = Rect2(666, 0, 222, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3uan"]
+atlas = ExtResource("3_jcjcs")
+region = Rect2(888, 0, 222, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctrqt"]
+atlas = ExtResource("3_jcjcs")
+region = Rect2(1110, 0, 222, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcqix"]
+atlas = ExtResource("3_jcjcs")
+region = Rect2(1332, 0, 222, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qiybi"]
+atlas = ExtResource("3_jcjcs")
+region = Rect2(1554, 0, 222, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apmdg"]
+atlas = ExtResource("3_jcjcs")
+region = Rect2(1776, 0, 222, 119)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e3val"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfhth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enjrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vbio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcir3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3uan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctrqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcqix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qiybi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apmdg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="HeartHoarder" type="CharacterBody2D"]
+material = SubResource("ShaderMaterial_5oquy")
+collision_layer = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+use_parent_material = true
+sprite_frames = SubResource("SpriteFrames_e3val")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.0957863
