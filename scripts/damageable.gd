@@ -21,14 +21,18 @@ func hit(damage: int):
          anim_player.play("flash")
          SoundManager.play_sound("death")
          parent.queue_free()
+        else:
+         parent.queue_free()
+
 
 func take_damage(damage: int):#not exactly sure if this code is relevant
 
     var parent = get_parent()
     parent.health -= damage
     print("eeh")
-    var anim_player = parent.get_node("AnimationPlayer")
-    anim_player.play("flash")
+    if parent.has_node("Flash"):
+     var anim_player = parent.get_node("AnimationPlayer")
+     anim_player.play("flash")
 
     if parent.health <= 0:
         print("Enemy is dead!")

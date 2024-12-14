@@ -22,6 +22,7 @@ func save_game():
 
 func load_game():
  if not FileAccess.file_exists("user://savegame.save"):
+    levelUnlock(1)
     return
  var save_game = FileAccess.open("user://savegame.save", FileAccess.READ)
  while save_game.get_position() < save_game.get_length():
@@ -34,7 +35,7 @@ func levelUnlock(level: int):
     save_dict["level" + str(level) + "Unlocked"] = true
     if level==2: #weapon unlocks depending on level
         weaponUnlock("playerProjectileAreaBlastUnlocked")
-    if level==3: #weapon unlocks depending on level
+    if level==4: #weapon unlocks depending on level
         weaponUnlock("playerProjectileBombUnlocked")
     save()
     save_game()

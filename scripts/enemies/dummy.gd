@@ -3,8 +3,4 @@ extends Node2D
 
 @export var health: float = 1
 func _ready() -> void:
- sprite_2d.scale = Vector2(1, 1)
- var shader_material = ShaderMaterial.new()
- shader_material.shader = preload("res://shader/flashShader.gdshader")
- shader_material.set_shader_parameter("active", false)
- sprite_2d.material = shader_material
+ pass;

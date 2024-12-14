@@ -22,57 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://d4jhvtmuokrj6" path="res://assets/sprites/heart.png" id="20_ge7no"]
 [ext_resource type="Texture2D" uid="uid://b8upokwolvh58" path="res://assets/sprites/cutsceneSprites/level3/wallCeiling.png" id="21_km4xv"]
 
-[sub_resource type="Animation" id="Animation_mhgah"]
-resource_name = "cutscene1"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Control/MarginContainer/Background:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_vhgwx")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Control/MarginContainer/Background:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(525.385, 295.385)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Control/MarginContainer/Background:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(3.28365, 3.07692)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Control/MarginContainer/cutscene1:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
 [sub_resource type="Animation" id="Animation_n6jrm"]
 length = 0.001
 tracks/0/type = "value"
@@ -266,6 +215,57 @@ tracks/15/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mhgah"]
+resource_name = "cutscene1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/MarginContainer/Background:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_vhgwx")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/MarginContainer/Background:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(525.385, 295.385)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control/MarginContainer/Background:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.28365, 3.07692)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/MarginContainer/cutscene1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_tdx4x"]
@@ -1604,6 +1604,7 @@ libraries = {
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
+anchors_preset = 0
 offset_right = 1366.0
 offset_bottom = 768.0
 grow_horizontal = 2
@@ -1634,7 +1635,7 @@ visible = false
 position = Vector2(183.077, 158.462)
 sprite_frames = SubResource("SpriteFrames_y7ksk")
 autoplay = "default"
-frame_progress = 0.911562
+frame_progress = 0.608226
 
 [node name="cutscene2" type="Node2D" parent="Control/MarginContainer"]
 visible = false
@@ -1706,7 +1707,7 @@ texture = ExtResource("11_xwn8l")
 position = Vector2(183.077, 158.462)
 sprite_frames = SubResource("SpriteFrames_y7ksk")
 autoplay = "default"
-frame_progress = 0.460446
+frame_progress = 0.157113
 
 [node name="cutscene3" type="Node2D" parent="Control/MarginContainer"]
 visible = false
@@ -1716,7 +1717,7 @@ position = Vector2(509.231, 280.769)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_rinkl")
 autoplay = "default"
-frame_progress = 0.815394
+frame_progress = 0.165422
 
 [node name="blueExplosion" type="AnimatedSprite2D" parent="Control/MarginContainer/cutscene3"]
 position = Vector2(409.231, 180.769)
@@ -1724,7 +1725,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_rtdk6")
 animation = &"blueDefault"
 autoplay = "blueDefault"
-frame_progress = 0.735227
+frame_progress = 0.218584
 
 [node name="blueExplosion2" type="AnimatedSprite2D" parent="Control/MarginContainer/cutscene3"]
 position = Vector2(647.692, 266.923)
@@ -1732,7 +1733,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_rtdk6")
 animation = &"blue3"
 autoplay = "blue2"
-frame_progress = 0.497254
+frame_progress = 0.98061
 
 [node name="blueExplosion3" type="AnimatedSprite2D" parent="Control/MarginContainer/cutscene3"]
 position = Vector2(409.231, 343.846)
@@ -1740,7 +1741,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_rtdk6")
 animation = &"blue3"
 autoplay = "blue3"
-frame_progress = 0.566819
+frame_progress = 0.0501748
 
 [node name="orangeExplosion" type="AnimatedSprite2D" parent="Control/MarginContainer/cutscene3"]
 position = Vector2(525.385, 391.538)
@@ -1748,7 +1749,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_rtdk6")
 animation = &"orange2"
 autoplay = "orange2"
-frame_progress = 0.556375
+frame_progress = 0.0397295
 
 [node name="orangeExplosion2" type="AnimatedSprite2D" parent="Control/MarginContainer/cutscene3"]
 position = Vector2(525.385, 159.231)
@@ -1756,7 +1757,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_rtdk6")
 animation = &"orange2"
 autoplay = "blue3"
-frame_progress = 0.692816
+frame_progress = 0.176175
 
 [node name="orangeExplosion3" type="AnimatedSprite2D" parent="Control/MarginContainer/cutscene3"]
 position = Vector2(477.692, 261.538)
@@ -1764,7 +1765,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_rtdk6")
 animation = &"orange3"
 autoplay = "orange3"
-frame_progress = 0.731589
+frame_progress = 0.214946
 
 [node name="ships" type="Node2D" parent="Control/MarginContainer/cutscene3"]
 

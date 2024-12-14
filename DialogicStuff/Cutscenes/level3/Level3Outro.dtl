@@ -20,8 +20,6 @@ HeartHoarder: Such indignation, little ones. Your world thrives on conflict. Gre
 Mary: Even if what you said is true... How would this cruel invasion of yours solve anything?
 [style name="VisualNovelHeartHoarder"]
 HeartHoarder: Well... before i continue, let me introduce myself. I am what others call the "Heart Hoarder", although my real name, i do not remember.
-[style name="visualNovelRose"]
-Rose: Big surprise. Sounds like you’re all talk anyway.
 leave --All--
 [signal arg="cutscene1"]
 [style name="chatboxHeartHoarder"]
@@ -53,10 +51,10 @@ Mary: So you’re saying you turned your people into fuel? Is that how you won?
 HeartHoarder: Do not misunderstand. It was a choice born of necessity. The enemy would have annihilated us if I had not acted.
 HeartHoarder: I created the first Heart Engine, a machine capable of converting emotions into energy. With its power, we turned the tide.
 [signal arg="cutscene5"]
+[style name="VisualNovelHeartHoarder"]
 join HeartHoarder center
 join Rose leftmost
 join Mary rightmost
-[style name="VisualNovelHeartHoarder"]
 HeartHoarder: The invaders were driven back, and Valeria was saved.
 HeartHoarder: In the aftermath, we used the engine’s energy to rebuild what had been lost. We forged a utopia, powered by the very emotions of our people.
 [style name="visualNovelRose"]
@@ -78,3 +76,9 @@ Rose: Well aren't you a hypocrite for invading our planet, the same way yours wa
 [style name="VisualNovelHeartHoarder"]
 HeartHoarder: It is not about right or wrong. It is about survival.
 HeartHoarder: I do not wish to speak to you. I shall leave now. You can follow me through this portal, although by the time you come out the other side, i'll be long gone.
+leave HeartHoarder [animation="Fade Out" wait="true"]
+[style name="visualNovelMary"]
+Mary: Let's follow him!
+[style name="visualNovelRose"]
+Let's go!
+leave --All-- [animation="Fade Out" wait="true"]

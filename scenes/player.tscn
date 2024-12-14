@@ -928,6 +928,7 @@ offset_right = 417.0
 offset_bottom = 288.0
 rotation = 1.5708
 max_value = 5.0
+step = 0.1
 value = 2.0
 nine_patch_stretch = true
 texture_under = ExtResource("2_bxle1")
@@ -1030,7 +1031,7 @@ position = Vector2(-14, -7)
 position = Vector2(11, -7)
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-target_position = Vector2(-1, 27)
+target_position = Vector2(-1, 21)
 
 [node name="AudioStreamPlayer_Jump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_n8dl2")
@@ -1042,5 +1043,15 @@ stream = ExtResource("3_3beqt")
 [node name="AudioStreamPlayer2D_die" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_edr2i")
 
+[node name="dash_reload" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="coyoteTime" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="body_entered" from="sword" to="sword" method="_on_body_entered"]
+[connection signal="timeout" from="dash_reload" to="." method="_on_dash_reload_timeout"]
+[connection signal="timeout" from="coyoteTime" to="." method="_on_coyote_time_timeout"]

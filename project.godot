@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="KisarazuGame"
-run/main_scene="res://scenes/cutscene/level3/level3_OutroCutscene.tscn"
+run/main_scene="res://scenes/levels/level2.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="SaveSystem"
 config/features=PackedStringArray("4.3", "GL Compatibility")
@@ -42,6 +42,8 @@ directories/dtl_directory={
 "Level3Intro": "res://DialogicStuff/Cutscenes/Level3Intro.dtl",
 "Level3Outro": "res://DialogicStuff/Cutscenes/level3/Level3Outro.dtl",
 "Level4Intro": "res://DialogicStuff/Cutscenes/Level4Intro.dtl",
+"Level4IntroChat": "res://DialogicStuff/Cutscenes/Level4/Level4IntroChat.dtl",
+"WallJumpSideToSideTutorialDialogue_Lvl1": "res://DialogicStuff/Cutscenes/Level1/WallJumpSideToSideTutorialDialogue_Lvl1.dtl",
 "jumpTutorialDialogue_Lvl1": "res://DialogicStuff/Cutscenes/Level1/jumpTutorialDialogue_Lvl1.dtl",
 "level3IntroChat": "res://DialogicStuff/Cutscenes/level3/level3IntroChat.dtl",
 "moveTutorialDialogue_Lvl1": "res://DialogicStuff/Cutscenes/Level1/moveTutorialDialogue_Lvl1.dtl",

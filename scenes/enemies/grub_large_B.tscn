@@ -343,12 +343,12 @@ shape = SubResource("RectangleShape2D_utoyj")
 [node name="RaycastDownRight" type="RayCast2D" parent="."]
 position = Vector2(11, 0)
 exclude_parent = false
-target_position = Vector2(0, 26)
+target_position = Vector2(0, 15)
 
 [node name="RaycastDownLeft" type="RayCast2D" parent="."]
 position = Vector2(-13, 0)
 exclude_parent = false
-target_position = Vector2(0, 25)
+target_position = Vector2(0, 15)
 
 [node name="Flash" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimatedSprite2D")

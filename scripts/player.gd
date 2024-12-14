@@ -10,22 +10,29 @@ extends CharacterBody2D
 @onready var weapon_select_instance = $"../CanvasLayer/WeaponSelect"
 @onready var world = get_tree().current_scene
 @onready var currentWeapon="projectile"
+@onready var dash_timer: Timer = $dash_timer
+@onready var dash_reload: Timer = $dash_reload
+@onready var coyote_time: Timer = $coyoteTime
 
 #audio
 @onready var audio_stream_player_jump: AudioStreamPlayer2D = $AudioStreamPlayer_Jump
 @onready var audio_stream_player_2d_hurt: AudioStreamPlayer2D = $AudioStreamPlayer2D_hurt
 @onready var audio_stream_player_2d_die: AudioStreamPlayer2D = $AudioStreamPlayer2D_die
 
-
-const SPEED = 135.0
+const GRAVITY=100
+const FALL_GRAVITY=150
+const SPEED = 145.0
 const DASH_SPEED = 350
-const JUMP_VELOCITY = -290.0
+const JUMP_VELOCITY = -300
 const wall_jump_pushback = 350
-const wallslide_friction = -800.0
+const wallslide_friction = -1200
 
 # State flags
+var is_depowered=false #for level 4. if depowered, player cannot attack or shoot
+var isCoyote=false
 var dash_direction = 0
 var is_dead = false
+var dashable=true
 var is_wall_sliding = false
 var is_dashing = false
 var is_swording = false
@@ -33,6 +40,9 @@ var is_running = false
 var is_falling = false
 var is_hurt = false
 var is_jumping = false
+var can_jump = true
+var is_jump_pressed = false
+var is_sneaking=false
 var wall_jump_buffer = 0.0
 const WALL_JUMP_BUFFER_TIME = 0.2
 
@@ -71,6 +81,7 @@ func gain_health(amount: int):
     set_healthBar()
 
 func take_damage(amount: int):
+   if not is_sneaking and not is_dead:
     health -= amount
     set_healthBar()
     audio_stream_player_2d_hurt.play()
@@ -86,6 +97,7 @@ func die():
         is_dead = true
         audio_stream_player_2d_die.play()
         update_animation()
+        await animated_sprite.animation_finished
 
 func update_animation():
     if is_dead:
@@ -115,16 +127,18 @@ func update_animation():
         animated_sprite.play("idle")
 
 func jump():
-    if is_on_floor() or $RayCast2D.is_colliding():
+    if (is_on_floor() or $RayCast2D.is_colliding()) and (can_jump) or (isCoyote):
         velocity.y = JUMP_VELOCITY
         audio_stream_player_jump.play()
         is_jumping = true
+        can_jump = false
+        is_jump_pressed = true
     elif is_wall_sliding and Input.is_action_just_pressed("ui_select"):
         wall_jump()
 
 func wall_jump():
     wall_jump_buffer = WALL_JUMP_BUFFER_TIME
-    velocity.y = JUMP_VELOCITY * 0.8
+    velocity.y = JUMP_VELOCITY * 0.85
     audio_stream_player_jump.play()
     if sprite.flip_h:
         velocity.x = wall_jump_pushback
@@ -149,6 +163,7 @@ func handle_wall_slide(delta):
         velocity.y = min(velocity.y, get_gravity().y)
 
 func handle_shoot():
+ if not is_depowered:
     var projectile
     if Input.is_action_just_pressed("q") and !is_swording and !is_hurt and !is_wall_sliding:
      projectile = projectileSelected.instantiate()
@@ -169,6 +184,7 @@ func handle_shoot():
           projectile.launch(direction)
 
 func handle_sword():
+  if not is_depowered:
     if Input.is_action_just_pressed("e") and !is_swording and !is_hurt:
         is_swording = true
         if sprite.flip_h:
@@ -181,20 +197,40 @@ func handle_sword():
         is_swording = false
 
 func _physics_process(delta: float) -> void:
+    print(is_sneaking)
     if is_dead:
         return
     is_running = false
     is_falling = false
+
+    if is_on_floor():
+        can_jump = true
+
     if not is_on_floor():
-        velocity += get_gravity() * delta
+        if is_jumping==false and not is_wall_sliding:
+         isCoyote=true
+         coyote_time.start()
+
+        if velocity.y<0:
+             velocity += get_gravity() * delta
+        else:
+            velocity += get_gravity()*1.5*delta
         if !$RayCast2D.is_colliding():
-         is_falling = true
+            is_falling = true
+
+    if Input.is_action_just_released("ui_select") and velocity.y < 0 and is_jump_pressed:
+        velocity.y = JUMP_VELOCITY / 4
+        is_jump_pressed = false
+
     if Input.is_action_just_pressed("ui_select"):
         jump()
 
     var direction := Input.get_axis("a", "d")
-    if Input.is_action_just_pressed("alt"):
+    if (Input.is_action_just_pressed("alt")) and (dashable==true):
         is_dashing = true
+        dashable=false
+        dash_reload.start()
+
         if direction != 0:
             dash_direction = direction
         else:
@@ -202,7 +238,7 @@ func _physics_process(delta: float) -> void:
                 dash_direction = -1
             else:
                 dash_direction = 1
-        $dash_timer.start()
+        dash_timer.start()
     if is_dashing:
         velocity.x = dash_direction * DASH_SPEED
     elif direction != 0:
@@ -222,3 +258,12 @@ func _physics_process(delta: float) -> void:
 
 func _on_dash_timer_timeout() -> void:
     is_dashing = false
+
+
+func _on_dash_reload_timeout() -> void:
+    dashable=true
+    print("yeah")
+
+
+func _on_coyote_time_timeout() -> void:
+    isCoyote=false
