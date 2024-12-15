@@ -80,7 +80,7 @@ func gain_health(amount: int):
     health += amount
     set_healthBar()
 
-func take_damage(amount: int):
+func take_damage(amount: float):
    if not is_sneaking and not is_dead:
     health -= amount
     set_healthBar()
@@ -197,7 +197,6 @@ func handle_sword():
         is_swording = false
 
 func _physics_process(delta: float) -> void:
-    print(is_sneaking)
     if is_dead:
         return
     is_running = false

@@ -9,7 +9,7 @@ func _on_body_entered(body: Node2D) -> void:
   if not body.is_dead:
     player_in_area=body
     inside_damage_zone=true
-    body.take_damage(0.1)
+    body.take_damage(0.25)
     print("player inside")
     player_in_area=body
     damage_again.start()
@@ -30,7 +30,7 @@ func _on_timer_timeout() -> void:
 func _on_damage_again_timeout() -> void:
 
     if inside_damage_zone==true:
-         player_in_area.take_damage(1)
+         player_in_area.take_damage(0.25)
          if player_in_area.health<= 0:
           damage_again.stop()
           timer.start()

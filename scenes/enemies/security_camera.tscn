@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/enemies/security_camera.gd" id="1_yfswc"]
 [ext_resource type="Texture2D" uid="uid://bmsthm1o5y5ph" path="res://assets/sprites/security_camera_base.png" id="2_kk5db"]
 [ext_resource type="Texture2D" uid="uid://cp0fdi0wlkn2i" path="res://assets/sprites/security_camera_ray.png" id="3_veiws"]
-[ext_resource type="PackedScene" uid="uid://cl88owhcrejwd" path="res://scenes/killzoneSecurityCamera.tscn" id="4_x8aiv"]
+[ext_resource type="PackedScene" uid="uid://cl88owhcrejwd" path="res://scenes/killzoneRay.tscn" id="4_x8aiv"]
 
 [node name="SecurityCamera" type="Node2D"]
 script = ExtResource("1_yfswc")
@@ -12,14 +12,14 @@ script = ExtResource("1_yfswc")
 position = Vector2(1, 0)
 texture = ExtResource("2_kk5db")
 
-[node name="Ray" type="Sprite2D" parent="SecurityCamera"]
-position = Vector2(-2, 54)
-texture = ExtResource("3_veiws")
-
 [node name="killzone" parent="." instance=ExtResource("4_x8aiv")]
 
 [node name="RayCollision" type="CollisionPolygon2D" parent="killzone"]
 polygon = PackedVector2Array(-2, 11, 1, 11, 39, 90, 39, 93, 33, 97, 18, 99, -19, 99, -28, 98, -34, 97, -40, 92, -40, 89)
+
+[node name="Ray" type="Sprite2D" parent="."]
+position = Vector2(-1, 54)
+texture = ExtResource("3_veiws")
 
 [connection signal="body_entered" from="killzone" to="." method="_on_killzone_body_entered"]
 [connection signal="body_exited" from="killzone" to="." method="_on_killzone_body_exited"]

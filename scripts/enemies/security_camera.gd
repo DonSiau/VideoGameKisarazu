@@ -1,7 +1,7 @@
 extends Node2D
 
 var inside_ray = false
-@onready var ray: Sprite2D = $SecurityCamera/Ray
+@onready var ray: Sprite2D = $Ray
 @onready var player = get_node("/root/level4/player")
 
 func _ready() -> void:

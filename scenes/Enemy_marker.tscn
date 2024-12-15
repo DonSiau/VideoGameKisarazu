@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpobbdpr4rprq"]
+
+[ext_resource type="Script" path="res://Scripts/enemies/enemy_marker.gd" id="1_eout7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sx5wt"]
+size = Vector2(4, 24)
+
+[node name="EnemyMarker" type="Area2D"]
+script = ExtResource("1_eout7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_sx5wt")

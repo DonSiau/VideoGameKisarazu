@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://cl88owhcrejwd"]
 
-[ext_resource type="Script" path="res://scripts/enemies/killzone_security_camera.gd" id="1_ydrlo"]
+[ext_resource type="Script" path="res://scripts/enemies/killzone_ray.gd" id="1_ydrlo"]
 
-[node name="killzoneSecurityCamera" type="Area2D"]
+[node name="killzoneRay" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_ydrlo")
 
