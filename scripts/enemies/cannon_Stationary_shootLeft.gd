@@ -5,7 +5,7 @@ var direction = 1
 @onready var projectile_barrel_Left = $projectile_barrel_Left
 @onready var Projectile = preload("res://scenes/enemyProjectile.tscn")
 @export var health: float = 9  # Health variable defined in the enemy node
-
+@onready var reload: Timer = $reload
 @onready var sprite2d: Sprite2D = $Sprite2D
 
 
