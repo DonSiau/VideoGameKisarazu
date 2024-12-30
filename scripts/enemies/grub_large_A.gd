@@ -1,6 +1,6 @@
 extends Node2D
 
-const SPEED = 40
+const SPEED = 50
 var direction = 1
 @export var health: float = 9  # Health variable defined in the enemy node
 
@@ -9,7 +9,7 @@ var direction = 1
 @onready var raycast_left: RayCast2D = $RaycastLeft
 @onready var raycast_down_right: RayCast2D = $RaycastDownRight
 @onready var raycast_down_left: RayCast2D = $RaycastDownLeft
-
+var enraged=false
 func _ready() -> void:
         animated_sprite_2d.scale = Vector2(1, 1)
         var shader_material = ShaderMaterial.new()
@@ -24,7 +24,6 @@ func _process(delta: float) -> void:
     elif raycast_left.is_colliding():
         direction = 1  # Change direction to right
         animated_sprite_2d.scale.x = 1  # Reset to normal orientation
-
     # Check for ledge detection
     if direction == 1 and not raycast_down_right.is_colliding():
         # If moving right and no ground below on the right side

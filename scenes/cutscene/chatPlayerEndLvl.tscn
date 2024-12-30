@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://otk441bt7vdm"]
+[gd_scene load_steps=3 format=3 uid="uid://c1eoli2mrccmy"]
 
 [ext_resource type="Script" path="res://scripts/cutscenes/chat_player_end_lvl.gd" id="1_kovr5"]
 

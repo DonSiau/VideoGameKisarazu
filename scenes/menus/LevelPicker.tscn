@@ -29,6 +29,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -70.0
+offset_bottom = 70.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -58,9 +60,12 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Quit_Main_Menu" type="TextureButton" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(256, 50)
 layout_mode = 2
 texture_normal = ExtResource("4_hw38w")
 texture_pressed = ExtResource("5_n75fp")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Quit_Main_Menu"]
 layout_mode = 1
@@ -75,13 +80,16 @@ offset_right = 23.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 30
 text = "Exit to Menu"
 
 [node name="Level1" type="TextureButton" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 texture_normal = ExtResource("6_tiil4")
 texture_pressed = ExtResource("7_y4ed2")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level1"]
 layout_mode = 1
@@ -96,14 +104,16 @@ offset_right = 23.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 30
 text = "Level 1"
 
 [node name="Level2" type="TextureButton" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
-visible = false
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 texture_normal = ExtResource("6_tiil4")
 texture_pressed = ExtResource("7_y4ed2")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level2"]
 layout_mode = 1
@@ -118,14 +128,16 @@ offset_right = 23.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 30
 text = "Level 2"
 
 [node name="Level3" type="TextureButton" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
-visible = false
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 texture_normal = ExtResource("6_tiil4")
 texture_pressed = ExtResource("7_y4ed2")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level3"]
 layout_mode = 1
@@ -140,15 +152,17 @@ offset_right = 23.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 30
 text = "Level 3
 "
 
 [node name="Level4" type="TextureButton" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
-visible = false
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 texture_normal = ExtResource("6_tiil4")
 texture_pressed = ExtResource("7_y4ed2")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level4"]
 layout_mode = 1
@@ -157,14 +171,39 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -23.0
-offset_top = -11.5
-offset_right = 23.0
-offset_bottom = 11.5
+offset_left = -50.0
+offset_top = -21.0
+offset_right = 50.0
+offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 30
 text = "Level 4
+"
+
+[node name="Level5" type="TextureButton" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+texture_normal = ExtResource("6_tiil4")
+texture_pressed = ExtResource("7_y4ed2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -21.0
+offset_right = 50.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Level 5
 "
 
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Quit_Main_Menu" to="." method="_on_quit_main_menu_pressed"]
@@ -172,3 +211,4 @@ text = "Level 4
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level5" to="." method="_on_level_5_pressed"]

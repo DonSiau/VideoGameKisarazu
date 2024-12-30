@@ -15,6 +15,10 @@ func hit(damage: int):
 
 
     if parent.health <= 0:
+        print(parent.name)
+        if parent.name=="Level4Boss":
+         var boss_anim_player = parent.get_parent().get_node("Level4BossFightInitator/AnimationPlayer")
+         boss_anim_player.play("boss_end")
         print("Enemy is dead!")
         if parent.has_node("Flash"):
          var anim_player = parent.get_node("Flash")
@@ -25,7 +29,7 @@ func hit(damage: int):
          parent.queue_free()
 
 
-func take_damage(damage: int):#not exactly sure if this code is relevant
+func take_damage(damage: int):#not used. do not delete for now
 
     var parent = get_parent()
     parent.health -= damage
@@ -36,4 +40,4 @@ func take_damage(damage: int):#not exactly sure if this code is relevant
 
     if parent.health <= 0:
         print("Enemy is dead!")
-        parent.queue_free()  # Remove the parent if health is 0 or less
+        parent.queue_free()

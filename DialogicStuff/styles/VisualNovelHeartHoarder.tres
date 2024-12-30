@@ -34,10 +34,18 @@ overrides = {}
 script = ExtResource("1_k5cmo")
 scene = ExtResource("5_t7gkc")
 overrides = {
+"box_margin_bottom": "10.0",
+"box_size": "Vector2(300, 75)",
+"name_label_box_offset": "Vector2(0, 10)",
 "name_label_custom_color": "Color(0.611765, 0, 0, 1)",
+"name_label_custom_font_size": "12.0",
 "name_label_use_global_color": "false",
+"name_label_use_global_font_size": "false",
+"next_indicator_size": "Vector2(10, 10)",
 "text_custom_color": "Color(0.613281, 0, 0, 1)",
-"text_use_global_color": "false"
+"text_size": "10.0",
+"text_use_global_color": "false",
+"text_use_global_size": "false"
 }
 
 [sub_resource type="Resource" id="Resource_f2v5n"]

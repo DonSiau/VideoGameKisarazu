@@ -3,6 +3,7 @@ extends Control
 @onready var level2=$MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level2
 @onready var level3=$MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level3
 @onready var level4=$MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level4
+@onready var level5=$MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level5
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
     LevelState.reset_checkpoint()
@@ -26,8 +27,10 @@ func _ready() -> void:
         level4.visible=true
     else:
         level4.visible=false
-
-
+    if SaveState.save_dict["level5Unlocked"]:
+        level5.visible=true
+    else:
+        level5.visible=false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -58,3 +61,8 @@ func _on_level_3_pressed() -> void:
 func _on_level_4_pressed() -> void:
     SoundManager.play_sound("menuAccept",-20)
     get_tree().change_scene_to_file("res://scenes/cutscene/level4/level4_IntroCutscene.tscn")
+
+
+func _on_level_5_pressed() -> void:
+        SoundManager.play_sound("menuAccept",-20)
+        get_tree().change_scene_to_file("res://scenes/cutscene/level5/level5_IntroCutscene.tscn")

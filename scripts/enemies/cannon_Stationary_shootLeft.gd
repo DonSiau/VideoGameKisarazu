@@ -1,7 +1,7 @@
 extends Node2D
 
 const SPEED = 40
-var direction = 1
+@export var direction = 1
 @onready var projectile_barrel_Left = $projectile_barrel_Left
 @onready var Projectile = preload("res://scenes/enemyProjectile.tscn")
 @export var health: float = 9  # Health variable defined in the enemy node

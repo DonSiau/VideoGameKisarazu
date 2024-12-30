@@ -920,12 +920,14 @@ script = ExtResource("1_hs32l")
 
 [node name="CanvasLayerHealth" type="CanvasLayer" parent="."]
 process_priority = 1
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
 
 [node name="HealthBar" type="TextureProgressBar" parent="CanvasLayerHealth"]
-offset_left = 117.0
-offset_top = 220.0
-offset_right = 417.0
-offset_bottom = 288.0
+offset_left = 102.001
+offset_top = 142.0
+offset_right = 402.001
+offset_bottom = 210.0
 rotation = 1.5708
 max_value = 5.0
 step = 0.25
@@ -936,19 +938,19 @@ texture_progress = ExtResource("3_g4p05")
 metadata/_edit_use_anchors_ = true
 
 [node name="upperHealthBar" type="TextureRect" parent="CanvasLayerHealth"]
-offset_left = 117.0
-offset_top = 111.0
-offset_right = 245.0
-offset_bottom = 179.0
+offset_left = 102.0
+offset_top = 32.0
+offset_right = 230.0
+offset_bottom = 100.0
 rotation = 1.5708
 texture = ExtResource("4_cy76p")
 metadata/_edit_use_anchors_ = true
 
 [node name="LowerHealthBar" type="TextureRect" parent="CanvasLayerHealth"]
-offset_left = 117.0
-offset_top = 519.0
-offset_right = 213.0
-offset_bottom = 587.0
+offset_left = 102.001
+offset_top = 441.0
+offset_right = 198.001
+offset_bottom = 509.0
 rotation = 1.5708
 texture = ExtResource("5_4x7bq")
 flip_v = true
@@ -956,12 +958,14 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayerAmmo" type="CanvasLayer" parent="."]
 process_priority = 1
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
 
 [node name="AmmoBar" type="TextureProgressBar" parent="CanvasLayerAmmo"]
-offset_left = 200.0
-offset_top = 220.0
-offset_right = 500.0
-offset_bottom = 288.0
+offset_left = 185.001
+offset_top = 142.0
+offset_right = 485.001
+offset_bottom = 210.0
 rotation = 1.5708
 max_value = 10.0
 value = 2.0
@@ -971,20 +975,20 @@ texture_progress = ExtResource("6_7hm07")
 metadata/_edit_use_anchors_ = true
 
 [node name="upperAmmoBar" type="TextureRect" parent="CanvasLayerAmmo"]
-offset_left = 200.0
-offset_top = 111.0
-offset_right = 328.0
-offset_bottom = 179.0
+offset_left = 185.0
+offset_top = 32.0
+offset_right = 313.0
+offset_bottom = 100.0
 rotation = 1.5708
 texture = ExtResource("8_hqtd4")
 flip_v = true
 metadata/_edit_use_anchors_ = true
 
 [node name="LowerAmmoBar" type="TextureRect" parent="CanvasLayerAmmo"]
-offset_left = 200.0
-offset_top = 519.0
-offset_right = 296.0
-offset_bottom = 587.0
+offset_left = 185.001
+offset_top = 441.0
+offset_right = 281.001
+offset_bottom = 509.0
 rotation = 1.5708
 texture = ExtResource("9_likt2")
 metadata/_edit_use_anchors_ = true
@@ -1004,7 +1008,9 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
+shape = SubResource("CapsuleShape2D_t0378")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_t0378")
 
 [node name="dash_timer" type="Timer" parent="."]

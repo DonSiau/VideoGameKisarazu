@@ -30,10 +30,15 @@ overrides = {}
 script = ExtResource("1_6l45w")
 scene = ExtResource("4_5xof6")
 overrides = {
+"box_size": "Vector2(300, 100)",
 "name_label_color_mode": "2",
 "name_label_custom_color": "Color(0, 0.854902, 0.854902, 1)",
+"name_label_custom_size": "12.0",
+"name_label_use_global_size": "false",
 "text_custom_color": "Color(0, 0.854902, 0.854902, 1)",
-"text_use_global_color": "false"
+"text_custom_size": "10.0",
+"text_use_global_color": "false",
+"text_use_global_size": "false"
 }
 
 [sub_resource type="Resource" id="Resource_7vdvw"]
@@ -72,4 +77,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_6l45w")]([])
-metadata/_latest_layer = "10"
+metadata/_latest_layer = "12"

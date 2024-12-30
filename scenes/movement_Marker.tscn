@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwe2kgedyj7s"]
+
+[ext_resource type="Script" path="res://scripts/movement_marker.gd" id="1_163mp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sx5wt"]
+size = Vector2(4, 24)
+
+[node name="MovementMarker" type="Area2D"]
+script = ExtResource("1_163mp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_sx5wt")

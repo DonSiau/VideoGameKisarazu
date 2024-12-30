@@ -26,6 +26,7 @@ const DASH_SPEED = 350
 const JUMP_VELOCITY = -300
 const wall_jump_pushback = 350
 const wallslide_friction = -1200
+const WALL_SLIDE_SPEED =30
 
 # State flags
 var is_depowered=false #for level 4. if depowered, player cannot attack or shoot
@@ -98,6 +99,7 @@ func die():
         audio_stream_player_2d_die.play()
         update_animation()
         await animated_sprite.animation_finished
+        get_tree().reload_current_scene()
 
 func update_animation():
     if is_dead:
@@ -159,8 +161,8 @@ func handle_wall_slide(delta):
                 is_wall_sliding = true
 
     if is_wall_sliding and velocity.y > 0:
-        velocity.y += (wallslide_friction * delta)
-        velocity.y = min(velocity.y, get_gravity().y)
+        velocity.y = WALL_SLIDE_SPEED
+
 
 func handle_shoot():
  if not is_depowered:

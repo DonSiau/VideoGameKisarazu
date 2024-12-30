@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://cob8eb3ws5nxe"]
+
+[ext_resource type="Script" path="res://scripts/enemies/level_4_boss_phase_1_projectile.gd" id="1_gvjh8"]
+[ext_resource type="Texture2D" uid="uid://uhru8ptsiml6" path="res://assets/sprites/level4BossProjectile.png" id="3_oj8xn"]
+[ext_resource type="PackedScene" uid="uid://53kn0wf4gsk3" path="res://scenes/killzone.tscn" id="7_mgnii"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5n4y"]
+atlas = ExtResource("3_oj8xn")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3b6t"]
+atlas = ExtResource("3_oj8xn")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aj74y"]
+atlas = ExtResource("3_oj8xn")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egnxp"]
+atlas = ExtResource("3_oj8xn")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_exme0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a5n4y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3b6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aj74y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_egnxp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yad8q"]
+size = Vector2(14, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utoyj"]
+size = Vector2(11, 10)
+
+[node name="Level4BossPhase1Projectile" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_gvjh8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_exme0")
+autoplay = "default"
+frame_progress = 0.849827
+
+[node name="killzone" parent="." instance=ExtResource("7_mgnii")]
+
+[node name="killShape" type="CollisionShape2D" parent="killzone"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_yad8q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_utoyj")
+
+[node name="ExpireProjectile" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[connection signal="body_entered" from="killzone" to="." method="_on_killzone_body_entered"]
+[connection signal="timeout" from="ExpireProjectile" to="." method="_on_expire_projectile_timeout"]

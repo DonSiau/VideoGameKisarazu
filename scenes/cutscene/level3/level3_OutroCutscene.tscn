@@ -27,55 +27,55 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/MarginContainer/Background:texture")
+tracks/0/path = NodePath("Control/MarginContainer/background:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("2_gebpq")]
+"values": [ExtResource("2_gebpq"), ExtResource("2_gebpq")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Control/MarginContainer/Background:scale")
+tracks/1/path = NodePath("Control/MarginContainer/cutscene1:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.229476, 0.225829)]
+"update": 1,
+"values": [false]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Control/MarginContainer/Background:position")
+tracks/2/path = NodePath("Control/MarginContainer/cutscene2:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(525.385, 295.385)]
+"update": 1,
+"values": [false]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Control/MarginContainer/cutscene1:visible")
+tracks/3/path = NodePath("Control/MarginContainer/cutscene2/ships:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Vector2(0, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Control/MarginContainer/cutscene2:visible")
+tracks/4/path = NodePath("Control/MarginContainer/cutscene3:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -87,91 +87,91 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Control/MarginContainer/cutscene2/ships:position")
+tracks/5/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-Scout-Base2:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(477.692, 657.692)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Control/MarginContainer/cutscene3:visible")
+tracks/6/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-SupportShip-Base:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Vector2(590, 626.923)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-Scout-Base2:position")
+tracks/7/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-Scout-Base:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(477.692, 657.692)]
+"values": [Vector2(373.077, 613.846)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-SupportShip-Base:position")
+tracks/8/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-Battlecruiser-Base:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(590, 626.923)]
+"values": [Vector2(615.385, 657.692)]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-Scout-Base:position")
+tracks/9/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-TorpedoShip-Base:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(373.077, 613.846)]
+"values": [Vector2(647.692, 626.923)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-Battlecruiser-Base:position")
+tracks/10/path = NodePath("Control/MarginContainer/cutscene4:visible")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(615.385, 657.692)]
+"update": 1,
+"values": [false]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-TorpedoShip-Base:position")
+tracks/11/path = NodePath("Control/MarginContainer/cutscene4/Camera2D:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(647.692, 626.923)]
+"values": [Vector2(145.385, 220.769)]
 }
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("Control/MarginContainer/cutscene4:visible")
+tracks/12/path = NodePath("Control/MarginContainer/cutscene4/Camera2D:enabled")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -183,38 +183,50 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("Control/MarginContainer/cutscene4/Camera2D:position")
+tracks/13/path = NodePath("Control/MarginContainer/cutscene2:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(145.385, 220.769)]
+"values": [Vector2(0, 0)]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("Control/MarginContainer/cutscene4/Camera2D:enabled")
+tracks/14/path = NodePath("Control/MarginContainer/cutscene3/ships:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Vector2(0, 0)]
 }
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("Control/MarginContainer/cutscene2:position")
+tracks/15/path = NodePath("Control/MarginContainer/background:position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(246.154, 138.462)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Control/MarginContainer/background:scale")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.13, 0.127)]
 }
 
 [sub_resource type="Animation" id="Animation_mhgah"]
@@ -222,7 +234,7 @@ resource_name = "cutscene1"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/MarginContainer/Background:texture")
+tracks/0/path = NodePath("Control/MarginContainer/background:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -234,43 +246,43 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Control/MarginContainer/Background:position")
+tracks/1/path = NodePath("Control/MarginContainer/cutscene1:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(525.385, 295.385)]
+"update": 1,
+"values": [true]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Control/MarginContainer/Background:scale")
+tracks/2/path = NodePath("Control/MarginContainer/background:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0.0333333),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(3.28365, 3.07692)]
+"values": [Vector2(290, 174.231)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Control/MarginContainer/cutscene1:visible")
+tracks/3/path = NodePath("Control/MarginContainer/background:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"update": 0,
+"values": [Vector2(1.927, 1.807)]
 }
 
 [sub_resource type="Animation" id="Animation_tdx4x"]
 resource_name = "cutscene2"
-length = 10.0
+length = 6.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -286,7 +298,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Control/MarginContainer/Background:texture")
+tracks/1/path = NodePath("Control/MarginContainer/background:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -298,38 +310,38 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Control/MarginContainer/Background:position")
+tracks/2/path = NodePath("Control/MarginContainer/cutscene2/ships:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(-0.0333333, 6),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(525.385, 295.385)]
+"values": [Vector2(-100, -330), Vector2(-100, -430)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Control/MarginContainer/Background:scale")
+tracks/3/path = NodePath("Control/MarginContainer/background:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(3.28365, 3.07692)]
+"values": [Vector2(290, 174.231)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Control/MarginContainer/cutscene2/ships:position")
+tracks/4/path = NodePath("Control/MarginContainer/background:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 10),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, -300)]
+"values": [Vector2(1.927, 1.807)]
 }
 
 [sub_resource type="Animation" id="Animation_fxaao"]
@@ -339,7 +351,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/MarginContainer/Background:texture")
+tracks/0/path = NodePath("Control/MarginContainer/background:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -351,122 +363,134 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Control/MarginContainer/Background:position")
+tracks/1/path = NodePath("Control/MarginContainer/cutscene3:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(525.385, 295.385)]
+"update": 1,
+"values": [true]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Control/MarginContainer/Background:scale")
+tracks/2/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-Scout-Base2:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(3.28365, 3.07692)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Control/MarginContainer/cutscene3:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-Scout-Base2:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "times": PackedFloat32Array(0, 6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(477.692, 657.692), Vector2(477.692, -273.077)]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-SupportShip-Base:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = false
-tracks/5/keys = {
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-SupportShip-Base:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = false
+tracks/3/keys = {
 "times": PackedFloat32Array(2.9, 6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(590, 626.923), Vector2(709.231, -73.8462)]
 }
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-Scout-Base:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = false
-tracks/6/keys = {
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-Scout-Base:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = false
+tracks/4/keys = {
 "times": PackedFloat32Array(1.6, 6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(373.077, 613.846), Vector2(647.692, -375.385)]
 }
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-Battlecruiser-Base:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-Battlecruiser-Base:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
 "times": PackedFloat32Array(0, 6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(615.385, 657.692), Vector2(550, -60.7693)]
 }
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-TorpedoShip-Base:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = false
-tracks/8/keys = {
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Control/MarginContainer/cutscene3/ships/Nairan-TorpedoShip-Base:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = false
+tracks/6/keys = {
 "times": PackedFloat32Array(4, 6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(373.077, 626.923), Vector2(401.538, -41.5385)]
 }
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Control/MarginContainer/cutscene2:visible")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Control/MarginContainer/cutscene2:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Control/MarginContainer/cutscene1:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Control/MarginContainer/cutscene3/ships:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-300, -30)]
+}
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Control/MarginContainer/cutscene1:visible")
+tracks/10/path = NodePath("Control/MarginContainer/background:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Vector2(290, 174.231)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Control/MarginContainer/background:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.927, 1.807)]
 }
 
 [sub_resource type="Animation" id="Animation_ijsv3"]
@@ -574,7 +598,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Control/MarginContainer/Background:texture")
+tracks/4/path = NodePath("Control/MarginContainer/background:texture")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -586,26 +610,26 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Control/MarginContainer/Background:position")
+tracks/5/path = NodePath("Control/MarginContainer/background:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(525.385, 295.385)]
+"values": [Vector2(246.154, 138.462)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Control/MarginContainer/Background:scale")
+tracks/6/path = NodePath("Control/MarginContainer/background:scale")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.229476, 0.225829)]
+"values": [Vector2(0.129, 0.127)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -1605,27 +1629,25 @@ libraries = {
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1366.0
-offset_bottom = 768.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 640.0
+offset_bottom = 360.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="Control"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -315.0
-offset_bottom = -177.0
+offset_right = -147.7
+offset_bottom = -83.07
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.3, 1.3)
 
-[node name="Background" type="Sprite2D" parent="Control/MarginContainer"]
-position = Vector2(525.385, 295.385)
-scale = Vector2(0.229476, 0.225829)
+[node name="background" type="Sprite2D" parent="Control/MarginContainer"]
+position = Vector2(246.154, 138.462)
+scale = Vector2(0.13, 0.127)
 texture = ExtResource("2_gebpq")
 
 [node name="cutscene1" type="Node2D" parent="Control/MarginContainer"]
@@ -1713,59 +1735,59 @@ frame_progress = 0.157113
 visible = false
 
 [node name="planetBig" type="AnimatedSprite2D" parent="Control/MarginContainer/cutscene3"]
-position = Vector2(509.231, 280.769)
-scale = Vector2(4, 4)
+position = Vector2(245.385, 156.154)
+scale = Vector2(2, 2.098)
 sprite_frames = SubResource("SpriteFrames_rinkl")
 autoplay = "default"
-frame_progress = 0.165422
+frame_progress = 0.775664
 
 [node name="blueExplosion" type="AnimatedSprite2D" parent="Control/MarginContainer/cutscene3"]
-position = Vector2(409.231, 180.769)
+position = Vector2(271.538, 159.231)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_rtdk6")
 animation = &"blueDefault"
 autoplay = "blueDefault"
-frame_progress = 0.218584
+frame_progress = 0.568311
 
 [node name="blueExplosion2" type="AnimatedSprite2D" parent="Control/MarginContainer/cutscene3"]
-position = Vector2(647.692, 266.923)
+position = Vector2(261.538, 91.5385)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_rtdk6")
 animation = &"blue3"
 autoplay = "blue2"
-frame_progress = 0.98061
+frame_progress = 0.727248
 
 [node name="blueExplosion3" type="AnimatedSprite2D" parent="Control/MarginContainer/cutscene3"]
-position = Vector2(409.231, 343.846)
+position = Vector2(245.385, 211.538)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_rtdk6")
 animation = &"blue3"
 autoplay = "blue3"
-frame_progress = 0.0501748
+frame_progress = 0.374162
 
 [node name="orangeExplosion" type="AnimatedSprite2D" parent="Control/MarginContainer/cutscene3"]
-position = Vector2(525.385, 391.538)
+position = Vector2(223.846, 111.538)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_rtdk6")
 animation = &"orange2"
 autoplay = "orange2"
-frame_progress = 0.0397295
+frame_progress = 0.155514
 
 [node name="orangeExplosion2" type="AnimatedSprite2D" parent="Control/MarginContainer/cutscene3"]
-position = Vector2(525.385, 159.231)
+position = Vector2(309.231, 126.154)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_rtdk6")
 animation = &"orange2"
 autoplay = "blue3"
-frame_progress = 0.176175
+frame_progress = 0.246682
 
 [node name="orangeExplosion3" type="AnimatedSprite2D" parent="Control/MarginContainer/cutscene3"]
-position = Vector2(477.692, 261.538)
+position = Vector2(203.846, 173.846)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_rtdk6")
 animation = &"orange3"
 autoplay = "orange3"
-frame_progress = 0.214946
+frame_progress = 0.776074
 
 [node name="ships" type="Node2D" parent="Control/MarginContainer/cutscene3"]
 

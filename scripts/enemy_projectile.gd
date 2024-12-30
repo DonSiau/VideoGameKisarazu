@@ -29,5 +29,4 @@ func _on_projectile_timeout_timeout() -> void:
         queue_free()
 
 func _on_death_timer_timeout() -> void:
-    print("test")
     get_tree().reload_current_scene()

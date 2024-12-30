@@ -1,0 +1,138 @@
+[gd_scene load_steps=21 format=3 uid="uid://jrqqyfoad5kp"]
+
+[ext_resource type="Script" path="res://scripts/enemy_projectile.gd" id="1_bsj8p"]
+[ext_resource type="Texture2D" uid="uid://dso4fcuwxbh48" path="res://assets/sprites/level4BossPhase2Projectile.png" id="2_4uufm"]
+[ext_resource type="PackedScene" uid="uid://53kn0wf4gsk3" path="res://scenes/killzone.tscn" id="3_1xdev"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cionn"]
+atlas = ExtResource("2_4uufm")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_370no"]
+atlas = ExtResource("2_4uufm")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqr3b"]
+atlas = ExtResource("2_4uufm")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffe6x"]
+atlas = ExtResource("2_4uufm")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_palud"]
+atlas = ExtResource("2_4uufm")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y36j1"]
+atlas = ExtResource("2_4uufm")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nixdu"]
+atlas = ExtResource("2_4uufm")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qlgo"]
+atlas = ExtResource("2_4uufm")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0lgu"]
+atlas = ExtResource("2_4uufm")
+region = Rect2(192, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hjbe"]
+atlas = ExtResource("2_4uufm")
+region = Rect2(216, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcxlu"]
+atlas = ExtResource("2_4uufm")
+region = Rect2(240, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sn13u"]
+atlas = ExtResource("2_4uufm")
+region = Rect2(264, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nha3y"]
+atlas = ExtResource("2_4uufm")
+region = Rect2(288, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kuo0"]
+atlas = ExtResource("2_4uufm")
+region = Rect2(312, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_exme0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cionn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_370no")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqr3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffe6x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_palud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y36j1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nixdu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qlgo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0lgu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hjbe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcxlu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sn13u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nha3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kuo0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yad8q"]
+size = Vector2(17, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utoyj"]
+size = Vector2(18, 10)
+
+[node name="Level4BossPhase2Projectile" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_bsj8p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_exme0")
+autoplay = "default"
+frame_progress = 0.551651
+
+[node name="killzone" parent="." instance=ExtResource("3_1xdev")]
+
+[node name="killShape" type="CollisionShape2D" parent="killzone"]
+shape = SubResource("RectangleShape2D_yad8q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_utoyj")
+
+[node name="Projectile_timeout" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true

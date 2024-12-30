@@ -7,21 +7,19 @@ join Mary right
 Mary: Guardian, what do you think about the guy we just met?
 [style name="visualNovel"]
 Guardian: He seems misguided, we must stop him, that is our mission.
+[style name="visualNovelMary"]
 Mary (Mary_serious): Agreed.
 [style name="visualNovelRose"]
 Rose: so... What now?
 [style name="visualNovel"]
-Guardian: He seems misguided, we must stop him, and i have a plan.
+Guardian: I have a plan.
 [style name="visualNovelRose"]
 Rose: a plan?
 [style name="visualNovel"]
-Guardian: These heart engines of his, i can sense their energy. There are multiple engines all over cyberion. I have scanned through the internet, and the portals all seem to be concentrated here
+Guardian: The heart engines of his, i can sense their energy. Infact, some of them are within cyberion. We need to destroy them.
 [style name="visualNovelMary"]
-Mary: That means they're targeting our country first before launching a global invasion.
-[style name="visualNovelRose"]
-Rose (Rose_grit): Ehh?
+Mary: And once we have caused enough damage, the Heart Hoarder will be lured out?
 [style name="visualNovel"]
-Guardian: The portal is taking us near one of the heart engines. We need to take it out.
-[style name="visualNovelMary"]
-Mary: And once we have taken out all of them, the Heart Hoarder won't be able to ignore us anymore
-
+Guardian: Correct. And then, we will defeat him
+[style name="visualNovelRose"]
+Rose (Rose_Grin): Sounds good! 
