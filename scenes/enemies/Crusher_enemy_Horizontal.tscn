@@ -6,9 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://dtaw7mc4kovwl" path="res://assets/sprites/grub_large_A.png" id="3_ba5pd"]
 [ext_resource type="Texture2D" uid="uid://be81s6rmjein1" path="res://assets/sprites/grub_large_B.png" id="4_f2qgq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcymg"]
-size = Vector2(20, 22.75)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_rrumv"]
 atlas = ExtResource("2_7rqlb")
 region = Rect2(0, 204, 51, 51)
@@ -393,17 +390,12 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_utoyj"]
-size = Vector2(18, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcymg"]
+size = Vector2(21, 22.75)
 
 [node name="Crusher_enemy_Horizontal" type="CharacterBody2D"]
 script = ExtResource("1_busea")
-
-[node name="killzone" parent="." instance=ExtResource("2_topf1")]
-
-[node name="KillShape" type="CollisionShape2D" parent="killzone"]
-visible = false
-position = Vector2(0, -0.625)
-shape = SubResource("RectangleShape2D_tcymg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.548194, 0.63536)
@@ -426,6 +418,11 @@ shape = SubResource("RectangleShape2D_utoyj")
 position = Vector2(0, 3)
 exclude_parent = false
 target_position = Vector2(0, 16)
+
+[node name="killzone" parent="." instance=ExtResource("2_topf1")]
+
+[node name="KillShape" type="CollisionShape2D" parent="killzone"]
+shape = SubResource("RectangleShape2D_tcymg")
 
 [node name="attackTimer" type="Timer" parent="."]
 wait_time = 3.0

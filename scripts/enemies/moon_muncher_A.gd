@@ -1,7 +1,7 @@
 extends Node2D
 @export var health: float = 9  # Health variable defined in the enemy node
-var submerge_speed = 30
-var SPEED = 120
+var submerge_speed = 40
+var SPEED = 110
 var player_pos: Vector2  # Position of the player
 var target_pos: Vector2  # Direction towards the player
 var original_y_pos: float
@@ -10,6 +10,7 @@ var attack_mode: bool = false
 var at_edge: bool = false
 var follow_mode: bool = false
 var direction = 1
+@onready var killzone: Area2D = $killzone
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var raycast_right: RayCast2D = $RaycastRight
@@ -29,6 +30,10 @@ func _ready():
       original_y_pos = global_position.y  # Store the original Y position of the enemy
 
 func _physics_process(delta: float) -> void:
+    if follow_mode==true:
+        killzone.monitoring=false
+    else:
+        killzone.monitoring=true
     # Edge detection based on raycasts
     if !raycast_down_right.is_colliding():
         direction = -1  # Change direction to left

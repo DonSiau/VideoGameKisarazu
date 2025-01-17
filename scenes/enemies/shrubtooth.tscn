@@ -462,7 +462,7 @@ target_position = Vector2(8, 0)
 
 [node name="RaycastLeft" type="RayCast2D" parent="."]
 position = Vector2(-7, 0)
-target_position = Vector2(-9, 0)
+target_position = Vector2(-8, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
@@ -473,7 +473,7 @@ shape = SubResource("RectangleShape2D_utoyj")
 [node name="RaycastDownRight" type="RayCast2D" parent="."]
 position = Vector2(11, 0)
 exclude_parent = false
-target_position = Vector2(0, 16)
+target_position = Vector2(-1, 16)
 
 [node name="RaycastDownLeft" type="RayCast2D" parent="."]
 position = Vector2(-13, 0)

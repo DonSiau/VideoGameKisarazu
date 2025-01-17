@@ -44,7 +44,7 @@ var is_jumping = false
 var can_jump = true
 var is_jump_pressed = false
 var is_sneaking=false
-var wall_jump_buffer = 0.0
+var wall_jump_buffer = 0
 const WALL_JUMP_BUFFER_TIME = 0.2
 
 # Player stats

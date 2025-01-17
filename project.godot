@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="KisarazuGame"
-run/main_scene="res://scenes/menus/MainMenu.tscn"
+run/main_scene="res://scenes/levels/level3.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="SaveSystem"
 config/features=PackedStringArray("4.3", "GL Compatibility")
@@ -37,6 +37,7 @@ directories/dtl_directory={
 "DashJumpTutorialDialogue_Lvl1": "res://DialogicStuff/Cutscenes/Level1/DashJumpTutorialDialogue_Lvl1.dtl",
 "DashTutorialDialogue_Lvl1": "res://DialogicStuff/Cutscenes/Level1/DashTutorialDialogue_Lvl1.dtl",
 "EnemySpotted_Lvl1": "res://DialogicStuff/Cutscenes/Level1/EnemySpotted_Lvl1.dtl",
+"FirstLevel5": "res://DialogicStuff/Cutscenes/Level5/FirstLevel5.dtl",
 "Level1Intro": "res://DialogicStuff/Cutscenes/Level1Intro.dtl",
 "Level2Intro": "res://DialogicStuff/Cutscenes/Level2Intro.dtl",
 "Level3Intro": "res://DialogicStuff/Cutscenes/Level3Intro.dtl",
@@ -46,6 +47,10 @@ directories/dtl_directory={
 "Level4IntroChat": "res://DialogicStuff/Cutscenes/Level4/Level4IntroChat.dtl",
 "Level4Outro": "res://DialogicStuff/Cutscenes/Level4/Level4Outro.dtl",
 "Level5Intro": "res://DialogicStuff/Cutscenes/Level5Intro.dtl",
+"Level5Outro": "res://DialogicStuff/Cutscenes/Level5/Level5Outro.dtl",
+"Level6Intro": "res://DialogicStuff/Cutscenes/Level6Intro.dtl",
+"Level6Part1": "res://DialogicStuff/Cutscenes/Level6/Level6Part1.dtl",
+"SecondLevel5": "res://DialogicStuff/Cutscenes/Level5/SecondLevel5.dtl",
 "WallJumpSideToSideTutorialDialogue_Lvl1": "res://DialogicStuff/Cutscenes/Level1/WallJumpSideToSideTutorialDialogue_Lvl1.dtl",
 "jumpTutorialDialogue_Lvl1": "res://DialogicStuff/Cutscenes/Level1/jumpTutorialDialogue_Lvl1.dtl",
 "level3IntroChat": "res://DialogicStuff/Cutscenes/level3/level3IntroChat.dtl",

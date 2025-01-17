@@ -2,6 +2,7 @@ extends Area2D
 @onready var timer: Timer = $Timer
 @onready var damage_again: Timer = $damage_again
 @onready var player = get_node("/root/level4/player")
+@onready var pLayerLevel6 = get_node("/root/level6/player")
 var inside_damage_zone : bool=false
 var player_in_area: Node2D = null
 @onready var ray: Sprite2D = $"../ray"
@@ -19,7 +20,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
  if body.is_in_group("Player"):
-  if not body.is_dead and not player.is_sneaking:
+  if not body.is_dead and not body.is_sneaking:
     player_in_area=body
     shrubtooth.enraged=true
     animated_sprite_2d.play("Shrubtooth_enraged")

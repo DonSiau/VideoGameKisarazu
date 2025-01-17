@@ -1,25 +1,36 @@
 [background arg="res://DialogicStuff/bluePortalSwirl.jpg" fade="0.0"]
 [style name="visualNovelRose"]
 join Rose (Rose_grit) left
-Rose: ugggghhhhh.... i feel nauseous
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Rose1.wav" volume="0.0"]
+Rose: Ugh... My stomach doesn't feel so good.
 join Mary right
 [style name="visualNovelMary"]
-Mary: Guardian, what do you think about the guy we just met?
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Mary1.wav" volume="0.0"]
+Mary: The Heart Hoarder... Guardian, what's your analysis of him?
 [style name="visualNovel"]
-Guardian: He seems misguided, we must stop him, that is our mission.
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/guardian1.wav" volume="0.0"]
+Guardian: He's created a cycle of invasion and destruction, exactly what destroyed his own world. We must end this.
 [style name="visualNovelMary"]
-Mary (Mary_serious): Agreed.
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Mary2.wav" volume="0.0"]
+Mary (Mary_serious): To think he believes he's doing what's right... when he's just perpetuating more suffering.
 [style name="visualNovelRose"]
-Rose: so... What now?
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Rose2.wav" volume="0.0"]
+Rose (Rose_Grin): Standing around won't help. What's our next move?
 [style name="visualNovel"]
-Guardian: I have a plan.
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/guardian2.wav" volume="0.0"]
+Guardian: I've detected something crucial that could give us an advantage.
 [style name="visualNovelRose"]
-Rose: a plan?
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Rose3.wav" volume="0.0"]
+Rose: Oh? Tell us!
 [style name="visualNovel"]
-Guardian: The heart engines of his, i can sense their energy. Infact, some of them are within cyberion. We need to destroy them.
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/guardian3.wav" volume="0.0"]
+Guardian: His Heart Engines have a distinct energy signature. Several are scattered throughout Cyberion. If we destroy them, we'll cripple his operation.
 [style name="visualNovelMary"]
-Mary: And once we have caused enough damage, the Heart Hoarder will be lured out?
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Mary3.wav" volume="0.0"]
+Mary: And force his hand. He'll have to emerge to defend what remains of his power source.
 [style name="visualNovel"]
-Guardian: Correct. And then, we will defeat him
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/guardian4.wav" volume="0.0"]
+Guardian: Precisely. When he does, we'll be ready to end this.
 [style name="visualNovelRose"]
-Rose (Rose_Grin): Sounds good! 
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Rose4.wav" volume="0.0"]
+Rose (Rose_Grin): Now that's what I call a plan! Time to show him what happens when you mess with our world!

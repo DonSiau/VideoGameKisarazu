@@ -2,11 +2,16 @@ extends Node2D
 
 var inside_ray = false
 @onready var ray: Sprite2D = $Ray
-@onready var player = get_node("/root/level4/player")
+@onready var player = null
+
 
 func _ready() -> void:
  ray.modulate = Color("#FFD368")
  ray.modulate.a = 0.5
+ if get_node_or_null("/root/level4/player") != null:
+  player = get_node("/root/level4/player")
+ elif get_node_or_null("/root/level6/player") != null:
+  player = get_node("/root/level6/player")
 
 func _physics_process(_delta: float) -> void:
     if inside_ray and not player.is_sneaking:

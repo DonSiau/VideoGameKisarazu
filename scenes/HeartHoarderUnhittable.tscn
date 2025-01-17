@@ -85,6 +85,7 @@ collision_layer = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 use_parent_material = true
+position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_e3val")
 animation = &"idle"
 autoplay = "idle"

@@ -10,7 +10,7 @@ const SPEED = 40
 
 
 func _ready() -> void:
- pass
+  pass
 func _process(delta: float) -> void:
     pass
 
@@ -21,12 +21,11 @@ func _on_reload_timeout() -> void:
         if projectile:
             get_tree().current_scene.add_child(projectile)
 
-            var direction: Vector2
+            var Projectile_direction =Vector2(direction, 0)
             var active_barrel: Node2D
             active_barrel = projectile_barrel_Left
-            direction = Vector2.LEFT
 
 
             # Set the position to the active barrel's global position
             projectile.global_position = active_barrel.global_position
-            projectile.launch(direction)
+            projectile.launch(Projectile_direction)

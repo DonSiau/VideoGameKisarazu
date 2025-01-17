@@ -26,7 +26,7 @@
 },
 "Rose_Angry2": {
 "export_overrides": {
-"image": "\"res://DialogicStuff/characters/RoseAnrgy2.png\""
+"image": "\"res://DialogicStuff/characters/Rose_angry.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

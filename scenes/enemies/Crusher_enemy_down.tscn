@@ -360,5 +360,9 @@ autostart = true
 wait_time = 8.0
 autostart = true
 
+[node name="timeOffset" type="Timer" parent="."]
+wait_time = 0.001
+
 [connection signal="timeout" from="attackTimer" to="." method="_on_attack_timer_timeout"]
 [connection signal="timeout" from="attackWarn" to="." method="_on_attack_warn_timeout"]
+[connection signal="timeout" from="timeOffset" to="." method="_on_time_offset_timeout"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4duo174khr3p"]
+
+[ext_resource type="Script" path="res://scripts/enemies/cannon_Stationary_shootLeft.gd" id="1_vu3hn"]
+[ext_resource type="Texture2D" uid="uid://buh85xw6s2ndw" path="res://assets/sprites/cannon_stationary_Level5.png" id="2_bkkhn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utoyj"]
+size = Vector2(15, 20)
+
+[node name="cannon_stationary" type="CharacterBody2D"]
+script = ExtResource("1_vu3hn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.548194, 0.63536)
+texture = ExtResource("2_bkkhn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.5, 2)
+shape = SubResource("RectangleShape2D_utoyj")
+
+[node name="reload" type="Timer" parent="."]
+wait_time = 1.572
+autostart = true
+
+[node name="projectile_barrel_Left" type="Marker2D" parent="."]
+position = Vector2(-8, 1)
+
+[connection signal="timeout" from="reload" to="." method="_on_reload_timeout"]

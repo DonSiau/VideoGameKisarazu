@@ -1,16 +1,23 @@
 [background arg="res://DialogicStuff/bluePortalSwirl.jpg" fade="0.0"]
 [style name="visualNovelRose"]
 join Rose (Rose_grit) left
-Rose: ugggghhhhh...... are we stuck?
+[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/Rose1.wav" volume="0.0"]
+Rose: uuhhh...... are we stuck?
 join Mary right
 [style name="visualNovelMary"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/Mary1.wav" volume="0.0"]
 Mary (Mary_serious): Guardian any information?
 [style name="visualNovel"]
-Guardian: I sense am sensing a change in GPS location, it seems we are being taken to somewhere far away, perhaps to a secret base
-Guardian: We should reach the target destination in approximaetly 38 seconds
+[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/guardian1.wav" volume="0.0"]
+Guardian: I sense am sensing a change in GPS location, it seems we are being taken to somewhere far away, perhaps to a secret base.
+[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/guardian2.wav" volume="0.0"]
+Guardian: We should reach the target destination in approximately 38 seconds
 [style name="visualNovelRose"]
-Rose (Rose_LookAside): phew.....
+[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/Rose2.wav" volume="0.0"]
+Rose (Rose_LookAside): That's a relief...
 [style name="visualNovelMary"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/Mary2.wav" volume="0.0"]
 Mary (Mary_serious): be prepared guardian for what's on the other side.
 [style name="visualNovel"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/guardian3.wav" volume="0.0"]
 Guardian: Affirmative.

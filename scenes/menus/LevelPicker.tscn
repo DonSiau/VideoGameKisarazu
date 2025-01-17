@@ -206,9 +206,35 @@ theme_override_font_sizes/font_size = 30
 text = "Level 5
 "
 
+[node name="Level6" type="TextureButton" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+texture_normal = ExtResource("6_tiil4")
+texture_pressed = ExtResource("7_y4ed2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -21.0
+offset_right = 50.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Level 6
+"
+
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Quit_Main_Menu" to="." method="_on_quit_main_menu_pressed"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level4" to="." method="_on_level_4_pressed"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Level6" to="." method="_on_level_6_pressed"]

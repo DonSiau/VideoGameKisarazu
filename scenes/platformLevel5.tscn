@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyrxpfxxaay2l"]
+
+[ext_resource type="Texture2D" uid="uid://cqbw8e8a7744e" path="res://assets/sprites/SewerStyleA.png" id="1_waq40"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1q0m"]
+size = Vector2(39, 14)
+
+[node name="platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_waq40")
+region_enabled = true
+region_rect = Rect2(320, 80, 41, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_r1q0m")
+one_way_collision = true
