@@ -3,4 +3,4 @@ extends Node2D
 
 
 func _ready():
-    player.is_depowered=false
+    player.is_depowered=true
