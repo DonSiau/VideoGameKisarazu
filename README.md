@@ -1,5 +1,6 @@
 # Heart Wars
 ![banner1](https://github.com/user-attachments/assets/833b4364-192c-4aad-8ba9-ca64f945f23b)
+
 ## Play now
 
 ## About
@@ -15,6 +16,8 @@ In this story-driven 2D platformer inspired by the Mega Man Series, the player w
 - Dispatch enemies with your sword, or various ranged attacks
 
 ## Screenshots
+
+## Playthrough
 
 ## Development
 his game was developed as a student project during a 5-month internship at Kisarazu National College of Technology in Japan. The game was developed using the Godot game engine
