@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="KisarazuGame"
-run/main_scene="res://scenes/levels/level6.tscn"
+run/main_scene="res://scenes/levels/finalBoss.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="SaveSystem"
 config/features=PackedStringArray("4.3", "GL Compatibility")
@@ -48,8 +48,10 @@ directories/dtl_directory={
 "Level4Outro": "res://DialogicStuff/Cutscenes/Level4/Level4Outro.dtl",
 "Level5Intro": "res://DialogicStuff/Cutscenes/Level5Intro.dtl",
 "Level5Outro": "res://DialogicStuff/Cutscenes/Level5/Level5Outro.dtl",
+"Level6HeartHoarderIntro": "res://DialogicStuff/Cutscenes/Level6/Level6HeartHoarderIntro.dtl",
 "Level6Intro": "res://DialogicStuff/Cutscenes/Level6Intro.dtl",
 "Level6Part1": "res://DialogicStuff/Cutscenes/Level6/Level6Part1.dtl",
+"Level6Part2": "res://DialogicStuff/Cutscenes/Level6/Level6Part2.dtl",
 "SecondLevel5": "res://DialogicStuff/Cutscenes/Level5/SecondLevel5.dtl",
 "WallJumpSideToSideTutorialDialogue_Lvl1": "res://DialogicStuff/Cutscenes/Level1/WallJumpSideToSideTutorialDialogue_Lvl1.dtl",
 "jumpTutorialDialogue_Lvl1": "res://DialogicStuff/Cutscenes/Level1/jumpTutorialDialogue_Lvl1.dtl",

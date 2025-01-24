@@ -19,7 +19,6 @@ var phase_1_projectile = preload("res://scenes/enemies/level4BossPhase1Projectil
 @export var phase = 1
 var phase_1_timer_started = false
 var phase_2_timer_started = false
-
 func _ready() -> void:
     animated_sprite_2d.scale = Vector2(1, 1)
     var shader_material = ShaderMaterial.new()

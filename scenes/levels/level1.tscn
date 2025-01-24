@@ -2974,7 +2974,7 @@ position = Vector2(1, -17)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 offset = Vector2(0, -20)
-zoom = Vector2(1.8, 1.8)
+zoom = Vector2(1.7, 1.7)
 
 [node name="killzone" parent="." instance=ExtResource("4_mgqa5")]
 position = Vector2(31, -9)

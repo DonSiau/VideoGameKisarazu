@@ -24,13 +24,13 @@ func _on_body_exited(body: Node2D) -> void:
    inside_damage_zone=false
 # Called when the timer times out
 func _on_timer_timeout() -> void:
-    print("timeout")
+
     get_tree().reload_current_scene()  # Reload the current scene
 
 
 
 func _on_damage_again_timeout() -> void:
-    print("damage again")
+
     if inside_damage_zone==true:
          player_in_area.take_damage(1)
          if player_in_area.health<= 0:

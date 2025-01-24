@@ -5,7 +5,7 @@ var SPEED = 40
 var inside_ray = false
 
 @onready var ray: Sprite2D = $Ray
-@onready var player = get_node("/root/level4/player")
+@onready var player = null
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var killzone: Area2D = $killzone
 @onready var ray_collision: CollisionShape2D = $killzone/RayCollision
@@ -20,6 +20,10 @@ func _process(delta: float) -> void:
 func _ready() -> void:
  ray.modulate = Color("#FFD368")
  ray.modulate.a = 0.5
+ if get_node_or_null("/root/level4/player") != null:
+  player = get_node("/root/level4/player")
+ elif get_node_or_null("/root/level6/player") != null:
+  player = get_node("/root/level6/player")
  if direction == -1:
      animated_sprite_2d.scale.x = -1
      ray.position.x *= -1

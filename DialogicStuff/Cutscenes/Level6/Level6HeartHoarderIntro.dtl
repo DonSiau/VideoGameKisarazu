@@ -1,0 +1,48 @@
+[style name="VisualNovelHeartHoarder"]
+[background arg="res://DialogicStuff/backgroundLevel6Part3.png" fade="0.0"]
+join Rose (Rose_Angry2) leftmost
+join Mary (Mary_serious) rightmost
+join HeartHoarder center
+HeartHoarder: So, you've discovered the truth in those old records...
+[style name="visualNovelRose"]
+Rose: The messages we found... You and Grandpa were in contact!
+[style name="visualNovelMary"]
+Mary: You spent years working together on the Heart Engine...
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: Your grandfather and I, we communicated through satellite signals.
+HeartHoarder: Your grandfather was brilliant. We believed we could change everything.
+HeartHoarder: With the Heart Engine, we created a revolutionary machine, capable of immense amounts of clean energy.
+HeartHoarder: The prototype worked perfectly, even being able to power portals between distant worlds.
+HeartHoarder: However, when Earth's governments found out about it, they couldn't leave us alone.
+HeartHoarder: The plans, the prototype, all our work, stolen! And then...
+HeartHoarder: And then they invaded Valeria...
+HeartHoarder: My family was at the research facility. My wife, my children... When your forces came through...
+[style name="visualNovelMary"]
+Mary: W-wait, you're saying that...
+[style name="visualNovelRose"]
+Rose: W-we were the invaders?
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: Yes... You humans. You pests invaded my homeland, all due to the disgusting greed that possesses all of you.
+HeartHoarder: In order to win the war, I had to make modifications to the only remaining Heart Engine I had in my arsenal.
+[style name="visualNovelRose"]
+Rose: Instead of a clean source of energy, you sacrificed your own people for fuel.
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: Yes... you remember. I shall not repeat myself, as you invaders, and now I am here.
+[style name="visualNovelMary"]
+Mary: I don't understand. After the war, why not revert back to the original design of the Heart Engine?
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: If only it were that simple. The original Heart Engine design was lost forever in Earth's attack.
+[style name="visualNovelMary"]
+Mary: So you are invading Earth for revenge...
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: Your grandfather saw this coming. Why else would he build Guardian?
+[style name="visualNovelRose"]
+Rose: Maybe he built it hoping someone would stop this cycle of revenge!
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: Too late for that. Earth will pay for what they've done. Every. Last. Soul.
+[style name="visualNovelMary"]
+Mary: We won't let you continue this!
+[style name="visualNovelRose"]
+Rose: This ends here!
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: Oh it will. Follow me through the portal, and meet your end.

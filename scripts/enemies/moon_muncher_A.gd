@@ -1,7 +1,7 @@
 extends Node2D
 @export var health: float = 9  # Health variable defined in the enemy node
 var submerge_speed = 40
-var SPEED = 110
+var SPEED = 120
 var player_pos: Vector2  # Position of the player
 var target_pos: Vector2  # Direction towards the player
 var original_y_pos: float
