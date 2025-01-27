@@ -1,0 +1,122 @@
+[background arg="res://DialogicStuff/FinalBattleRoom.png" fade="0.0"]
+[style name="VisualNovelHeartHoarder"]
+join Rose (Rose_Grin) leftmost
+join Mary (Mary_happy) rightmost
+join HeartHoarder (injured) center
+HeartHoarder: You've actually done it... beaten by children...
+HeartHoarder: God.... dammit... it's all... over...
+[style name="visualNovelMary"]
+Mary: It's over. W-we did it!
+[style name="visualNovelRose"]
+Rose: We won! Suck it, loser!
+[style name="visualNovelMary"]
+Mary: Well... What now?
+[style name="visualNovelRose"]
+Rose: Look at the Heart Hoarder, there's this red flash of energy coming out of his chest.
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: That is... The original Heart Engine... Through surgery, I inserted it within me. That's how I wielded it...
+HeartHoarder: Hey Guardian, he knew, didn't he? Set all this in motion...
+[style name="visualNovel"]
+Guardian: A long time ago. He saw where things were heading.
+[style name="visualNovelMary"]
+Mary: What's he talking about?
+[style name="visualNovel"]
+Guardian: It's time they knew. Initiating Protocol Final Truth.
+Grandpa: Recording test 47... ah, there we go. Mary, Rose - if you're seeing this, things have played out exactly as predicted.
+[style name="visualNovelRose"]
+Rose (Rose_confused): That's... Grandpa?
+[style name="visualNovelMary"]
+Mary (Mary_neutral): It's a hologram...
+[style name="visualNovel"]
+Grandpa: In my notes, I wrote that Guardian was created to protect Earth from extraordinary threats. However, the true goal of the Guardian, I had to keep a secret. If you knew too much, you would not have succeeded.
+Grandpa: The Heart Engine was meant to bridge worlds, but it only brought destruction. Every day, I spent hours regretting what happened to Valeria...
+Grandpa: Yes, Guardian was built to fight the threats I knew would come after what we did to Valeria. But that wasn't its only purpose...
+Grandpa: Guardian was designed to merge with the original Heart Engine, to use its power for good, for it's true purpose.
+Grandpa: Hey James, if you're seeing this, I'm sorry for everything. 
+Grandpa: I promise you, Valeria will thrive once more.
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: Always the optimist... 
+HeartHoarder: My wife... My dear child, i'll be seeing you two soon.
+leave HeartHoarder
+
+[style name="visualNovel"]
+Grandpa: And to my dear, dear girls, I just want to say... I love you. I love you both so much.
+[style name="visualNovelRose"]
+Rose (Rose_Grin): Aw...
+[style name="visualNovelMary"]
+Mary (Mary_serious): Grandpa...
+[style name="visualNovel"]
+Grandpa: Goodbye, you two. The Guardian will take over for me.
+[style name="visualNovelMary"]
+Mary: What happens next?
+[style name="visualNovel"]
+Guardian: I'll transfer my programming to within the Heart Engine. My consciousness will spread through the power grid, becoming one with the energy that flows through it.
+[style name="visualNovelRose"]
+Rose (Rose_confused): B-but what will happen to you?
+[style name="visualNovel"]
+Guardian: I'll still be here... just in a different form. The grid will become my new body, in a sense.
+[style name="visualNovelMary"]
+Mary (Mary_neutral): So you'll be conscious within the energy produced by the engine?
+[style name="visualNovel"]
+Guardian: Yes, directing the energy toward good, not evil.
+[style name="visualNovelRose"]
+Rose: But it won't be the same...
+[style name="visualNovel"]
+Guardian: You'll know when I'm around. Some things you just feel.
+[style name="visualNovelMary"]
+Mary (Mary_happy): I...I think I understand
+[style name="visualNovel"]
+Guardian: It's time. Thank you both, for everything.
+[style name="visualNovelRose"]
+Rose: Goodbye Guardian... and thank you for protecting us too.
+[style name="visualNovelMary"]
+Mary: We'll make you proud!
+leave --All--
+[background arg="res://DialogicStuff/white.png" fade="2.0"]
+[wait time="4.0"]
+[style name="visualNovel"]
+6 months later
+[wait time="2.0"]
+[background arg="res://DialogicStuff/School.png" fade="2.0"]
+[wait time="1.0"]
+"Student 1": Did you see the news about that planet Valeria? They're saying the whole atmosphere is healing itself somehow.
+"Student 2": Yeah, and did you catch the report this morning? They're saying the new energy grid could power the entire planet by next year.
+"Student 3": Free energy, no more blackouts, they're even terraforming deserts now. My dad says we're living through history!
+[style name="visualNovelMary"]
+join Rose (Rose_Grin) left
+join Mary (Mary_happy) right
+[style name="visualNovelMary"]
+Mary (Mary_happy): Still trying to figure out if the grid's acting weird around you?
+[style name="visualNovelRose"]
+Rose (Rose_Grin): Hey, you notice it too sometimes!
+[style name="visualNovelMary"]
+Mary: Could just be your imagination.
+[style name="visualNovelRose"]
+Rose: Or someone being a show-off.
+[style name="visualNovelMary"]
+Mary: Life's gotten pretty normal since then, huh?
+[style name="visualNovelRose"]
+Rose: Normal is... nice. Though sometimes I miss our adventures.
+[style name="visualNovelMary"]
+Mary: Even the dangerous parts?
+[style name="visualNovelRose"]
+Rose: Well... maybe not those. But we were a pretty good team.
+[style name="visualNovelMary"]
+Mary: Were?
+[style name="visualNovelRose"]
+Rose (Rose_confused): Are! Definitely are!
+Rose: Besides, who else would put up with your constant studying?
+[style name="visualNovelMary"]
+Mary (Mary_neutral): Hey, one of us has to be responsible!
+[style name="visualNovelRose"]
+Rose: And one of us has to make sure you actually have fun sometimes.
+[style name="visualNovelMary"]
+Mary (Mary_happy): I have fun!
+[style name="visualNovelRose"]
+Rose: Reading textbooks doesn't count, sis.
+[style name="visualNovelMary"]
+Mary (Mary_happy): Come on, we'll be late for class.
+[style name="visualNovelRose"]
+Rose (Rose_Grin): Race you there! Loser buys lunch!
+[style name="visualNovelMary"]
+Mary: Hey, wait up!

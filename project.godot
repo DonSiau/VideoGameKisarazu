@@ -27,13 +27,20 @@ SoundManager="*res://scripts/sound_manager.gd"
 [dialogic]
 
 directories/dch_directory={
+"Grandpa": "res://DialogicStuff/characters/Grandpa.dch",
 "Guardian": "res://DialogicStuff/characters/Guardian.dch",
 "HeartHoarder": "res://DialogicStuff/characters/HeartHoarder/HeartHoarder.dch",
 "Mary": "res://DialogicStuff/characters/Mary/Mary.dch",
 "Rose": "res://DialogicStuff/characters/Rose/Rose.dch",
+"Student 1": "res://DialogicStuff/characters/Student 1.dch",
+"Student 2": "res://DialogicStuff/characters/Student 2.dch",
+"Student 3": "res://DialogicStuff/characters/Student 3.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"BossFight1": "res://DialogicStuff/Cutscenes/bossFight/BossFight1.dtl",
+"BossFight2": "res://DialogicStuff/Cutscenes/bossFight/BossFight2.dtl",
+"BossFight3": "res://DialogicStuff/Cutscenes/bossFight/BossFight3.dtl",
 "DashJumpTutorialDialogue_Lvl1": "res://DialogicStuff/Cutscenes/Level1/DashJumpTutorialDialogue_Lvl1.dtl",
 "DashTutorialDialogue_Lvl1": "res://DialogicStuff/Cutscenes/Level1/DashTutorialDialogue_Lvl1.dtl",
 "EnemySpotted_Lvl1": "res://DialogicStuff/Cutscenes/Level1/EnemySpotted_Lvl1.dtl",
@@ -52,8 +59,10 @@ directories/dtl_directory={
 "Level6Intro": "res://DialogicStuff/Cutscenes/Level6Intro.dtl",
 "Level6Part1": "res://DialogicStuff/Cutscenes/Level6/Level6Part1.dtl",
 "Level6Part2": "res://DialogicStuff/Cutscenes/Level6/Level6Part2.dtl",
+"Level6Start": "res://DialogicStuff/Cutscenes/Level6/Level6Start.dtl",
 "SecondLevel5": "res://DialogicStuff/Cutscenes/Level5/SecondLevel5.dtl",
 "WallJumpSideToSideTutorialDialogue_Lvl1": "res://DialogicStuff/Cutscenes/Level1/WallJumpSideToSideTutorialDialogue_Lvl1.dtl",
+"gameEnding": "res://DialogicStuff/Cutscenes/gameEnding/gameEnding.dtl",
 "jumpTutorialDialogue_Lvl1": "res://DialogicStuff/Cutscenes/Level1/jumpTutorialDialogue_Lvl1.dtl",
 "level3IntroChat": "res://DialogicStuff/Cutscenes/level3/level3IntroChat.dtl",
 "moveTutorialDialogue_Lvl1": "res://DialogicStuff/Cutscenes/Level1/moveTutorialDialogue_Lvl1.dtl",

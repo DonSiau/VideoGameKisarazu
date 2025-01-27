@@ -1,4 +1,4 @@
-[gd_scene load_steps=170 format=3 uid="uid://kcy6vxmsua5n"]
+[gd_scene load_steps=175 format=3 uid="uid://kcy6vxmsua5n"]
 
 [ext_resource type="Texture2D" uid="uid://dswp2ra2y4bww" path="res://assets/sprites/The Heart Hoarder Sprite sheet 222x119.png" id="1_amek0"]
 [ext_resource type="Script" path="res://scripts/enemies/heart_hoarder.gd" id="1_b3frn"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://c82jvfsanh7x7" path="res://assets/sprites/bossbattle/Air Attack Slam Sprite sheet 246x121.png" id="4_7tvsx"]
 [ext_resource type="PackedScene" uid="uid://53kn0wf4gsk3" path="res://scenes/killzone.tscn" id="4_a3utq"]
 [ext_resource type="PackedScene" uid="uid://c31mvjap8amod" path="res://scenes/enemies/damageable.tscn" id="5_6xkgp"]
+[ext_resource type="Texture2D" uid="uid://1xadh5ah7ujt" path="res://assets/sprites/bossbattle/meter_center.png" id="8_8nilc"]
+[ext_resource type="Texture2D" uid="uid://cxe8snerrxq8b" path="res://assets/sprites/bossbattle/healthProgress.png" id="9_gkkr6"]
+[ext_resource type="Texture2D" uid="uid://cbxydasclahjg" path="res://assets/sprites/bossbattle/meter_left.png" id="10_67mhg"]
+[ext_resource type="Texture2D" uid="uid://dkau51stlo22" path="res://assets/sprites/bossbattle/lower_healthbar.png" id="11_7tywt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5oquy"]
 resource_local_to_scene = true
@@ -905,7 +909,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rlidq")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
 "speed": 10.0
 }, {
@@ -1163,10 +1167,12 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ddy8w"]
-size = Vector2(45, 54.5)
+size = Vector2(45, 51.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wcrdo"]
-size = Vector2(182, 20)
+size = Vector2(206.75, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_secsk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ip6vb"]
 size = Vector2(49.5, 53.75)
@@ -1217,22 +1223,28 @@ script = ExtResource("1_b3frn")
 use_parent_material = true
 position = Vector2(0, -38)
 sprite_frames = SubResource("SpriteFrames_e3val")
-animation = &"appear"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="killzone" parent="." instance=ExtResource("4_a3utq")]
 position = Vector2(0, 32)
 
 [node name="collisionKill" type="CollisionShape2D" parent="killzone"]
-position = Vector2(0, -44)
+position = Vector2(0, -42.375)
 shape = SubResource("RectangleShape2D_ddy8w")
 
 [node name="SliceShape" type="CollisionShape2D" parent="killzone"]
-position = Vector2(0, -32)
+position = Vector2(0, -29.5)
 shape = SubResource("RectangleShape2D_wcrdo")
 disabled = true
 
+[node name="sword" type="CollisionShape2D" parent="killzone"]
+position = Vector2(21, -33)
+shape = SubResource("RectangleShape2D_secsk")
+disabled = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, -13)
 shape = SubResource("RectangleShape2D_ip6vb")
 
@@ -1255,9 +1267,55 @@ one_shot = true
 one_shot = true
 
 [node name="slice" type="Timer" parent="."]
+wait_time = 0.7
 one_shot = true
+
+[node name="meteorCooldown" type="Timer" parent="."]
+wait_time = 4.0
+
+[node name="CanvasLayerHealth" type="CanvasLayer" parent="."]
+process_priority = 1
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
+
+[node name="BossHealthBar" type="TextureProgressBar" parent="CanvasLayerHealth"]
+offset_left = 458.0
+offset_top = 8.0
+offset_right = 908.0
+offset_bottom = 56.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_value = 330.0
+value = 330.0
+nine_patch_stretch = true
+texture_under = ExtResource("8_8nilc")
+texture_progress = ExtResource("9_gkkr6")
+
+[node name="upperHealthBar" type="TextureRect" parent="CanvasLayerHealth"]
+offset_left = 348.0
+offset_top = 8.0
+offset_right = 476.0
+offset_bottom = 56.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("10_67mhg")
+
+[node name="LowerHealthBar" type="TextureRect" parent="CanvasLayerHealth"]
+offset_left = 908.0
+offset_top = 8.0
+offset_right = 1004.0
+offset_bottom = 56.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("11_7tywt")
+flip_v = true
+
+[node name="Death" type="Timer" parent="."]
+wait_time = 5.0
 
 [connection signal="timeout" from="followPlayerP1" to="." method="_on_follow_player_timeout"]
 [connection signal="timeout" from="moveAttackP1" to="." method="_on_move_attack_timeout"]
 [connection signal="timeout" from="teleport" to="." method="_on_teleport_timeout"]
 [connection signal="timeout" from="slice" to="." method="_on_slice_timeout"]
+[connection signal="timeout" from="meteorCooldown" to="." method="_on_meteor_cooldown_timeout"]
+[connection signal="timeout" from="Death" to="." method="_on_death_timeout"]

@@ -1,7 +1,7 @@
 [background arg="res://DialogicStuff/level5Sewer.png" fade="0.0"]
 [style name="visualNovelRose"]
 join Rose (Rose_LookAside) leftmost [animation="Slide In Left"]
-join Mary rightmostw
+join Mary rightmost
 [voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose1.wav" volume="0.0"]
 Rose (Rose_LookAside): This doesn't make sense... We've searched every corner of these tunnels. Where's the Heart Engine?
 [style name="visualNovelMary"]
@@ -37,7 +37,7 @@ Rose: If you're here for a fight, we're ready!
 HeartHoarder: No... not here. If you truly wish to stop me, come to my sanctuary. You shall see the truth
 [style name="visualNovelMary"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary4.wav" volume="0.0"]
-Mary: Your base of operations...
+Mary: Your sanctuary? What do you mean?
 [style name="VisualNovelHeartHoarder"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/HeartHoarder3.wav" volume="0.0"]
 HeartHoarder: You can follow me through this portal. Come, if you dare.
@@ -45,7 +45,7 @@ HeartHoarder: You can follow me through this portal. Come, if you dare.
 HeartHoarder: But know this, what you'll find there may change everything you think you know about your world...
 [style name="visualNovelRose"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose5.wav" volume="0.0"]
-Rose: Hey what's your problem loser!
+Rose: Hey what's your problem!
 [style name="VisualNovelHeartHoarder"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/HeartHoarder5.wav" volume="0.0"]
 HeartHoarder: Until then, young ones.
@@ -53,15 +53,16 @@ leave HeartHoarder [animation="Fade Out" length="1.5" wait="true"]
 [style name="visualNovelRose"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose6.wav" volume="0.0"]
 Rose: Hey, wait!
-[style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary5.wav" volume="0.0"]
-Mary: Let him go, Rose. He wants us to follow him.
 [style name="visualNovel"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/guardian3.wav" volume="0.0"]
 Guardian: This is clearly a trap.
-[style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose7.wav" volume="0.0"]
-Rose: Maybe. But this may be our best chance to end this once end for all.
 [style name="visualNovelMary"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary5.wav" volume="0.0"]
+Mary: Maybe. I'm one to be cautious, perhaps too cautious most of the time. 
 [voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary6.wav" volume="0.0"]
-Mary: I have a bad feeling about this... but you are right Rose. For the sake of humanity, we need to take this chance.
+Mary: but this may be our best chance to end this once and for all.
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary7.wav" volume="0.0"]
+Mary: Rose, Guardian, let's do this.
+[style name="visualNovelRose" ]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose7.wav" volume="0.0"]
+Rose: I have a bad feeling about this... but you're right Mary. For the sake of humanity, we need to take this chance.

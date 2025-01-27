@@ -1,0 +1,88 @@
+[gd_scene load_steps=14 format=3 uid="uid://hye4htwof51p"]
+
+[ext_resource type="Texture2D" uid="uid://b3mjyqwlh4cwd" path="res://assets/sprites/bossbattle/meteorSmall.png" id="1_1f0h8"]
+[ext_resource type="Script" path="res://scripts/enemies/meteor_final_boss.gd" id="1_mje4c"]
+[ext_resource type="PackedScene" uid="uid://53kn0wf4gsk3" path="res://scenes/killzone.tscn" id="2_74j4l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ubwa"]
+atlas = ExtResource("1_1f0h8")
+region = Rect2(0, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y45k5"]
+atlas = ExtResource("1_1f0h8")
+region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6h17"]
+atlas = ExtResource("1_1f0h8")
+region = Rect2(96, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5ewa"]
+atlas = ExtResource("1_1f0h8")
+region = Rect2(144, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kykp"]
+atlas = ExtResource("1_1f0h8")
+region = Rect2(192, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vo8hd"]
+atlas = ExtResource("1_1f0h8")
+region = Rect2(240, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdsdb"]
+atlas = ExtResource("1_1f0h8")
+region = Rect2(288, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k807k"]
+atlas = ExtResource("1_1f0h8")
+region = Rect2(336, 0, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bxre5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ubwa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y45k5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6h17")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5ewa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kykp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vo8hd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdsdb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k807k")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6ls0"]
+size = Vector2(22.875, 22.6875)
+
+[node name="MeteorFinalBoss" type="CharacterBody2D"]
+script = ExtResource("1_mje4c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_bxre5")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.992182
+
+[node name="killzone" parent="." instance=ExtResource("2_74j4l")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(0, 10.3438)
+shape = SubResource("RectangleShape2D_n6ls0")

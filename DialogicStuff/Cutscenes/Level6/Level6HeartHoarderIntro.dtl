@@ -3,46 +3,72 @@
 join Rose (Rose_Angry2) leftmost
 join Mary (Mary_serious) rightmost
 join HeartHoarder center
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/HeartHoarder1.wav" volume="0.0"]
 HeartHoarder: So, you've discovered the truth in those old records...
 [style name="visualNovelRose"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/Rose1.wav" volume="0.0"]
 Rose: The messages we found... You and Grandpa were in contact!
 [style name="visualNovelMary"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/Mary1.wav" volume="0.0"]
 Mary: You spent years working together on the Heart Engine...
 [style name="VisualNovelHeartHoarder"]
-HeartHoarder: Your grandfather and I, we communicated through satellite signals.
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/HeartHoarder2.wav" volume="0.0"]
+HeartHoarder: Your grandfather and I communicated through satellite signals.
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/HeartHoarder3.wav" volume="0.0"]
 HeartHoarder: Your grandfather was brilliant. We believed we could change everything.
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/HeartHoarder4.wav" volume="0.0"]
 HeartHoarder: With the Heart Engine, we created a revolutionary machine, capable of immense amounts of clean energy.
-HeartHoarder: The prototype worked perfectly, even being able to power portals between distant worlds.
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/HeartHoarder5.wav" volume="0.0"]
+HeartHoarder: The prototype worked perfectly, powering portals between distant worlds.
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/HeartHoarder6.wav" volume="0.0"]
 HeartHoarder: However, when Earth's governments found out about it, they couldn't leave us alone.
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/HeartHoarder7.wav" volume="0.0"]
 HeartHoarder: The plans, the prototype, all our work, stolen! And then...
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/HeartHoarder8.wav" volume="0.0"]
 HeartHoarder: And then they invaded Valeria...
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/HeartHoarder9.wav" volume="0.0"]
 HeartHoarder: My family was at the research facility. My wife, my children... When your forces came through...
 [style name="visualNovelMary"]
-Mary: W-wait, you're saying that...
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/Mary2.wav" volume="0.0"]
+Mary: wait, you're saying that...
 [style name="visualNovelRose"]
-Rose: W-we were the invaders?
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/Rose2.wav" volume="0.0"]
+Rose (Rose_confused): We were the invaders?
 [style name="VisualNovelHeartHoarder"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/HeartHoarder10.wav" volume="0.0"]
 HeartHoarder: Yes... You humans. You pests invaded my homeland, all due to the disgusting greed that possesses all of you.
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/HeartHoarder11.wav" volume="0.0"]
 HeartHoarder: In order to win the war, I had to make modifications to the only remaining Heart Engine I had in my arsenal.
 [style name="visualNovelRose"]
-Rose: Instead of a clean source of energy, you sacrificed your own people for fuel.
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/Rose3.wav" volume="0.0"]
+Rose (Rose_Angry2): Instead of a clean source of energy, you sacrificed your own people for fuel.
 [style name="VisualNovelHeartHoarder"]
-HeartHoarder: Yes... you remember. I shall not repeat myself, as you invaders, and now I am here.
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/HeartHoarder12.wav" volume="0.0"]
+HeartHoarder: Yes... you remember. And now I am here, with our roles reversed.
 [style name="visualNovelMary"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/Mary3.wav" volume="0.0"]
 Mary: I don't understand. After the war, why not revert back to the original design of the Heart Engine?
 [style name="VisualNovelHeartHoarder"]
-HeartHoarder: If only it were that simple. The original Heart Engine design was lost forever in Earth's attack.
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/HeartHoarder13.wav" volume="0.0"]
+HeartHoarder: If only it were that simple. Some choices... can't be undone.
 [style name="visualNovelMary"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/Mary4.wav" volume="0.0"]
 Mary: So you are invading Earth for revenge...
 [style name="VisualNovelHeartHoarder"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/HeartHoarder14.wav" volume="0.0"]
 HeartHoarder: Your grandfather saw this coming. Why else would he build Guardian?
 [style name="visualNovelRose"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/Rose4.wav" volume="0.0"]
 Rose: Maybe he built it hoping someone would stop this cycle of revenge!
 [style name="VisualNovelHeartHoarder"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/HeartHoarder15.wav" volume="0.0"]
 HeartHoarder: Too late for that. Earth will pay for what they've done. Every. Last. Soul.
 [style name="visualNovelMary"]
-Mary: We won't let you continue this!
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/Mary5.wav" volume="0.0"]
+Mary (Mary_serious): We won't let you continue this!
 [style name="visualNovelRose"]
-Rose: This ends here!
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/Rose5.wav" volume="0.0"]
+Rose: We will stop you!
 [style name="VisualNovelHeartHoarder"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/HeartHoarder16.wav" volume="0.0"]
 HeartHoarder: Oh it will. Follow me through the portal, and meet your end.

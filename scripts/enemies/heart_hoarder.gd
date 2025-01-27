@@ -3,11 +3,12 @@ extends Node2D
 var player_pos: Vector2  # Position of the player
 var target_pos: Vector2  # Direction towards the player
 @onready var player = get_parent().get_node("player")  # Reference to the Player node
-@export var health: float = 220
-var SPEED = 35
+@export var health: float = 330
+var SPEED = 38
 
 @onready var killzone: Area2D = $killzone
 
+var meteor = preload("res://scenes/enemies/MeteorFinalBoss.tscn")
 
 var is_following=true
 var is_moveAttack=false
@@ -21,31 +22,23 @@ var attackCount=1 #used to track attack order within a phase
 @onready var slice: Timer = $slice
 
 var phase2Started=true
+var meteorStarted=false
 @onready var sliceShape: CollisionShape2D = $killzone/SliceShape
+@onready var sword: CollisionShape2D = $killzone/sword
+@onready var meteor_cooldown: Timer = $meteorCooldown
+@onready var death: Timer = $Death
 
 
+var dialogue2Done=false
+var dialogue3Done=false
+var hasDied=false
 
-
-
-
-#initial plan. The attack pattern will cycle as seen in the numberings
-#Phase1:
-#1.follows player. every 5 seconds, he becomes temporarily faster, using the slash attack.
-#2.teleports to static portions of the map, shooting projectiles statically.
-#Phase2:
-#1. follows player. every 5 seconds, he becomes temporarily faster, using the slash attack.
-#2. uses the larger AOE slash attack
-#3. teleports to static portions of the map, shooting projectiles statically.
-#Phase3:
-#1. follows player. every 5 seconds, he becomes temporarily faster, using the slash attack.
-#2. uses the larger AOE slash attack
-#3. teleports to static portions of the map, shooting projectiles statically.
-#4. Uses the ariel slice attack
 @onready var teleport: Timer = $teleport
 
 
 
 func _ready() -> void:
+        spawn_meteor()
         follow_player_p_1.start()
         animated_sprite_2d.scale = Vector2(1, 1)
         var shader_material = ShaderMaterial.new()
@@ -53,6 +46,7 @@ func _ready() -> void:
         shader_material.set_shader_parameter("active", false)
         animated_sprite_2d.material = shader_material
         animated_sprite_2d.play("move")
+        start_dialog("BossFight1")
 
 func _process(delta: float) -> void:
     if player and is_following and !is_teleporting and !is_charging_slice:  #
@@ -62,22 +56,53 @@ func _process(delta: float) -> void:
      if is_moveAttack:
         if !is_teleporting:
          animated_sprite_2d.play("move_attack")
-         SPEED=55
+         SPEED=58
      else:
         if !is_teleporting:
          animated_sprite_2d.play("move")
-         SPEED=35
+         SPEED=38
 
 
     if position.distance_to(player_pos) <500:
      position += target_pos * SPEED * delta  # Update the position manually based on speed and delta
 
-    if health < 170:
+
+
+    if health<=0 and !hasDied:
+
+     hasDied=true
+     follow_player_p_1.stop()  # Stop the follow timer
+     move_attack_p_1.stop()    # Stop the attack timer
+     slice.stop()
+     teleport.stop()
+     is_following=false
+     is_moveAttack=false
+     is_charging_slice=false
+     is_teleporting=false
+     animated_sprite_2d.play("death")
+     SPEED=0
+     death.start()
+
+
+    if health < 110:
      phase = 3
-    elif health < 80:
+     if !dialogue3Done:
+      start_dialog("BossFight3")
+      dialogue3Done=true
+     if !meteorStarted:
+        meteor_cooldown.start()
+        meteorStarted=true
+
+
+    elif health < 220:
      phase = 2
+     if !dialogue2Done:
+      start_dialog("BossFight2")
+      dialogue2Done=true
+
     if phase==1:
-     pass;
+        pass;
+
 func start_slice_attack():
  if !is_charging_slice:
   is_charging_slice=true
@@ -88,6 +113,16 @@ func start_slice_attack():
   follow_player_p_1.stop()  # Stop the follow timer
   move_attack_p_1.stop()    # Stop the attack timer
   slice.start()
+
+func spawn_meteor():
+    var y_coordinate = -220
+    var meteor = meteor.instantiate()
+    var random_x = randf_range(-170, 170)
+    meteor.global_position = Vector2(random_x, y_coordinate)
+    meteor.z_index = 12
+    get_parent().add_child(meteor)
+
+
 
 
 func start_teleport():
@@ -101,6 +136,7 @@ func start_teleport():
 func _on_follow_player_timeout() -> void:
 
     is_moveAttack=true
+    sword.disabled=false
     print("start move attack")
     move_attack_p_1.start()
 
@@ -110,8 +146,9 @@ func _on_move_attack_timeout() -> void:
     attackCount+=1
     is_charging_slice=false
     is_moveAttack=false
+    sword.disabled=true
     print("end move attack")
-    if attackCount==2: #remember, add if phase==2
+    if attackCount==2 and phase>=2:
      start_slice_attack()
     elif attackCount==3:
      attackCount=0
@@ -146,3 +183,24 @@ func _on_slice_timeout() -> void:
     sliceShape.disabled=true
     is_charging_slice=false
     follow_player_p_1.start()
+
+
+func start_dialog(timeline_name: String):
+ Dialogic.start(str(timeline_name)).process_mode = Node.PROCESS_MODE_ALWAYS
+ Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
+ Dialogic.timeline_ended.connect(_on_timeline_ended)
+ get_tree().paused = true
+
+
+func _on_timeline_ended():
+    Dialogic.timeline_ended.disconnect(_on_timeline_ended)
+    get_tree().paused=false
+
+
+func _on_meteor_cooldown_timeout() -> void:
+    spawn_meteor()
+
+
+func _on_death_timeout() -> void:
+    get_tree().change_scene_to_file("res://scenes/cutscene/finalBoss/gameEnding.tscn")
+    queue_free()

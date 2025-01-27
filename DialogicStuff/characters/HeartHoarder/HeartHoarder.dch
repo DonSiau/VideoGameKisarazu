@@ -17,7 +17,16 @@
 "portraits": {
 "default": {
 "export_overrides": {
-"image": "\"res://DialogicStuff/characters/HeartHoarderV2.png\""
+"image": "\"res://DialogicStuff/characters/HeartHoarderV8.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"injured": {
+"export_overrides": {
+"image": "\"res://DialogicStuff/characters/HeartHoarderV8Injured.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
