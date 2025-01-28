@@ -2,24 +2,41 @@
 [style name="VisualNovelHeartHoarder"]
 join Rose (Rose_Grin) leftmost
 join Mary (Mary_happy) rightmost
-join HeartHoarder (injured) center
-HeartHoarder: You've actually done it... beaten by children...
-HeartHoarder: God.... dammit... it's all... over...
+join HeartHoarder (default) center
+update HeartHoarder center [animation="Heartbeat" length="0.2" wait="true" repeat="7"]
+HeartHoarder: Aargh!
+update HeartHoarder center [animation="Heartbeat" length="0.2" wait="true" repeat="7"]
+HeartHoarder: Aargh!
 [style name="visualNovelMary"]
-Mary: It's over. W-we did it!
+Mary: It's over. W-we did it...
 [style name="visualNovelRose"]
 Rose: We won! Suck it, loser!
-[style name="visualNovelMary"]
-Mary: Well... What now?
-[style name="visualNovelRose"]
-Rose: Look at the Heart Hoarder, there's this red flash of energy coming out of his chest.
 [style name="VisualNovelHeartHoarder"]
-HeartHoarder: That is... The original Heart Engine... Through surgery, I inserted it within me. That's how I wielded it...
+HeartHoarder: You've actually done it... beaten by children...
+HeartHoarder: You humans... always surprising me...
+HeartHoarder: To think... all my plans... my ambitions...
+[style name="visualNovelMary"]
+Mary (Mary_neutral): There had to be another way. Not through hurting people.
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: Perhaps... I was blinded by grief...
+HeartHoarder: Defeated by two girls and their pet AI...
+update HeartHoarder (injured) center [animation="Shake X" length="0.2" wait="true" repeat="10" fade="Fade Cross" fade_length="0.2"]
+HeartHoarder: Uugh!
+[style name="visualNovelRose"]
+Rose (Rose_confused): Something's happening...
+[style name="visualNovelMary"]
+Mary (Mary_serious): Guardian, what's going on?
+[style name="visualNovel"]
+Guardian: Stand back...
+[style name="visualNovelRose"]
+Rose: What's that red flash of energy coming out of his chest?
+[style name="VisualNovelHeartHoarder"]
+HeartHoarder: That is...  from the original Heart Engine... Through surgery, I inserted it within me. That's how I wielded it...
 HeartHoarder: Hey Guardian, he knew, didn't he? Set all this in motion...
 [style name="visualNovel"]
 Guardian: A long time ago. He saw where things were heading.
 [style name="visualNovelMary"]
-Mary: What's he talking about?
+Mary (Mary_neutral): What's he talking about?
 [style name="visualNovel"]
 Guardian: It's time they knew. Initiating Protocol Final Truth.
 Grandpa: Recording test 47... ah, there we go. Mary, Rose - if you're seeing this, things have played out exactly as predicted.
@@ -32,19 +49,18 @@ Grandpa: In my notes, I wrote that Guardian was created to protect Earth from ex
 Grandpa: The Heart Engine was meant to bridge worlds, but it only brought destruction. Every day, I spent hours regretting what happened to Valeria...
 Grandpa: Yes, Guardian was built to fight the threats I knew would come after what we did to Valeria. But that wasn't its only purpose...
 Grandpa: Guardian was designed to merge with the original Heart Engine, to use its power for good, for it's true purpose.
-Grandpa: Hey James, if you're seeing this, I'm sorry for everything. 
+Grandpa: Hey James, if you're seeing this, I'm sorry for everything.
 Grandpa: I promise you, Valeria will thrive once more.
 [style name="VisualNovelHeartHoarder"]
-HeartHoarder: Always the optimist... 
+HeartHoarder: James? huh...Always the optimist...
 HeartHoarder: My wife... My dear child, i'll be seeing you two soon.
 leave HeartHoarder
-
 [style name="visualNovel"]
-Grandpa: And to my dear, dear girls, I just want to say... I love you. I love you both so much.
+Grandpa: And to my dear, dear girls, I just want to say... I love you. I love you both so much. 
 [style name="visualNovelRose"]
 Rose (Rose_Grin): Aw...
 [style name="visualNovelMary"]
-Mary (Mary_serious): Grandpa...
+Mary (Mary_happy): Grandpa...
 [style name="visualNovel"]
 Grandpa: Goodbye, you two. The Guardian will take over for me.
 [style name="visualNovelMary"]
@@ -68,7 +84,7 @@ Mary (Mary_happy): I...I think I understand
 [style name="visualNovel"]
 Guardian: It's time. Thank you both, for everything.
 [style name="visualNovelRose"]
-Rose: Goodbye Guardian... and thank you for protecting us too.
+Rose (Rose_grit): Goodbye Guardian... and thank you for protecting us too.
 [style name="visualNovelMary"]
 Mary: We'll make you proud!
 leave --All--
@@ -78,11 +94,10 @@ leave --All--
 6 months later
 [wait time="2.0"]
 [background arg="res://DialogicStuff/School.png" fade="2.0"]
-[wait time="1.0"]
-"Student 1": Did you see the news about that planet Valeria? They're saying the whole atmosphere is healing itself somehow.
-"Student 2": Yeah, and did you catch the report this morning? They're saying the new energy grid could power the entire planet by next year.
-"Student 3": Free energy, no more blackouts, they're even terraforming deserts now. My dad says we're living through history!
-[style name="visualNovelMary"]
+[wait time="2.0"]
+"Student 1": Man, everything's different since that whole Heart Engine thing...
+"Student 2": Tell me about it! My dad says the new power is revolutionary.
+"Student 3": And did you hear about Valeria? It's like the whole planet is coming back to life!
 join Rose (Rose_Grin) left
 join Mary (Mary_happy) right
 [style name="visualNovelMary"]
@@ -104,10 +119,10 @@ Rose: Well... maybe not those. But we were a pretty good team.
 [style name="visualNovelMary"]
 Mary: Were?
 [style name="visualNovelRose"]
-Rose (Rose_confused): Are! Definitely are!
+Rose (Rose_Grin): Are! Definitely are!
 Rose: Besides, who else would put up with your constant studying?
 [style name="visualNovelMary"]
-Mary (Mary_neutral): Hey, one of us has to be responsible!
+Mary (Mary_serious): Hey, one of us has to be responsible!
 [style name="visualNovelRose"]
 Rose: And one of us has to make sure you actually have fun sometimes.
 [style name="visualNovelMary"]
@@ -118,5 +133,11 @@ Rose: Reading textbooks doesn't count, sis.
 Mary (Mary_happy): Come on, we'll be late for class.
 [style name="visualNovelRose"]
 Rose (Rose_Grin): Race you there! Loser buys lunch!
+leave Rose
 [style name="visualNovelMary"]
 Mary: Hey, wait up!
+leave Mary
+[wait time="3.0"]
+[background arg="res://DialogicStuff/white.png" fade="2.0"]
+[wait time="4.0"]
+[background arg="res://DialogicStuff/School.png" fade="2.0"]
