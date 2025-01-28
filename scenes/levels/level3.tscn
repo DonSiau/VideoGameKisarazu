@@ -1362,14 +1362,6 @@ texture = ExtResource("4_1icms")
 centered = false
 offset = Vector2(0, -110)
 
-[node name="player" parent="." instance=ExtResource("2_rdemd")]
-z_index = 5
-position = Vector2(2375, -553)
-
-[node name="Camera2D" type="Camera2D" parent="player"]
-offset = Vector2(0, -35)
-zoom = Vector2(1.7, 1.7)
-
 [node name="killzone" parent="." instance=ExtResource("4_mgqa5")]
 position = Vector2(-130, 56)
 
@@ -1710,6 +1702,14 @@ direction = -1
 
 [node name="grub_large_B6" parent="." instance=ExtResource("12_17yej")]
 position = Vector2(2277, -1318)
+
+[node name="player" parent="." instance=ExtResource("2_rdemd")]
+z_index = 5
+position = Vector2(2394, -1737)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+offset = Vector2(0, -35)
+zoom = Vector2(1.7, 1.7)
 
 [connection signal="area_entered" from="platforms/movingPlatformUp/Area2D" to="platforms/movingPlatformUp" method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="platforms/movingPlatformUp/inputStopTimer" to="platforms/movingPlatformUp" method="_on_input_stop_timer_timeout"]
