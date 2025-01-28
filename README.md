@@ -1,5 +1,5 @@
 # Heart Wars
-![banner1](https://github.com/user-attachments/assets/833b4364-192c-4aad-8ba9-ca64f945f23b)
+![Banner2](https://github.com/user-attachments/assets/5cf910c2-a290-49b2-b910-b1ac80030b43)
 
 ## Play now
 
