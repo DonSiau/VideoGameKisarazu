@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://bvkdv5wyelto3"]
+[gd_scene load_steps=18 format=3 uid="uid://bvkdv5wyelto3"]
 
 [ext_resource type="Texture2D" uid="uid://cocxtlqsbd5p0" path="res://assets/parallax/bg_grass_near.png" id="1_anyrf"]
 [ext_resource type="Texture2D" uid="uid://dq07rn1l8ydsw" path="res://assets/parallax/bg_sky.png" id="1_qo5je"]
+[ext_resource type="AudioStream" uid="uid://3h6dwsssn4d4" path="res://assets/music/test.wav" id="1_vnqoo"]
 [ext_resource type="PackedScene" uid="uid://dql06euexqj2c" path="res://scenes/player.tscn" id="2_rdemd"]
 [ext_resource type="Texture2D" uid="uid://bb8xp6poo7wbj" path="res://assets/sprites/spritesheetMeadows.png" id="3_7dh1w"]
 [ext_resource type="PackedScene" uid="uid://d1gwyfochnhf3" path="res://scenes/Instakillzone.tscn" id="4_mgqa5"]
@@ -2912,6 +2913,12 @@ distance = -49.0
 [sub_resource type="Theme" id="Theme_gwy3g"]
 
 [node name="level1" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("1_vnqoo")
+autoplay = true
+bus = &"Music"
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(9, 2)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=59 format=3 uid="uid://b5mfotdhg67c3"]
+[gd_scene load_steps=60 format=3 uid="uid://b5mfotdhg67c3"]
 
 [ext_resource type="Script" path="res://scripts/level/level4/level_4.gd" id="1_142dw"]
 [ext_resource type="Texture2D" uid="uid://mha0s4dq0q38" path="res://assets/TileMapAssets/Level4/Buildings.png" id="1_bilr2"]
 [ext_resource type="Texture2D" uid="uid://60j1tbo4mlfb" path="res://assets/sprites/level4/Tiles.png" id="1_pkr1o"]
+[ext_resource type="AudioStream" uid="uid://3h6dwsssn4d4" path="res://assets/music/test.wav" id="2_aqh7r"]
 [ext_resource type="Texture2D" uid="uid://bry6j0o41o88g" path="res://assets/TileMapAssets/Level4/Props-01.png" id="3_i5bkc"]
 [ext_resource type="PackedScene" uid="uid://dql06euexqj2c" path="res://scenes/player.tscn" id="5_0gdcf"]
 [ext_resource type="PackedScene" uid="uid://d1gwyfochnhf3" path="res://scenes/Instakillzone.tscn" id="6_38uc1"]
@@ -911,6 +912,12 @@ size = Vector2(41, 60)
 
 [node name="level4" type="Node2D"]
 script = ExtResource("1_142dw")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("2_aqh7r")
+autoplay = true
+bus = &"Music"
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(9, 2)

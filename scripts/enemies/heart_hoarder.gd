@@ -33,6 +33,7 @@ var dialogue2Done=false
 var dialogue3Done=false
 var hasDied=false
 
+@onready var audio_stream_player_bg: AudioStreamPlayer = $"../AudioStreamPlayerBG"
 @onready var teleport: Timer = $teleport
 
 
@@ -202,5 +203,6 @@ func _on_meteor_cooldown_timeout() -> void:
 
 
 func _on_death_timeout() -> void:
+    audio_stream_player_bg.stop()
     get_tree().change_scene_to_file("res://scenes/cutscene/finalBoss/gameEnding.tscn")
     queue_free()

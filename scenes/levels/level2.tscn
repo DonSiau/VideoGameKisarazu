@@ -1,5 +1,6 @@
-[gd_scene load_steps=28 format=3 uid="uid://dqfrrt8eu33q8"]
+[gd_scene load_steps=29 format=3 uid="uid://dqfrrt8eu33q8"]
 
+[ext_resource type="AudioStream" uid="uid://3h6dwsssn4d4" path="res://assets/music/test.wav" id="1_8n0c2"]
 [ext_resource type="TileSet" uid="uid://bvyrqlg4ujl0b" path="res://assets/tileset/cavern.tres" id="1_wib08"]
 [ext_resource type="Texture2D" uid="uid://dq07rn1l8ydsw" path="res://assets/parallax/bg_sky.png" id="1_ypnu3"]
 [ext_resource type="PackedScene" uid="uid://dql06euexqj2c" path="res://scenes/player.tscn" id="2_hsdvo"]
@@ -48,6 +49,12 @@ size = Vector2(52, 20)
 size = Vector2(57, 20)
 
 [node name="Level2" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("1_8n0c2")
+autoplay = true
+bus = &"Music"
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(9, 2)
@@ -109,7 +116,7 @@ layer_0/tile_data = PackedInt32Array(-851964, 131073, 38, -786428, 131073, 39, -
 
 [node name="player" parent="." instance=ExtResource("2_hsdvo")]
 z_index = 5
-position = Vector2(1691, -754)
+position = Vector2(2032, -997)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 offset = Vector2(0, -30)

@@ -1,5 +1,6 @@
-[gd_scene load_steps=26 format=3 uid="uid://bhy7c1xl21obd"]
+[gd_scene load_steps=27 format=3 uid="uid://bhy7c1xl21obd"]
 
+[ext_resource type="AudioStream" uid="uid://3h6dwsssn4d4" path="res://assets/music/test.wav" id="1_4xdwk"]
 [ext_resource type="Texture2D" uid="uid://bb8xp6poo7wbj" path="res://assets/sprites/spritesheetMeadows.png" id="1_iej4j"]
 [ext_resource type="Texture2D" uid="uid://cqbw8e8a7744e" path="res://assets/sprites/SewerStyleA.png" id="2_e512t"]
 [ext_resource type="Texture2D" uid="uid://bual6vcmbd5un" path="res://assets/sprites/level5/bg4.png" id="5_820ct"]
@@ -6393,6 +6394,12 @@ distance = -49.0
 
 [node name="level5" type="Node2D"]
 
+[node name="AudioStreamPlayerBG" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("1_4xdwk")
+autoplay = true
+bus = &"Music"
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(9, 2)
 tile_set = SubResource("TileSet_n2qot")
@@ -6485,7 +6492,7 @@ offset = Vector2(0, 146)
 
 [node name="player" parent="." instance=ExtResource("8_65ot6")]
 z_index = 5
-position = Vector2(6409, -925)
+position = Vector2(8497, -928)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 offset = Vector2(0, -20)

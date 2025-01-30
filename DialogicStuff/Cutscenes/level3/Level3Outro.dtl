@@ -10,7 +10,7 @@ join Mary (Mary_serious) rightmost
 Mary: Calm down rose.
 [style name="visualNovelRose"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level3Outro/Rose2.wav" volume="0.0"]
-Rose: you seem bad guy, what are your motivations?!
+Rose: you seem like a bad guy, what are your motivations?!
 [style name="VisualNovelHeartHoarder"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level3Outro/HeartHoarder1.wav" volume="0.0"]
 HeartHoarder: Hmm... my goal? to harvest your sick and twisted world.

@@ -9,7 +9,7 @@ join Rose (Rose_Angry) left
 Rose: Ugh! Why is this darn thing not booting up? It's been hours!
 join Mary right
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary1.mp3" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary1.wav" volume="0.0"]
 Mary: Just be patient, Rose. Rushing isn't going to help.
 [style name="visualNovelRose"]
 update Rose [animation="Bounce" length="0.2" repeat="8"]
@@ -33,12 +33,12 @@ SYSTEM ONLINE. INITIALIZING PRIMARY FUNCTION MODULES
 [wait time="0.8"]
 join Mary right
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary3.mp3" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary3.wav" volume="0.0"]
 Mary: oh, she's speaking. Thats a good sign.
 join Rose (Rose_Grin) left
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose4.mp3" volume="0.0"]
-Rose: Took him long enough. Hey, tin can, you know how long we've been waiting for you?
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose4.wav" volume="0.0"]
+Rose: Took you long enough. Hey, tin can, you know how long we've been waiting for you?
 [style name="visualNovel"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/guardian3.mp3" volume="0.0"]
 Guardian: My apologies for the delay. It seems my activation protocols took longer than expected.

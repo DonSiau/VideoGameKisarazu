@@ -1,5 +1,6 @@
-[gd_scene load_steps=155 format=3 uid="uid://dnbg0chnq7vdq"]
+[gd_scene load_steps=156 format=3 uid="uid://dnbg0chnq7vdq"]
 
+[ext_resource type="AudioStream" uid="uid://3h6dwsssn4d4" path="res://assets/music/test.wav" id="1_d8li8"]
 [ext_resource type="TileSet" uid="uid://bqof1pgxdtwws" path="res://assets/tileset/spaceBase_lowerTiles aligned.tres" id="1_deffp"]
 [ext_resource type="Texture2D" uid="uid://gq8axdestnm2" path="res://assets/parallax/bg_wall.png" id="2_gmo6e"]
 [ext_resource type="PackedScene" uid="uid://dql06euexqj2c" path="res://scenes/player.tscn" id="2_rdemd"]
@@ -1310,6 +1311,12 @@ size = Vector2(44, 16)
 size = Vector2(45, 16)
 
 [node name="level3" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("1_d8li8")
+autoplay = true
+bus = &"Music"
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(9, 2)

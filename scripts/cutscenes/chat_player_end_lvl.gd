@@ -1,6 +1,8 @@
 extends Node2D
 var read=false
 var node_name=""
+@onready var audio_stream_player_bg: AudioStreamPlayer = $"../../AudioStreamPlayerBG"
+
 func _ready() -> void:
     print(get_parent().get_parent().name)
     Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
@@ -15,6 +17,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
     read=true;
 
 func start_dialog():
+ audio_stream_player_bg.stop()
  Dialogic.start(str(node_name)).process_mode = Node.PROCESS_MODE_ALWAYS
  Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
  Dialogic.timeline_ended.connect(_on_timeline_ended)

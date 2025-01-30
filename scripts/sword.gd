@@ -1,5 +1,5 @@
 extends Area2D
-@export var damage : int=300
+@export var damage : int=3
 @onready var audio_stream_player_2d_sword: AudioStreamPlayer2D = $AudioStreamPlayer2D_sword
 
 

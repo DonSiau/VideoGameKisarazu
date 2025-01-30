@@ -33,9 +33,9 @@ func _ready() -> void:
     else:
         level5.visible=false
     if SaveState.save_dict["level6Unlocked"]:
-        level5.visible=true
+        level6.visible=true
     else:
-        level5.visible=false
+        level6.visible=false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
