@@ -33,6 +33,8 @@ his game was developed as a student project during a 5-month internship at Kisar
 - Audio:
   - [ElevenLabs](elevenlabs.io)
   - [Yal](https://yaru.itch.io/)
+  - [Abstraction](https://abstractionmusic.com/)
+  - [Original music by Marllon Silva (xDeviruchi)](https://www.youtube.com/xdeviruchi)
 
 
 
