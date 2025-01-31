@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=3 uid="uid://bhy7c1xl21obd"]
 
-[ext_resource type="AudioStream" uid="uid://3h6dwsssn4d4" path="res://assets/music/test.wav" id="1_4xdwk"]
 [ext_resource type="Texture2D" uid="uid://bb8xp6poo7wbj" path="res://assets/sprites/spritesheetMeadows.png" id="1_iej4j"]
+[ext_resource type="AudioStream" uid="uid://cn2m7kex32yjt" path="res://DialogicStuff/Audio/music/Level5/VGMA Challenge 20.ogg" id="1_ulrcj"]
 [ext_resource type="Texture2D" uid="uid://cqbw8e8a7744e" path="res://assets/sprites/SewerStyleA.png" id="2_e512t"]
 [ext_resource type="Texture2D" uid="uid://bual6vcmbd5un" path="res://assets/sprites/level5/bg4.png" id="5_820ct"]
 [ext_resource type="Texture2D" uid="uid://hkpsfln4gcg2" path="res://assets/sprites/level5/bg3.png" id="6_y88v3"]
@@ -6400,7 +6400,8 @@ b = Vector2(-151.403, 23.8206)
 
 [node name="AudioStreamPlayerBG" type="AudioStreamPlayer" parent="."]
 process_mode = 3
-stream = ExtResource("1_4xdwk")
+stream = ExtResource("1_ulrcj")
+volume_db = -10.0
 autoplay = true
 bus = &"Music"
 
@@ -6900,9 +6901,6 @@ position = Vector2(7761, -1387)
 position = Vector2(7702, -1407)
 attack_timer_offset = 2.0
 attack_warn_offset = 4.0
-
-[node name="mudMan9" parent="." instance=ExtResource("18_ttq0y")]
-position = Vector2(7971, -1441)
 
 [node name="mudMan10" parent="." instance=ExtResource("18_ttq0y")]
 position = Vector2(8232, -1473)

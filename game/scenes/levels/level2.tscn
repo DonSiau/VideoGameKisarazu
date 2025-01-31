@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://dqfrrt8eu33q8"]
 
-[ext_resource type="AudioStream" uid="uid://c6ov8yfw13b4j" path="res://DialogicStuff/Audio/music/Level2/Level2.ogg" id="1_6yp4f"]
+[ext_resource type="AudioStream" uid="uid://dlkf25pvw71qv" path="res://DialogicStuff/Audio/music/Level2/Level2.ogg" id="1_6yp4f"]
 [ext_resource type="TileSet" uid="uid://bvyrqlg4ujl0b" path="res://assets/tileset/cavern.tres" id="1_wib08"]
 [ext_resource type="Texture2D" uid="uid://dq07rn1l8ydsw" path="res://assets/parallax/bg_sky.png" id="1_ypnu3"]
 [ext_resource type="PackedScene" uid="uid://dql06euexqj2c" path="res://scenes/player.tscn" id="2_hsdvo"]

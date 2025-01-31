@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cr2ycodmh1ny5"
+path="res://.godot/imported/Sketchbook 2024-12-15.ogg-e8ef31501db3336f4abc490a3694c48c.oggvorbisstr"
+
+[deps]
+
+source_file="res://DialogicStuff/Audio/music/Level4/Sketchbook 2024-12-15.ogg"
+dest_files=["res://.godot/imported/Sketchbook 2024-12-15.ogg-e8ef31501db3336f4abc490a3694c48c.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

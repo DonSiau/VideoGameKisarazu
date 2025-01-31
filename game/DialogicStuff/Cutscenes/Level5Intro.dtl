@@ -1,3 +1,4 @@
+[music path="res://DialogicStuff/Audio/music/Level5/Ludum Dare 28 05.ogg" fade="0.0" volume="0.0" bus="Music"]
 [background arg="res://DialogicStuff/bluePortalSwirl.jpg" fade="0.0"]
 [style name="visualNovelRose"]
 join Rose (Rose_grit) left
