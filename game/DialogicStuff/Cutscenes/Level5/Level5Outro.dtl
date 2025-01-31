@@ -2,67 +2,67 @@
 [style name="visualNovelRose"]
 join Rose (Rose_LookAside) leftmost [animation="Slide In Left"]
 join Mary rightmost
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose1.ogg" volume="0.0"]
 Rose (Rose_LookAside): This doesn't make sense... We've searched every corner of these tunnels. Where's the Heart Engine?
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary1.ogg" volume="0.0"]
 Mary: Guardian, are you certain about those energy readings?
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/guardian1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/guardian1.ogg" volume="0.0"]
 Guardian: The signature is strong... and yet... something is different about it.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose2.ogg" volume="0.0"]
 Rose: Different how?
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/guardian2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/guardian2.ogg" volume="0.0"]
 Guardian: It's getting stronger
 [background arg="res://DialogicStuff/level5SewerPortal.png" fade="1.0"]
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose3.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose3.ogg" volume="0.0"]
 Rose (Rose_grit): Eh?
 join HeartHoarder center [animation="Fade In" length="1.5" wait="true"]
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary2.ogg" volume="0.0"]
 Mary (Mary_serious): You!
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary3.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary3.ogg" volume="0.0"]
 Mary (Mary_serious): You led us here deliberately.
 [style name="VisualNovelHeartHoarder"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/HeartHoarder1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/HeartHoarder1.ogg" volume="0.0"]
 HeartHoarder: Indeed. I wanted to see you with my very own eyes
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose4.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose4.ogg" volume="0.0"]
 Rose: If you're here for a fight, we're ready!
 [style name="VisualNovelHeartHoarder"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/HeartHoarder2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/HeartHoarder2.ogg" volume="0.0"]
 HeartHoarder: No... not here. If you truly wish to stop me, come to my sanctuary. You shall see the truth
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary4.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary4.ogg" volume="0.0"]
 Mary: Your sanctuary? What do you mean?
 [style name="VisualNovelHeartHoarder"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/HeartHoarder3.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/HeartHoarder3.ogg" volume="0.0"]
 HeartHoarder: You can follow me through this portal. Come, if you dare.
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/HeartHoarder4.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/HeartHoarder4.ogg" volume="0.0"]
 HeartHoarder: But know this, what you'll find there may change everything you think you know about your world...
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose5.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose5.ogg" volume="0.0"]
 Rose: Hey what's your problem!
 [style name="VisualNovelHeartHoarder"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/HeartHoarder5.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/HeartHoarder5.ogg" volume="0.0"]
 HeartHoarder: Until then, young ones.
 leave HeartHoarder [animation="Fade Out" length="1.5" wait="true"]
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose6.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose6.ogg" volume="0.0"]
 Rose: Hey, wait!
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/guardian3.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/guardian3.ogg" volume="0.0"]
 Guardian: This is clearly a trap.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary5.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary5.ogg" volume="0.0"]
 Mary: Maybe. I'm one to be cautious, perhaps too cautious most of the time. 
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary6.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary6.ogg" volume="0.0"]
 Mary: but this may be our best chance to end this once and for all.
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary7.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary7.ogg" volume="0.0"]
 Mary: Rose, Guardian, let's do this.
 [style name="visualNovelRose" ]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose7.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose7.ogg" volume="0.0"]
 Rose: I have a bad feeling about this... but you're right Mary. For the sake of humanity, we need to take this chance.

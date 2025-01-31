@@ -1315,7 +1315,7 @@ size = Vector2(45, 16)
 [node name="AudioStreamPlayerBG" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("1_3nq4e")
-volume_db = -12.0
+volume_db = -7.0
 autoplay = true
 bus = &"Music"
 
