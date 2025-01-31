@@ -2,13 +2,13 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-uid="uid://d32uddi7navcm"
-path="res://.godot/imported/bossfight1.ogg-ddbac4c8e8f957ed4da0ab3d4bbdf900.oggvorbisstr"
+uid="uid://byawoo75p3gu7"
+path="res://.godot/imported/bossFight1.ogg-520b419a5ef11ea4f365496a6186197a.oggvorbisstr"
 
 [deps]
 
-source_file="res://DialogicStuff/Audio/music/Level4/bossfight1.ogg"
-dest_files=["res://.godot/imported/bossfight1.ogg-ddbac4c8e8f957ed4da0ab3d4bbdf900.oggvorbisstr"]
+source_file="res://DialogicStuff/Audio/music/Level4/bossFight1.ogg"
+dest_files=["res://.godot/imported/bossFight1.ogg-520b419a5ef11ea4f365496a6186197a.oggvorbisstr"]
 
 [params]
 
