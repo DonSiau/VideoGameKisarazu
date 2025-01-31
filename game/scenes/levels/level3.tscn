@@ -1713,7 +1713,7 @@ position = Vector2(2277, -1318)
 
 [node name="player" parent="." instance=ExtResource("2_rdemd")]
 z_index = 5
-position = Vector2(2394, -1737)
+position = Vector2(2409, -1731)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 offset = Vector2(0, -35)

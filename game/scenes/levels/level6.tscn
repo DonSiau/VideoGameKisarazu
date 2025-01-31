@@ -672,7 +672,7 @@ offset = Vector2(0, -110)
 
 [node name="player" parent="." instance=ExtResource("8_3vtf6")]
 z_index = 5
-position = Vector2(12805, -3482)
+position = Vector2(12851, -3488)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 offset = Vector2(0, -20)
