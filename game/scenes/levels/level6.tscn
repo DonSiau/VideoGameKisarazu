@@ -1,8 +1,8 @@
 [gd_scene load_steps=100 format=3 uid="uid://dmsf0hjvcoudn"]
 
 [ext_resource type="PackedScene" uid="uid://dmllab74uh2bm" path="res://scenes/enemies/glacier.tscn" id="1_2diou"]
+[ext_resource type="AudioStream" uid="uid://i73ffoyl1i7g" path="res://DialogicStuff/Audio/music/Level6/Level6.ogg" id="1_2ul8l"]
 [ext_resource type="PackedScene" uid="uid://bltejelrb2kg8" path="res://scenes/platformLevel6.tscn" id="1_bfnt5"]
-[ext_resource type="AudioStream" uid="uid://bs310wta30g3d" path="res://DialogicStuff/Audio/music/Level6/level6.ogg" id="1_d81ep"]
 [ext_resource type="TileSet" uid="uid://xu3iqppv4ap1" path="res://assets/sprites/Level6/level6.tres" id="3_cypuc"]
 [ext_resource type="Texture2D" uid="uid://d2wdjxc1ypp05" path="res://assets/sprites/Level6/background_0.png" id="5_v78ev"]
 [ext_resource type="Texture2D" uid="uid://dggvwa1c5mvm2" path="res://assets/sprites/Level6/background_1.png" id="6_iwf1o"]
@@ -545,7 +545,8 @@ size = Vector2(44, 20)
 
 [node name="AudioStreamPlayerBG" type="AudioStreamPlayer" parent="."]
 process_mode = 3
-stream = ExtResource("1_d81ep")
+stream = ExtResource("1_2ul8l")
+volume_db = -2.0
 autoplay = true
 bus = &"Music"
 

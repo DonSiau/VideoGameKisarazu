@@ -1,8 +1,8 @@
 [gd_scene load_steps=19 format=3 uid="uid://cvuvttu6t7t5"]
 
 [ext_resource type="Texture2D" uid="uid://bpbi3kkc7thwg" path="res://assets/sprites/bossbattle/layer 7 - foreground.png" id="1_8gdlt"]
-[ext_resource type="AudioStream" uid="uid://3h6dwsssn4d4" path="res://assets/music/test.wav" id="1_e8vrx"]
 [ext_resource type="Script" path="res://scripts/level/final_boss.gd" id="1_nl620"]
+[ext_resource type="AudioStream" uid="uid://byawoo75p3gu7" path="res://DialogicStuff/Audio/music/gameEnd/finalBoss.ogg" id="2_g00td"]
 [ext_resource type="PackedScene" uid="uid://dql06euexqj2c" path="res://scenes/player.tscn" id="4_ij03m"]
 [ext_resource type="PackedScene" uid="uid://civc6i1wg2d3c" path="res://scenes/menus/pause.tscn" id="5_6q6hm"]
 [ext_resource type="PackedScene" uid="uid://bddb88ersb008" path="res://scenes/menus/pauseMenu.tscn" id="6_mk30s"]
@@ -30,7 +30,7 @@ script = ExtResource("1_nl620")
 [node name="AudioStreamPlayerBG" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 process_priority = 5
-stream = ExtResource("1_e8vrx")
+stream = ExtResource("2_g00td")
 autoplay = true
 bus = &"Music"
 

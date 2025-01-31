@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://b5mfotdhg67c3"]
+[gd_scene load_steps=67 format=3 uid="uid://b5mfotdhg67c3"]
 
 [ext_resource type="Script" path="res://scripts/level/level4/level_4.gd" id="1_142dw"]
 [ext_resource type="Texture2D" uid="uid://mha0s4dq0q38" path="res://assets/TileMapAssets/Level4/Buildings.png" id="1_bilr2"]
@@ -34,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://c31mvjap8amod" path="res://scenes/enemies/damageable.tscn" id="30_nfq0w"]
 [ext_resource type="PackedScene" uid="uid://ffuaup7hir3h" path="res://scenes/enemies/cannon_stationary.tscn" id="32_2heav"]
 [ext_resource type="PackedScene" uid="uid://dx5tqq5j0h3mb" path="res://scenes/platformDown.tscn" id="34_40cy5"]
+[ext_resource type="Script" path="res://scripts/level/level4/end_boss_music1.gd" id="35_1fg7s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kpk7m"]
 texture = ExtResource("1_bilr2")
@@ -925,6 +926,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r4rk4"]
 size = Vector2(41, 60)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k862d"]
+size = Vector2(20, 94)
+
 [node name="level4" type="Node2D"]
 script = ExtResource("1_142dw")
 
@@ -956,7 +960,7 @@ position = Vector2(4013, -266)
 position = Vector2(3980, -266)
 
 [node name="player" parent="." instance=ExtResource("5_0gdcf")]
-position = Vector2(4551, -119)
+position = Vector2(3977, -379)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 offset = Vector2(0, -30)
@@ -1437,8 +1441,18 @@ position = Vector2(3831, 79)
 [node name="platformDown" parent="." instance=ExtResource("34_40cy5")]
 position = Vector2(3233, -85)
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(4695.89, -381.346)
+collision_mask = 2
+script = ExtResource("35_1fg7s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(24.1055, -4.65378)
+shape = SubResource("RectangleShape2D_k862d")
+
 [connection signal="body_entered" from="SneakZone" to="SneakZone" method="_on_body_entered"]
 [connection signal="body_exited" from="SneakZone" to="SneakZone" method="_on_body_exited"]
 [connection signal="body_entered" from="Level4BossFightInitator" to="Level4BossFightInitator" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 
 [editable path="LevelEnd"]

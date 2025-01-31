@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 50
 var direction = 1
-@export var health: float = 120
+@export var health: float = 165
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player: AnimationPlayer = $"../Level4BossFightInitator/AnimationPlayer"
 
@@ -31,9 +31,9 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
     print(position)
-    if health < 40:
+    if health < 60:
         phase = 3
-    elif health < 80:
+    elif health < 110:
         phase = 2
 
 
