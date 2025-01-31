@@ -1,3 +1,4 @@
+[music path="res://DialogicStuff/Audio/music/Level3/Sketchbook 2024-09-04_LOOP.ogg" fade="0.0" volume="0.0" bus="Music"]
 [style name="VisualNovelHeartHoarder"]
 [background arg="res://DialogicStuff/backgroundLevel6Part3.png" fade="0.0"]
 join Rose (Rose_Angry2) leftmost

@@ -1,3 +1,4 @@
+[music path="res://DialogicStuff/Audio/music/Level5/VGMA Challenge 21.ogg" fade="0.0" volume="0.0" bus="Music"]
 [background arg="res://DialogicStuff/level5Sewer.png" fade="0.0"]
 [style name="visualNovelRose"]
 join Rose (Rose_LookAside) leftmost [animation="Slide In Left"]
@@ -58,11 +59,11 @@ Rose: Hey, wait!
 Guardian: This is clearly a trap.
 [style name="visualNovelMary"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary5.ogg" volume="0.0"]
-Mary: Maybe. I'm one to be cautious, perhaps too cautious most of the time. 
+Mary: Maybe. I'm one to be cautious, perhaps too cautious most of the time.
 [voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary6.ogg" volume="0.0"]
 Mary: but this may be our best chance to end this once and for all.
 [voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Mary7.ogg" volume="0.0"]
 Mary: Rose, Guardian, let's do this.
-[style name="visualNovelRose" ]
+[style name="visualNovelRose"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level5Outro/Rose7.ogg" volume="0.0"]
 Rose: I have a bad feeling about this... but you're right Mary. For the sake of humanity, we need to take this chance.

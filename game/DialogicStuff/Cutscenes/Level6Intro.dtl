@@ -1,3 +1,4 @@
+[music path="res://DialogicStuff/Audio/music/Level6/Ludum Dare 28 03.ogg" fade="0.0" volume="0.0" bus="Music"]
 [background arg="res://DialogicStuff/bluePortalSwirl.jpg" fade="0.0"]
 [style name="visualNovelRose"]
 join Rose (Rose_grit) left
@@ -5,7 +6,7 @@ join Mary (Mary_neutral) right
 [voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Rose1.wav" volume="0.0"]
 Rose: Hopefully, this is the last time we have to go through one of these darn portals.
 [style name="visualNovelMary"]
-[background arg="res://DialogicStuff/Valeria.png" fade="3" transition="Simple Fade"]
+[background arg="res://DialogicStuff/Valeria.png" fade="3.0" transition="Simple Fade"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Mary1.wav" volume="0.0"]
 Mary (Mary_serious): Wait a minute... This feels weird.
 [style name="visualNovelRose"]

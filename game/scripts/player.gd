@@ -71,7 +71,7 @@ func _ready():
     set_healthBar()
     set_ammoBar()
     #comment out below to change spawn position
-    global_position=LevelState.current_checkpoint
+    #global_position=LevelState.current_checkpoint
     projectileSelected = Projectile
 
 func decreaseAmmo(amount: int):
