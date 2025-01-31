@@ -960,7 +960,7 @@ position = Vector2(1624, -157)
 position = Vector2(3883, -984)
 
 [node name="Checkpoint3" parent="." instance=ExtResource("20_ffi56")]
-position = Vector2(5229, -1359)
+position = Vector2(5937, -1361)
 
 [node name="platform9" parent="." instance=ExtResource("1_bfnt5")]
 position = Vector2(5570, -1560)
@@ -999,7 +999,7 @@ position = Vector2(1768, -305)
 position = Vector2(1768, -351)
 
 [node name="Checkpoint4" parent="." instance=ExtResource("20_ffi56")]
-position = Vector2(6312, -1359)
+position = Vector2(7299, -1825)
 
 [node name="shrubtooth2" parent="." instance=ExtResource("16_7lqho")]
 position = Vector2(7724, -1960)
@@ -1045,7 +1045,7 @@ position = Vector2(7523, -1824)
 position = Vector2(7723, -1822)
 
 [node name="Checkpoint5" parent="." instance=ExtResource("20_ffi56")]
-position = Vector2(7748, -2419)
+position = Vector2(9047, -2720)
 
 [node name="SecurityRobot" parent="." instance=ExtResource("35_htpkh")]
 position = Vector2(8572, -2640)

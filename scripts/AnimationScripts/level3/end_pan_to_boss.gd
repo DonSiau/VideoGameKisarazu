@@ -7,6 +7,7 @@ extends Area2D
 var timerTriggerable = true
 
 func _on_input_stop_timer_timeout() -> void:
+
     player.set_physics_process(true)
     timerTriggerable = false
     SaveState.levelUnlock(4)

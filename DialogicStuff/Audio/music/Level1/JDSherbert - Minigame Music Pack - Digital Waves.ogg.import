@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://crpd35f05ug7c"
+path="res://.godot/imported/JDSherbert - Minigame Music Pack - Digital Waves.ogg-e847338750a773350631db7a6a7bd09a.oggvorbisstr"
+
+[deps]
+
+source_file="res://DialogicStuff/Audio/music/Level1/JDSherbert - Minigame Music Pack - Digital Waves.ogg"
+dest_files=["res://.godot/imported/JDSherbert - Minigame Music Pack - Digital Waves.ogg-e847338750a773350631db7a6a7bd09a.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

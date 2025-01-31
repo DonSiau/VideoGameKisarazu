@@ -20,6 +20,7 @@ var phase_1_projectile = preload("res://scenes/enemies/level4BossPhase1Projectil
 var phase_1_timer_started = false
 var phase_2_timer_started = false
 func _ready() -> void:
+    position=Vector2(4320,-600)
     animated_sprite_2d.scale = Vector2(1, 1)
     var shader_material = ShaderMaterial.new()
     shader_material.shader = preload("res://shader/flashShader.gdshader")
@@ -29,6 +30,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+    print(position)
     if health < 40:
         phase = 3
     elif health < 80:

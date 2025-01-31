@@ -1,4 +1,5 @@
 [background arg="res://DialogicStuff/bluePortalSwirl.jpg" fade="0.0"]
+[music path="res://DialogicStuff/Audio/music/Level3/Sketchbook 2024-11-30.ogg" fade="0.0" volume="0.0" bus="Music"]
 [style name="visualNovelRose"]
 join Rose (Rose_grit) left
 [voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/Rose1.wav" volume="0.0"]

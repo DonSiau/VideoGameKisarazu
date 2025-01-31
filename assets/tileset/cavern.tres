@@ -1,6 +1,25 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bvyrqlg4ujl0b"]
+[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://bvyrqlg4ujl0b"]
 
 [ext_resource type="Texture2D" uid="uid://cbjubbb06s6u5" path="res://assets/sprites/ice_cavern.png" id="1_hubdy"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_unoqp"]
+resource_name = "2"
+texture = ExtResource("1_hubdy")
+2:0/0 = 0
+1:0/0 = 0
+0:0/0 = 0
+28:1/0 = 0
+30:1/0 = 0
+31:1/0 = 0
+32:1/0 = 0
+33:1/0 = 0
+33:2/0 = 0
+32:3/0 = 0
+31:3/0 = 0
+30:2/0 = 0
+31:2/0 = 0
+32:2/0 = 0
+30:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pvuxb"]
 texture = ExtResource("1_hubdy")
@@ -2132,3 +2151,4 @@ texture = ExtResource("1_hubdy")
 [resource]
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_pvuxb")
+sources/0 = SubResource("TileSetAtlasSource_unoqp")

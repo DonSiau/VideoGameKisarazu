@@ -5,7 +5,7 @@ join Mary (Mary_neutral) right
 [voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Rose1.wav" volume="0.0"]
 Rose: Hopefully, this is the last time we have to go through one of these darn portals.
 [style name="visualNovelMary"]
-[background arg="res://DialogicStuff/Valeria.png" fade="1.5" transition="Simple Fade"]
+[background arg="res://DialogicStuff/Valeria.png" fade="3" transition="Simple Fade"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Mary1.wav" volume="0.0"]
 Mary (Mary_serious): Wait a minute... This feels weird.
 [style name="visualNovelRose"]
@@ -22,7 +22,7 @@ Mary (Mary_serious): Valeria... Where it all began.
 Rose: I don't like this... Let's just save the world and get out of here!
 [style name="visualNovelMary"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Mary3.wav" volume="0.0"]
-Mary (Mary_serious): Yes... and then we get to go home.
+Mary (Mary_serious): Yes... I miss home too.
 [style name="visualNovelRose"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Rose4.wav" volume="0.0"]
 Rose (Rose_Grin): When this is all over, first thing I'm doing is taking the longest nap of my life!
