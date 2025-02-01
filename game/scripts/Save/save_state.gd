@@ -37,7 +37,7 @@ func levelUnlock(level: int):
     save_dict["level" + str(level) + "Unlocked"] = true
     if level==2: #weapon unlocks depending on level
         weaponUnlock("playerProjectileAreaBlastUnlocked")
-    if level==5: #weapon unlocks depending on level
+    if level==4: #weapon unlocks depending on level
         weaponUnlock("playerProjectileBombUnlocked")
     save()
     save_game()

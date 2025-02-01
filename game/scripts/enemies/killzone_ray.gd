@@ -9,7 +9,7 @@ func _on_body_entered(body: Node2D) -> void:
   if not body.is_dead:
     player_in_area=body
     inside_damage_zone=true
-    body.take_damage(0.25)
+    body.take_damage(0.5)
     print("player inside")
     player_in_area=body
     damage_again.start()

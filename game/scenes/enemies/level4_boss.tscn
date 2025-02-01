@@ -410,7 +410,7 @@ libraries = {
 }
 
 [node name="phase1ProjectileReload" type="Timer" parent="."]
-wait_time = 6.0
+wait_time = 5.5
 
 [node name="phase2ProjectileReload" type="Timer" parent="."]
 wait_time = 7.0

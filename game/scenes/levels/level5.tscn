@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://bhy7c1xl21obd"]
+[gd_scene load_steps=51 format=3 uid="uid://bhy7c1xl21obd"]
 
 [ext_resource type="Texture2D" uid="uid://bb8xp6poo7wbj" path="res://assets/sprites/spritesheetMeadows.png" id="1_iej4j"]
 [ext_resource type="AudioStream" uid="uid://cn2m7kex32yjt" path="res://DialogicStuff/Audio/music/Level5/VGMA Challenge 20.ogg" id="1_ulrcj"]
@@ -6457,6 +6457,12 @@ size = Vector2(57, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qe4sf"]
 size = Vector2(71, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vxebc"]
+size = Vector2(20, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ly6ll"]
+size = Vector2(20, 31)
+
 [node name="level5" type="Node2D"]
 
 [node name="AudioStreamPlayerBG" type="AudioStreamPlayer" parent="."]
@@ -6936,12 +6942,6 @@ position = Vector2(6074, -982)
 [node name="space_fly_small_A7" parent="." instance=ExtResource("13_20t0m")]
 position = Vector2(5896, -962)
 
-[node name="mudMan7" parent="." instance=ExtResource("18_ttq0y")]
-position = Vector2(957, -531)
-
-[node name="mudMan8" parent="." instance=ExtResource("18_ttq0y")]
-position = Vector2(1169, -531)
-
 [node name="Crusher_enemy_Horizontal13" parent="." instance=ExtResource("16_5bh0x")]
 position = Vector2(7814, -1084)
 attack_timer_offset = 2.0
@@ -7055,6 +7055,14 @@ shape = SubResource("RectangleShape2D_nxu4e")
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="killzone2"]
 position = Vector2(9729.5, -1553)
 shape = SubResource("RectangleShape2D_qe4sf")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="killzone2"]
+position = Vector2(5270, -557.5)
+shape = SubResource("RectangleShape2D_vxebc")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="killzone2"]
+position = Vector2(5269, -444.5)
+shape = SubResource("RectangleShape2D_ly6ll")
 
 [node name="cannon_stationary3" parent="." instance=ExtResource("20_4d62e")]
 position = Vector2(9070, -1527)

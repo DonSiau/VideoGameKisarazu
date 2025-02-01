@@ -1,6 +1,6 @@
 extends CharacterBody2D
 @export var health: float = 6  # Health variable defined in the enemy node
-var SPEED = 70  # Speed of the enemy
+var SPEED = 75  # Speed of the enemy
 var player_pos: Vector2  # Position of the player
 var target_pos: Vector2  # Direction towards the player
 @onready var expire_projectile: Timer = $ExpireProjectile

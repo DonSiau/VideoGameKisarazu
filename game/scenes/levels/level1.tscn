@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://bvkdv5wyelto3"]
 
 [ext_resource type="Texture2D" uid="uid://cocxtlqsbd5p0" path="res://assets/parallax/bg_grass_near.png" id="1_anyrf"]
-[ext_resource type="AudioStream" uid="uid://c1s78mekbx270" path="res://DialogicStuff/Audio/music/Level1/Level1.ogg" id="1_hjgtx"]
+[ext_resource type="AudioStream" uid="uid://x7xqdnx0ljth" path="res://DialogicStuff/Audio/music/Level1/Level1.ogg" id="1_hjgtx"]
 [ext_resource type="Texture2D" uid="uid://dq07rn1l8ydsw" path="res://assets/parallax/bg_sky.png" id="1_qo5je"]
 [ext_resource type="PackedScene" uid="uid://dql06euexqj2c" path="res://scenes/player.tscn" id="2_rdemd"]
 [ext_resource type="Texture2D" uid="uid://bb8xp6poo7wbj" path="res://assets/sprites/spritesheetMeadows.png" id="3_7dh1w"]
@@ -2916,6 +2916,7 @@ distance = -49.0
 
 [node name="AudioStreamPlayerBG" type="AudioStreamPlayer" parent="."]
 process_mode = 3
+process_priority = 10
 stream = ExtResource("1_hjgtx")
 autoplay = true
 bus = &"Music"
@@ -2977,7 +2978,7 @@ offset = Vector2(0, -110)
 
 [node name="player" parent="." instance=ExtResource("2_rdemd")]
 z_index = 5
-position = Vector2(3446, -24)
+position = Vector2(3498, -52)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 offset = Vector2(0, -20)

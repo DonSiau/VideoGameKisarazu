@@ -68,7 +68,7 @@ HeartHoarder: Too late for that. Earth will pay for what they've done. Every. La
 [voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/Mary5.ogg" volume="0.0"]
 Mary (Mary_serious): We won't let you continue this!
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/Rose5.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/Rose5.ogg" volume="-1.0"]
 Rose: We will stop you!
 [style name="VisualNovelHeartHoarder"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level6HeartHoarderIntro/HeartHoarder16.ogg" volume="0.0"]

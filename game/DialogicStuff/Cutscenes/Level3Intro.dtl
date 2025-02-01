@@ -18,7 +18,7 @@ Guardian: We should reach the target destination in approximately 38 seconds
 Rose (Rose_LookAside): That's a relief...
 [style name="visualNovelMary"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/Mary2.wav" volume="0.0"]
-Mary (Mary_serious): be prepared guardian for what's on the other side.
+Mary (Mary_serious): be prepared for what's on the other side.
 [style name="visualNovel"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/guardian3.wav" volume="0.0"]
 Guardian: Affirmative.

@@ -39,7 +39,7 @@ HeartHoarder: Once, long ago, my home planet, Valeria, was peaceful and humble.
 HeartHoarder: It was beautiful......
 [signal arg="cutscene2"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level3Outro/HeartHoarder6.ogg" volume="0.0"]
-HeartHoarder: But trouble came in the form of invaders—foreign aliens who descended upon our lands, demanding our submission.
+HeartHoarder: But trouble came in the form of invaders, foreign aliens who descended upon our lands, demanding our submission.
 [style name="chatboxMary"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level3Outro/Mary4.ogg" volume="0.0"]
 Mary: And i'm guessing your people refused...
@@ -50,7 +50,7 @@ HeartHoarder: Yes, and for that defiance, they unleashed their wrath.
 [voice path="res://DialogicStuff/Audio/voiceLines/Level3Outro/HeartHoarder8.ogg" volume="0.0"]
 HeartHoarder: War swept across Valeria, consuming everything in its path. They slaughtered our people and burned our cities.
 [voice path="res://DialogicStuff/Audio/voiceLines/Level3Outro/HeartHoarder9.ogg" volume="0.0"]
-HeartHoarder: ...and stole from me the two things I held most dear—my wife... and my child.
+HeartHoarder: ...and stole from me the two things I held most dear, my wife... and my child.
 [style name="chatboxRose"]
 [voice path="res://DialogicStuff/Audio/voiceLines/Level3Outro/Rose4.ogg" volume="0.0"]
 Rose: Well that's no excuse for what you are doing!
@@ -61,7 +61,7 @@ HeartHoarder: In those dark days, I was no warrior. I was a scientist, cowering 
 [voice path="res://DialogicStuff/Audio/voiceLines/Level3Outro/HeartHoarder11.ogg" volume="0.0"]
 HeartHoarder: I was desperate, Desperate to build something—anything—that could save us.
 [voice path="res://DialogicStuff/Audio/voiceLines/Level3Outro/HeartHoarder12.ogg" volume="0.0"]
-HeartHoarder: Then, I made my breakthrough. In my desperation, I uncovered a source of limitless power—an energy so vast it could have turned the tide of war.
+HeartHoarder: Then, I made my breakthrough. In my desperation, I uncovered a source of limitless power, an energy so vast it could have turned the tide of war.
 [voice path="res://DialogicStuff/Audio/voiceLines/Level3Outro/HeartHoarder13.ogg" volume="0.0"]
 HeartHoarder: I discovered that the essence of the soul itself could be harvested... and the emotions tied to those souls could be transformed into pure, unyielding energy.
 [voice path="res://DialogicStuff/Audio/voiceLines/Level3Outro/HeartHoarder14.ogg" volume="0.0"]

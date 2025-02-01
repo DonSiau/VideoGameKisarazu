@@ -17,7 +17,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
     read=true;
 
 func start_dialog():
- if get_parent().get_parent().name!="level1" or "Level2":
+ print(get_parent().get_parent().name)
+ if get_parent().get_parent().name != "level1" and get_parent().get_parent().name != "Level2":
   audio_stream_player_bg.stop()
  Dialogic.start(str(node_name)).process_mode = Node.PROCESS_MODE_ALWAYS
  Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS

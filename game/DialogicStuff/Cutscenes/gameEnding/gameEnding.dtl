@@ -1,13 +1,14 @@
-[background arg="res://DialogicStuff/FinalBattleRoom.png" fade="0.0"]
+[music path="res://DialogicStuff/Audio/music/gameEnd/Ludum Dare 30 06.ogg" fade="0.0" volume="0.0" bus="Music"]
 [style name="VisualNovelHeartHoarder"]
+[background arg="res://DialogicStuff/FinalBattleRoom.png" fade="0.0"]
 join Rose (Rose_Grin) leftmost
 join Mary (Mary_happy) rightmost
 join HeartHoarder (default) center
 update HeartHoarder center [animation="Heartbeat" length="0.2" wait="true" repeat="7"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder1.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder1.ogg" volume="6.0"]
 HeartHoarder: Aargh!
 update HeartHoarder center [animation="Heartbeat" length="0.2" wait="true" repeat="7"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder2.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder2.ogg" volume="6.0"]
 HeartHoarder: Gaah!
 [style name="visualNovelMary"]
 [voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary1.ogg" volume="0.0"]
@@ -74,11 +75,11 @@ Grandpa: The Heart Engine was meant to bridge worlds, but it only brought destru
 Grandpa: Guardian wasn't just created to protect Earth from the oncoming revenge I predicted, It was also designed to merge with the original Heart Engine, to use its power for good, for it's true purpose.
 [voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Grandpa4.ogg" volume="0.0"]
 Grandpa: I entrusted Guardian to you two because I knew you would do what's right.
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Grandpa5.ogg" volume="0.0"]
-Grandpa: Hey James, if you're seeing this, I'm sorry for everything. I promise you, Valeria will thrive once more.
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/grandpa5.wav" volume="0.0"]
+Grandpa: Hey James, if you're seeing this, I'm sorry for everything that happened. I promise you, Valeria will thrive once more.
 [style name="VisualNovelHeartHoarder"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder11.ogg" volume="0.0"]
-HeartHoarder: James? huh...Always the optimist...
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder11.wav" volume="0.0"]
+HeartHoarder: James? huh... I've not heard that name in a long time...
 [voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder12.ogg" volume="0.0"]
 HeartHoarder: Valeria's future lies with you... do well with it.
 [voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder13.ogg" volume="0.0"]
@@ -138,7 +139,9 @@ leave --All--
 [wait time="6.0"]
 [style name="visualNovel"]
 6 months later
-[wait time="4.0"]
+[wait time="2.0"]
+[music path="res://DialogicStuff/Audio/music/Level1/JDSherbert - Minigame Music Pack - Digital Waves.ogg" fade="1.5" volume="0.0" bus="Music"]
+[wait time="2.0"]
 [background arg="res://DialogicStuff/school2.png" fade="2.0"]
 [wait time="3.0"]
 "Student 1": Man, everything's different since that whole Heart Engine thing...

@@ -1,4 +1,4 @@
-[music path="res://DialogicStuff/Audio/music/Level5/VGMA Challenge 21.ogg" fade="0.0" volume="0.0" bus="Music"]
+[music path="res://DialogicStuff/Audio/music/Level5/VGMA Challenge 21.ogg" fade="0.0" volume="-1.0" bus="Music"]
 [background arg="res://DialogicStuff/level5Sewer.png" fade="0.0"]
 [style name="visualNovelRose"]
 join Rose (Rose_LookAside) leftmost [animation="Slide In Left"]
