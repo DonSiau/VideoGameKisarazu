@@ -51,7 +51,7 @@ const WALL_JUMP_BUFFER_TIME = 0.2
 var last_checkpoint=Vector2.ZERO
 var health = 5
 var projectileSelected = Projectile
-var ammo = 10
+var ammo = 5
 func set_healthBarInvisible()-> void:
     $CanvasLayerHealth.visible=false;
 func set_healthBarVisible()-> void:
@@ -67,11 +67,15 @@ func set_ammoBar() -> void:
     $CanvasLayerAmmo/AmmoBar.value = max(ammo, 0)
 
 func _ready():
+    if get_parent().name=="FinalBoss":
+        global_position=Vector2(-0,-15)
+    else:
+         global_position=LevelState.current_checkpoint
+
     add_to_group("Player")
     set_healthBar()
     set_ammoBar()
     #comment out below to change spawn position
-    global_position=LevelState.current_checkpoint
     projectileSelected = Projectile
 
 func decreaseAmmo(amount: int):

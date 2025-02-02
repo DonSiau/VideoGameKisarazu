@@ -146,7 +146,12 @@ leave --All--
 [wait time="3.0"]
 "Student 1": Man, everything's different since that whole Heart Engine thing...
 "Student 2": Tell me about it! My dad says the new power is revolutionary.
-"Student 3": And did you hear about the planet Valeria? It's like the whole planet is coming back to life!
+"Student 3": And did you hear about the planet Valeria? 
+"Student 1": eh? what's that?
+"Student 2": Do you live under a rock?! it's a alien civilization we discovered!
+"Student 3": Yeah. I heard on the news we made contact with them!
+"Student 2": Luckily they seem to be a peaceful and thriving civilization, although they seem to dislike us for some reason...
+"Student 3": Apparently there's been talks of us collaborating with them. Let's hope it's for the best!
 join Rose (Rose_Grin) left
 join Mary (Mary_happy) right
 [style name="visualNovelMary"]

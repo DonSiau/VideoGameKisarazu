@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://bhy7c1xl21obd"]
+[gd_scene load_steps=50 format=3 uid="uid://bhy7c1xl21obd"]
 
 [ext_resource type="Texture2D" uid="uid://bb8xp6poo7wbj" path="res://assets/sprites/spritesheetMeadows.png" id="1_iej4j"]
 [ext_resource type="AudioStream" uid="uid://cn2m7kex32yjt" path="res://DialogicStuff/Audio/music/Level5/VGMA Challenge 20.ogg" id="1_ulrcj"]
@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://dgagki4n4acui" path="res://scenes/menus/weaponSelect.tscn" id="12_jfgp6"]
 [ext_resource type="PackedScene" uid="uid://c6qmh3quao58p" path="res://scenes/enemies/space_fly_small_A.tscn" id="13_20t0m"]
 [ext_resource type="PackedScene" uid="uid://c4yaj5mtjynlq" path="res://scenes/cutscene/chatPlayerPaused.tscn" id="13_ut00w"]
-[ext_resource type="PackedScene" uid="uid://drkratb7ctu3n" path="res://scenes/enemies/moon_muncher_A.tscn" id="14_0unw1"]
 [ext_resource type="PackedScene" uid="uid://dkla8xwajyo6v" path="res://scenes/enemies/Crusher_enemy_down.tscn" id="15_b1a86"]
 [ext_resource type="PackedScene" uid="uid://dyb536x7n6gss" path="res://scenes/enemies/Crusher_enemy_Horizontal.tscn" id="16_5bh0x"]
 [ext_resource type="PackedScene" uid="uid://dyrxpfxxaay2l" path="res://scenes/platformLevel5.tscn" id="17_trtb8"]
@@ -6464,11 +6463,12 @@ size = Vector2(20, 27)
 size = Vector2(20, 31)
 
 [node name="level5" type="Node2D"]
+position = Vector2(-800, 0)
 
 [node name="AudioStreamPlayerBG" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("1_ulrcj")
-volume_db = -10.0
+volume_db = -7.0
 autoplay = true
 bus = &"Music"
 
@@ -6564,7 +6564,7 @@ offset = Vector2(0, 146)
 
 [node name="player" parent="." instance=ExtResource("8_65ot6")]
 z_index = 5
-position = Vector2(9073, -1574)
+position = Vector2(11120, -1546)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 offset = Vector2(0, -20)
@@ -6605,7 +6605,7 @@ visible = false
 offset_top = 5.0
 offset_bottom = 5.0
 
-[node name="animation" type="Node" parent="."]
+[node name="animation" type="Node2D" parent="."]
 
 [node name="FirstLevel5" parent="animation" instance=ExtResource("13_ut00w")]
 position = Vector2(4644, -436)
@@ -6624,9 +6624,6 @@ position = Vector2(281, -82)
 
 [node name="space_fly_small_A3" parent="." instance=ExtResource("13_20t0m")]
 position = Vector2(234, -82)
-
-[node name="moon_muncher_A" parent="." instance=ExtResource("14_0unw1")]
-position = Vector2(-276, -11)
 
 [node name="Crusher_enemy_down" parent="." instance=ExtResource("15_b1a86")]
 position = Vector2(203, -225)
@@ -7069,7 +7066,7 @@ position = Vector2(9070, -1527)
 direction = -1
 
 [node name="Checkpoint" parent="." instance=ExtResource("19_r03pb")]
-position = Vector2(8736, -1521)
+position = Vector2(7921, -1440)
 
 [node name="Crusher_enemy_down20" parent="." instance=ExtResource("15_b1a86")]
 position = Vector2(9216, -1656)
@@ -7078,7 +7075,7 @@ time_offset_duration = 2.0
 
 [node name="Crusher_enemy_down21" parent="." instance=ExtResource("15_b1a86")]
 position = Vector2(9328, -1656)
-time_offset_duration = 3.1
+time_offset_duration = 3.4
 
 [node name="Crusher_enemy_down22" parent="." instance=ExtResource("15_b1a86")]
 position = Vector2(9440, -1656)

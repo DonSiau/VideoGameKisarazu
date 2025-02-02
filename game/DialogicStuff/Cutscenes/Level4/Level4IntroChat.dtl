@@ -1,6 +1,6 @@
-[style name="visualNovelMary"]
+[style name="chatboxMary"]
 Mary: They've taken over the capital...
-[style name="visualNovelRose"]
+[style name="chatboxRose"]
 Rose: Well let's take it back!
 [style name="chatbox"]
 
@@ -8,7 +8,7 @@ Guardian: I sense that my energy reserves are low. Currently my attack modules a
 [style name="chatboxRose"]
 Rose (Rose_Grin): Eh so you can't attack?
 [style name="chatbox"]
-Guardian: You are correct. However, I sense a power source nearby, about a kilometer infront of us.
+Guardian: You are correct. However, I sense a power source nearby, about a kilometer infront of us. I can utilize that to power me up.
 [style name="chatboxMary"]
 Mary: The issue though is how we would reach it. There are enemies and security cameras everywhere
 [style name="chatboxRose"]

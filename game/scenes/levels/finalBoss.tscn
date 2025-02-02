@@ -108,7 +108,6 @@ z_as_relative = false
 layer = 1
 
 [node name="bg7" type="ParallaxLayer" parent="Node2D/ParallaxBackground2"]
-visible = false
 motion_mirroring = Vector2(640, 0)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Node2D"]

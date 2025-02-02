@@ -11,6 +11,7 @@ func _on_play_pressed() -> void:
     hide()
 
 func _on_exit_pressed() -> void:
+    SoundManager.play_sound("menuAccept",-20)
     print("Exit pressed")
     get_tree().paused = false
     get_tree().change_scene_to_file("res://scenes/menus/LevelPicker.tscn")
