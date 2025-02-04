@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://i73ffoyl1i7g"
-path="res://.godot/imported/Level6.ogg-090310c4aa38083d5eabd7269ef483ce.oggvorbisstr"
+path="res://.godot/imported/level6.ogg-6c5781147193d7c0f13ad61f03792422.oggvorbisstr"
 
 [deps]
 
-source_file="res://DialogicStuff/Audio/music/Level6/Level6.ogg"
-dest_files=["res://.godot/imported/Level6.ogg-090310c4aa38083d5eabd7269ef483ce.oggvorbisstr"]
+source_file="res://DialogicStuff/Audio/music/Level6/level6.ogg"
+dest_files=["res://.godot/imported/level6.ogg-6c5781147193d7c0f13ad61f03792422.oggvorbisstr"]
 
 [params]
 
