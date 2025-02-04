@@ -12,12 +12,10 @@ In the distant future, mysterious portals begin appearing across Earth, unleashi
 In this story-driven 2D platformer inspired by the Mega Man Series, the player will navigate through challenging environments, from city streets to alien territories, while uncovering the truth behind the invasion.
 
 ## Features
-- A gripping sci-fi narrative with two charming characters, Rose and Mary
-- Visual novel-style voice-acted cutscenes
-- 6 levels each with unique gameplay mechanics
-- Traverse across varied environments
-- Dispatch enemies with your sword, or various ranged attacks
-
+- A gripping sci-fi narrative with voice-acted, visual novel-style cutscenes
+- Six levels, each with unique gameplay mechanics, spanning over an hour of action-packed gameplay
+- Explore diverse and immersive environments
+- Take down enemies with your sword or mix it up with powerful secondary attacks
 ## Development
 his game was developed as a student project during a 5-month internship at Kisarazu National College of Technology in Japan. The game was developed using the Godot game engine
 
