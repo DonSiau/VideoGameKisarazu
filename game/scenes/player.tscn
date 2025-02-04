@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=3 uid="uid://dql06euexqj2c"]
+[gd_scene load_steps=117 format=3 uid="uid://dql06euexqj2c"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_hs32l"]
 [ext_resource type="Texture2D" uid="uid://b8efk5tuswtnb" path="res://assets/sprites/Player Death 64x64.png" id="2_0usdg"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://20cblvllf8he" path="res://assets/sprites/fall.png" id="12_lpdlf"]
 [ext_resource type="Script" path="res://scripts/sword.gd" id="13_s404n"]
 [ext_resource type="Texture2D" uid="uid://crjslmqyvq8b3" path="res://assets/sprites/Player Idle.png" id="14_1ct8p"]
+[ext_resource type="AudioStream" uid="uid://n7bp2uycats0" path="res://sfx/dash.wav" id="23_4y7tb"]
 [ext_resource type="AudioStream" uid="uid://dsymjg1a77o3" path="res://sfx/sword12.wav" id="23_x3146"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n2dle"]
@@ -1041,6 +1042,9 @@ position = Vector2(11, -7)
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(-1, 21)
 
+[node name="AudioStreamPlayer_dash" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("23_4y7tb")
+
 [node name="AudioStreamPlayer_Jump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_n8dl2")
 bus = &"SFX"
@@ -1050,6 +1054,7 @@ stream = ExtResource("3_3beqt")
 
 [node name="AudioStreamPlayer2D_die" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_edr2i")
+bus = &"SFX"
 
 [node name="dash_reload" type="Timer" parent="."]
 wait_time = 0.3

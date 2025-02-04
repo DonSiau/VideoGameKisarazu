@@ -18,6 +18,8 @@ extends CharacterBody2D
 @onready var audio_stream_player_jump: AudioStreamPlayer2D = $AudioStreamPlayer_Jump
 @onready var audio_stream_player_2d_hurt: AudioStreamPlayer2D = $AudioStreamPlayer2D_hurt
 @onready var audio_stream_player_2d_die: AudioStreamPlayer2D = $AudioStreamPlayer2D_die
+@onready var audio_stream_player_dash: AudioStreamPlayer2D = $AudioStreamPlayer_dash
+
 
 const GRAVITY=100
 const FALL_GRAVITY=150
@@ -232,6 +234,7 @@ func _physics_process(delta: float) -> void:
 
     var direction := Input.get_axis("a", "d")
     if (Input.is_action_just_pressed("alt")) and (dashable==true):
+        audio_stream_player_dash.play()
         is_dashing = true
         dashable=false
         dash_reload.start()

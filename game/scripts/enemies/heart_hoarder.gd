@@ -4,7 +4,7 @@ var player_pos: Vector2  # Position of the player
 var target_pos: Vector2  # Direction towards the player
 @onready var player = get_parent().get_node("player")  # Reference to the Player node
 @export var health: float = 330
-var SPEED = 38
+var SPEED = 41
 
 @onready var killzone: Area2D = $killzone
 
@@ -57,11 +57,11 @@ func _process(delta: float) -> void:
      if is_moveAttack:
         if !is_teleporting:
          animated_sprite_2d.play("move_attack")
-         SPEED=58
+         SPEED=61
      else:
         if !is_teleporting:
          animated_sprite_2d.play("move")
-         SPEED=38
+         SPEED=41
 
 
     if position.distance_to(player_pos) <500:

@@ -3,37 +3,38 @@
 [background arg="res://DialogicStuff/laboratory.jpg" fade="0.0"]
 [wait time="2.0"]
 join Rose (Rose_Grin) left
-[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Rose1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Rose1.wav" volume="0.0" bus="Voice"]
 Rose: Well, that was fun!
 join Mary (Mary_happy) right
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Mary1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Mary1.wav" volume="0.0" bus="Voice"]
 Mary: Agreed.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Rose2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Rose2.wav" volume="0.0" bus="Voice"]
 Rose: Hehe, even the grumpy one agrees!
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Mary2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Mary2.wav" volume="0.0" bus="Voice"]
 Mary (Mary_serious): Well now it's time to get serious. We need to figure out how to deal with the alien threat.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Rose3.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Rose3.wav" volume="0.0" bus="Voice"]
 Rose (Rose_confused): Hmmm... any ideas?
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Mary3.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Mary3.wav" volume="0.0" bus="Voice"]
 Mary: None at the moment. We don't even know where these aliens come from, or how their portals work.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Rose4.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Rose4.wav" volume="0.0" bus="Voice"]
 Rose (Rose_confused): Hmmm Guardian?
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/guardian1.wav" volume="0.0"]
-Guardian: I am sensing abnormal energy readings in a cave just 2 Kilometers north of here, A new portal might have popped up.
+[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/guardian1.wav" volume="0.0" bus="Voice"]
+Guardian: I am sensing abnormal energy readings in a cave just 2 Kilometers north of here. A new portal might have popped up.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Mary4.wav" volume="0.0"]
-Mary: Thats where city X is.... I sense they are arming for an attack soon. We need to stop them
+[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Mary4.wav" volume="0.0" bus="Voice"]
+Mary: That's where City X is.... I sense they are arming for an attack soon. We need to stop them.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Rose5.wav" volume="0.0"]
-Rose (Rose_Grin): Well what are we waiting? let's go!
+[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/Rose5.wav" volume="0.0" bus="Voice"]
+Rose (Rose_Grin): Well, what are we waiting for? Let's go!
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/guardian2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level2Intro/guardian2.wav" volume="0.0" bus="Voice"]
 Guardian: Affirmative.
 leave --All--
+

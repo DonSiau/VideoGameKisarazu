@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cvuvttu6t7t5"]
+[gd_scene load_steps=20 format=3 uid="uid://cvuvttu6t7t5"]
 
 [ext_resource type="Texture2D" uid="uid://bpbi3kkc7thwg" path="res://assets/sprites/bossbattle/layer 7 - foreground.png" id="1_8gdlt"]
 [ext_resource type="Script" path="res://scripts/level/final_boss.gd" id="1_nl620"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://kcy6vxmsua5n" path="res://scenes/HeartHoarder.tscn" id="12_dgxoh"]
 [ext_resource type="Shader" path="res://shader/flashShader.gdshader" id="13_2l0m6"]
 [ext_resource type="PackedScene" uid="uid://bltejelrb2kg8" path="res://scenes/platformLevel6.tscn" id="14_dhqro"]
+[ext_resource type="PackedScene" uid="uid://b543bdlj4unj" path="res://scenes/Heart.tscn" id="17_42tsb"]
 
 [sub_resource type="Theme" id="Theme_g4rrw"]
 
@@ -33,6 +34,12 @@ process_priority = 5
 stream = ExtResource("2_g00td")
 autoplay = true
 bus = &"Music"
+
+[node name="Heart" parent="." instance=ExtResource("17_42tsb")]
+position = Vector2(-107, -99)
+
+[node name="Heart2" parent="." instance=ExtResource("17_42tsb")]
+position = Vector2(107, -99)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 3

@@ -2,36 +2,36 @@
 [background arg="res://DialogicStuff/bluePortalSwirl.jpg" fade="0.0"]
 [style name="visualNovelRose"]
 join Rose (Rose_grit) left
-[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Rose1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Rose1.wav" volume="0.0" bus="Voice"]
 Rose: Ugh... My stomach doesn't feel so good.
 join Mary right
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Mary1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Mary1.wav" volume="0.0" bus="Voice"]
 Mary: The Heart Hoarder... Guardian, what's your analysis of him?
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/guardian1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/guardian1.wav" volume="0.0" bus="Voice"]
 Guardian: He's created a cycle of invasion and destruction, exactly what destroyed his own world. We must end this.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Mary2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Mary2.wav" volume="0.0" bus="Voice"]
 Mary (Mary_serious): To think he believes he's doing what's right... when he's just perpetuating more suffering.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Rose2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Rose2.wav" volume="0.0" bus="Voice"]
 Rose (Rose_Grin): Standing around won't help. What's our next move?
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/guardian2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/guardian2.wav" volume="0.0" bus="Voice"]
 Guardian: I've detected something crucial that could give us an advantage.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Rose3.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Rose3.wav" volume="0.0" bus="Voice"]
 Rose: Oh? Tell us!
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/guardian3.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/guardian3.wav" volume="0.0" bus="Voice"]
 Guardian: His Heart Engines have a distinct energy signature. Several are scattered throughout Cyberion. If we destroy them, we'll cripple his operation.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Mary3.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Mary3.wav" volume="0.0" bus="Voice"]
 Mary: And force his hand. He'll have to emerge to defend what remains of his power source.
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/guardian4.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/guardian4.wav" volume="0.0" bus="Voice"]
 Guardian: Precisely. When he does, we'll be ready to end this.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Rose4.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level4Intro/Rose4.wav" volume="0.0" bus="Voice"]
 Rose (Rose_Grin): Now that's what I call a plan! Time to show him what happens when you mess with our world!

@@ -2,23 +2,23 @@
 [music path="res://DialogicStuff/Audio/music/Level3/Sketchbook 2024-11-30.ogg" fade="0.0" volume="0.0" bus="Music"]
 [style name="visualNovelRose"]
 join Rose (Rose_grit) left
-[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/Rose1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/Rose1.wav" volume="0.0" bus="Voice"]
 Rose: uuhhh...... are we stuck?
 join Mary right
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/Mary1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/Mary1.wav" volume="0.0" bus="Voice"]
 Mary (Mary_serious): Guardian any information?
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/guardian1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/guardian1.wav" volume="0.0" bus="Voice"]
 Guardian: I sense am sensing a change in GPS location, it seems we are being taken to somewhere far away, perhaps to a secret base.
-[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/guardian2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/guardian2.wav" volume="0.0" bus="Voice"]
 Guardian: We should reach the target destination in approximately 38 seconds
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/Rose2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/Rose2.wav" volume="0.0" bus="Voice"]
 Rose (Rose_LookAside): That's a relief...
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/Mary2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/Mary2.wav" volume="0.0" bus="Voice"]
 Mary (Mary_serious): be prepared for what's on the other side.
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/guardian3.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level3Intro/guardian3.wav" volume="0.0" bus="Voice"]
 Guardian: Affirmative.

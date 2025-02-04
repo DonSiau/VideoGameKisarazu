@@ -6,93 +6,94 @@ brzz..... brzzz......
 brzz.... brzzzz
 join Rose (Rose_Angry) left
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose1.mp3" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose1.mp3" volume="0.0" bus="Voice"]
 Rose: Ugh! Why is this darn thing not booting up? It's been hours!
 join Mary right
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary1.wav" volume="0.0" bus="Voice"]
 Mary: Just be patient, Rose. Rushing isn't going to help.
 [style name="visualNovelRose"]
 update Rose [animation="Bounce" length="0.2" repeat="8"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose2.mp3" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose2.mp3" volume="0.0" bus="Voice"]
 Rose: Well, I'm trying to be patient, but it's taking forever!!!
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary2.mp3" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary2.mp3" volume="0.0" bus="Voice"]
 Mary: Look... her eyes are lighting up.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose3.mp3" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose3.mp3" volume="0.0" bus="Voice"]
 Rose (Rose_LookAside): Ugh... finally. About time.
 leave --All-- [animation="Fade Out" length="0.3"]
 [background arg="res://DialogicStuff/laboratoryBoot.jpg" fade="0.8"]
 [wait time="0.8"]
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/guardian1.mp3" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/guardian1.mp3" volume="0.0" bus="Voice"]
 SYSTEMS INITIATING....
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/guardian2.mp3" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/guardian2.mp3" volume="0.0" bus="Voice"]
 SYSTEM ONLINE. INITIALIZING PRIMARY FUNCTION MODULES
 [background arg="res://DialogicStuff/laboratory.jpg" fade="0.8"]
 [wait time="0.8"]
 join Mary right
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary3.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary3.wav" volume="0.0" bus="Voice"]
 Mary: oh, she's speaking. Thats a good sign.
 join Rose (Rose_Grin) left
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose4.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose4.wav" volume="0.0" bus="Voice"]
 Rose: Took you long enough. Hey, tin can, you know how long we've been waiting for you?
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/guardian3.mp3" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/guardian3.mp3" volume="0.0" bus="Voice"]
 Guardian: My apologies for the delay. It seems my activation protocols took longer than expected.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary4.mp3" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary4.mp3" volume="0.0" bus="Voice"]
 Mary: Please excuse my sister's impatience. I'm Mary, and this is-
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose5.mp3" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose5.mp3" volume="0.0" bus="Voice"]
 Rose: I'm Rose! We've been trying to activate you for hours!
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/guardian4.mp3" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/guardian4.mp3" volume="0.0" bus="Voice"]
 Guardian: Rose and Mary... I'm pleased to meet you both. Though I sense there's urgency in your voices.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose6.mp3" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose6.mp3" volume="0.0" bus="Voice"]
 Rose (Rose_grit): Yeah, and we really need your help.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary5.mp3" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary5.mp3" volume="0.0" bus="Voice"]
 Mary (Mary_serious): Grandfather's notes indicate you were specifically designed to handle extraordinary threats. He called you the "Guardian Project."
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/guardian5.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/guardian5.wav" volume="0.0" bus="Voice"]
 Guardian: Yes... I remember. Your grandfather built me to protect humanity.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary6.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary6.wav" volume="0.0" bus="Voice"]
 Mary: A week ago, strange portals started appearing in the sky. The aliens that came through... they're unlike anything we've seen.
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/guardian6.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/guardian6.wav" volume="0.0" bus="Voice"]
 Guardian: That seems like trouble.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose7.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose7.wav" volume="0.0" bus="Voice"]
 Rose: Yeah, and the military's having a real tough time with these things!
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary7.wav" volume="0.0"]
-Mary: We need to act. However we should verify your systems are functioning properly first...
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary7.wav" volume="0.0" bus="Voice"]
+Mary: We need to act. However, we should verify your systems are functioning properly first...
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose8.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose8.wav" volume="0.0" bus="Voice"]
 Rose (Rose_Grin): Yeah, we don't want you glitching out in the middle of a fight!
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary8.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary8.wav" volume="0.0" bus="Voice"]
 Mary: There's a secure training area just outside in the forest. We can guide you through your basic functions there.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose9.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose9.wav" volume="0.0" bus="Voice"]
 Rose: And then we can finally show those aliens who they're messing with!
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/guardian7.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/guardian7.wav" volume="0.0" bus="Voice"]
 Guardian: Lead the way.
 [background arg="res://DialogicStuff/3.jpg" fade="2.0"]
 [wait time="2.0"]
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary9.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Mary9.wav" volume="0.0" bus="Voice"]
 Mary: Guardian, are you ready to begin?
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/guardian8.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/guardian8.wav" volume="0.0" bus="Voice"]
 Guardian: Ready and willing. Operation Online.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose10.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level1Intro/Rose10.wav" volume="0.0" bus="Voice"]
 Rose: Finally! Time to see what you can do!
+

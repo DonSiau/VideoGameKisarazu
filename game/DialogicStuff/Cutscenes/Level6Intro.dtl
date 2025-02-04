@@ -3,39 +3,39 @@
 [style name="visualNovelRose"]
 join Rose (Rose_grit) left
 join Mary (Mary_neutral) right
-[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Rose1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Rose1.wav" volume="0.0" bus="Voice"]
 Rose: Hopefully, this is the last time we have to go through one of these darn portals.
 [style name="visualNovelMary"]
 [background arg="res://DialogicStuff/Valeria.png" fade="3.0" transition="Simple Fade"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Mary1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Mary1.wav" volume="0.0" bus="Voice"]
 Mary (Mary_serious): Wait a minute... This feels weird.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Rose2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Rose2.wav" volume="0.0" bus="Voice"]
 Rose: Woah... Where are we?
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Guardian1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Guardian1.wav" volume="0.0" bus="Voice"]
 Guardian: This must be Valeria.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Mary2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Mary2.wav" volume="0.0" bus="Voice"]
 Mary (Mary_serious): Valeria... Where it all began.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Rose3.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Rose3.wav" volume="0.0" bus="Voice"]
 Rose: I don't like this... Let's just save the world and get out of here!
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Mary3.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Mary3.wav" volume="0.0" bus="Voice"]
 Mary (Mary_serious): Yes... I miss home too.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Rose4.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Rose4.wav" volume="0.0" bus="Voice"]
 Rose (Rose_Grin): When this is all over, first thing I'm doing is taking the longest nap of my life!
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Mary4.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Mary4.wav" volume="0.0" bus="Voice"]
 Mary (Mary_happy): First thing I'm doing is visiting Mom and Dad. After all this, I think I finally understand why they were always so protective.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Rose5.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Rose5.wav" volume="0.0" bus="Voice"]
 Rose (Rose_grit): Right there with you, sis. Mom's definitely going to ground us both though...
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Mary5.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Mary5.wav" volume="0.0" bus="Voice"]
 Mary (Mary_happy): Who cares about that? as you would say, let's kick some alien butt!
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Rose6.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level6Intro/Rose6.wav" volume="0.0" bus="Voice"]
 Rose (Rose_Grin): Let's go!

@@ -2,29 +2,29 @@
 [background arg="res://DialogicStuff/bluePortalSwirl.jpg" fade="0.0"]
 [style name="visualNovelRose"]
 join Rose (Rose_grit) left
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/Rose1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/Rose1.wav" volume="0.0" bus="Voice"]
 Rose: Every time we go through one of these portals, it feels like my atoms are doing a dance party...
 join Mary (Mary_happy) right
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/Mary1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/Mary1.wav" volume="0.0" bus="Voice"]
 Mary (Mary_happy): At least your atoms have a sense of rhythm. I remember your dancing at last year's festival.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/Rose2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/Rose2.wav" volume="0.0" bus="Voice"]
 Rose (Rose_Angry2): Hey! I'll have you know that dance won the talent show! Well... technically came in third, but still!
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/Mary2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/Mary2.wav" volume="0.0" bus="Voice"]
 Mary: Third out of three contestants, if I remember correctly.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/Rose3.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/Rose3.wav" volume="0.0" bus="Voice"]
 Rose (Rose_LookAside): Always the perfectionist, aren't you? Some of us prefer to have fun over being precise all the time.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/Mary3.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/Mary3.wav" volume="0.0" bus="Voice"]
 Mary: Speaking of precision... Guardian, have you pinpointed our destination yet?
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/guardian1.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/guardian1.wav" volume="0.0" bus="Voice"]
 Guardian: Affirmative. The Heart Engine's energy signature is emanating from deep within the city's sewer system, which is where we are heading.
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/guardian2.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/guardian2.wav" volume="0.0" bus="Voice"]
 Guardian: The Heart Hoarder has transformed the abandoned maintenance hub into an operational facility.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/Rose4.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/Level5Intro/Rose4.wav" volume="0.0" bus="Voice"]
 Rose (Rose_Grin): First alien invasions, then portals, and now we're headed into the sewers? The things we do to save the world. At least we get to break stuff!

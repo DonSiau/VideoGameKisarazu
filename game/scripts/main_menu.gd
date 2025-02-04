@@ -4,6 +4,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+   SoundManager.play_sound("menuMusic",0,"Music")
    SaveState.load_game()
 
 

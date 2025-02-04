@@ -5,134 +5,134 @@ join Rose (Rose_Grin) leftmost
 join Mary (Mary_happy) rightmost
 join HeartHoarder (default) center
 update HeartHoarder center [animation="Heartbeat" length="0.2" wait="true" repeat="7"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder1.ogg" volume="6.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder1.ogg" volume="6.0" bus="Voice"]
 HeartHoarder: Aargh!
 update HeartHoarder center [animation="Heartbeat" length="0.2" wait="true" repeat="7"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder2.ogg" volume="6.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder2.ogg" volume="6.0" bus="Voice"]
 HeartHoarder: Gaah!
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary1.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary1.ogg" volume="0.0" bus="Voice"]
 Mary: It's over. W-we did it...
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose1.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose1.ogg" volume="0.0" bus="Voice"]
 Rose: We won! Suck it, loser!
 [style name="VisualNovelHeartHoarder"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder3.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder3.ogg" volume="0.0" bus="Voice"]
 HeartHoarder: You've actually done it... beaten by children...
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder4.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder4.ogg" volume="0.0" bus="Voice"]
 HeartHoarder: You humans... always surprising me...
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder5.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder5.ogg" volume="0.0" bus="Voice"]
 HeartHoarder: To think... all my plans... my ambitions...
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary2.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary2.ogg" volume="0.0" bus="Voice"]
 Mary (Mary_neutral): There had to be another way. Not through hurting people.
 [style name="VisualNovelHeartHoarder"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder6.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder6.ogg" volume="0.0" bus="Voice"]
 HeartHoarder: Perhaps... I was blinded by grief...
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder7.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder7.ogg" volume="0.0" bus="Voice"]
 HeartHoarder: Defeated by two girls and their pet robot...
 update HeartHoarder (injured) center [animation="Shake X" length="0.2" wait="true" repeat="10" fade="Fade Cross" fade_length="0.2"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder8.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder8.ogg" volume="0.0" bus="Voice"]
 HeartHoarder: Uugh!
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose2.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose2.ogg" volume="0.0" bus="Voice"]
 Rose (Rose_confused): Something's happening...
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary3.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary3.ogg" volume="0.0" bus="Voice"]
 Mary (Mary_serious): Guardian, what's going on?
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian1.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian1.ogg" volume="0.0" bus="Voice"]
 Guardian: Stand back...
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose3.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose3.ogg" volume="0.0" bus="Voice"]
 Rose: What's that red flash of energy coming out of his chest?
 [style name="VisualNovelHeartHoarder"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder9.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder9.ogg" volume="0.0" bus="Voice"]
 HeartHoarder: That is...  from the original Heart Engine... Before everything went wrong. Through surgery, I inserted it within me. That's how I wielded it...
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder10.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder10.ogg" volume="0.0" bus="Voice"]
 HeartHoarder: Hey Guardian, he knew, didn't he? Set all this in motion...
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian2.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian2.ogg" volume="0.0" bus="Voice"]
 Guardian: A long time ago. He saw where things were heading.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary4.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary4.ogg" volume="0.0" bus="Voice"]
 Mary (Mary_neutral): What's he talking about?
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian3.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian3.ogg" volume="0.0" bus="Voice"]
 Guardian: It's time they knew. Initiating Protocol Final Truth.
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Grandpa1.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Grandpa1.ogg" volume="0.0" bus="Voice"]
 Grandpa: Recording test 47... ah, there we go. Mary, Rose - if you're seeing this, things have played out exactly as predicted.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose4.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose4.ogg" volume="0.0" bus="Voice"]
 Rose (Rose_confused): That's... Grandpa?
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary5.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary5.ogg" volume="0.0" bus="Voice"]
 Mary (Mary_neutral): It's a video recording
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Grandpa2.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Grandpa2.ogg" volume="0.0" bus="Voice"]
 Grandpa: The Heart Engine was meant to bridge worlds, but it only brought destruction. Every day, I spent hours regretting what happened to Valeria... and so i built Guardian
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Grandpa3.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Grandpa3.ogg" volume="0.0" bus="Voice"]
 Grandpa: Guardian wasn't just created to protect Earth from the oncoming revenge I predicted, It was also designed to merge with the original Heart Engine, to use its power for good, for it's true purpose.
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Grandpa4.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Grandpa4.ogg" volume="0.0" bus="Voice"]
 Grandpa: I entrusted Guardian to you two because I knew you would do what's right.
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/grandpa5.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/grandpa5.wav" volume="0.0" bus="Voice"]
 Grandpa: Hey James, if you're seeing this, I'm sorry for everything that happened. I promise you, Valeria will thrive once more.
 [style name="VisualNovelHeartHoarder"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder11.wav" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder11.wav" volume="0.0" bus="Voice"]
 HeartHoarder: James? huh... I've not heard that name in a long time...
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder12.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder12.ogg" volume="0.0" bus="Voice"]
 HeartHoarder: Valeria's future lies with you... do well with it.
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder13.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/HeartHoarder13.ogg" volume="0.0" bus="Voice"]
 HeartHoarder: My wife... My dear child, i'll be seeing you two soon.
 leave HeartHoarder
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Grandpa6.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Grandpa6.ogg" volume="0.0" bus="Voice"]
 Grandpa: And to my amazing girls... By now i may already have passed years ago, but I just want to say i couldn't ask for better granddaughters. I love you both so very much!
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose5.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose5.ogg" volume="0.0" bus="Voice"]
 Rose (Rose_Grin): That's so sweet...
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary6.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary6.ogg" volume="0.0" bus="Voice"]
 Mary (Mary_happy): Grandpa...
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Grandpa7.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Grandpa7.ogg" volume="0.0" bus="Voice"]
 Grandpa: Goodbye, you two. The Guardian will take over for me.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary7.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary7.ogg" volume="0.0" bus="Voice"]
 Mary: So what happens next?
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian4.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian4.ogg" volume="0.0" bus="Voice"]
 Guardian: I'll transfer my programming to within the Heart Engine. My consciousness will spread through the power grid, becoming one with the energy that flows through it.
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian4a.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian4a.ogg" volume="0.0" bus="Voice"]
 Guardian: Powering Earth, Valeria, and beyond, guiding them towards a brighter future.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose6.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose6.ogg" volume="0.0" bus="Voice"]
 Rose (Rose_confused): B-but what will happen to you?
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian5.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian5.ogg" volume="0.0" bus="Voice"]
 Guardian: I'll still be here... just in a different form. The grid will become my new body, in a sense, directing the energy towards good, not evil.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary8.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary8.ogg" volume="0.0" bus="Voice"]
 Mary (Mary_neutral): But it won't be the same...
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian6.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian6.ogg" volume="0.0" bus="Voice"]
 Guardian: You'll know when I'm around. Some things you just feel.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary9.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary9.ogg" volume="0.0" bus="Voice"]
 Mary (Mary_happy): I...I think I understand.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose7.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose7.ogg" volume="0.0" bus="Voice"]
 Rose: Promise you'll still watch over us?
 [style name="visualNovel"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian7.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian7.ogg" volume="0.0" bus="Voice"]
 Guardian: Always. That's what family does.
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian8.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Guardian8.ogg" volume="0.0" bus="Voice"]
 Guardian: It's time. Thank you both, for everything.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose8.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose8.ogg" volume="0.0" bus="Voice"]
 Rose (Rose_Grin): Goodbye Guardian... and thank you for protecting us too.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary10.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary10.ogg" volume="0.0" bus="Voice"]
 Mary: We'll make you proud!
 leave --All--
 [background arg="res://DialogicStuff/white.png" fade="2.0"]
@@ -155,76 +155,76 @@ leave --All--
 join Rose (Rose_Grin) left
 join Mary (Mary_happy) right
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary11.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary11.ogg" volume="0.0" bus="Voice"]
 Mary (Mary_happy): Still trying to figure out if the grid's acting weird around you?
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose9.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose9.ogg" volume="0.0" bus="Voice"]
 Rose (Rose_Grin): Hey, you notice it too sometimes!
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary12.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary12.ogg" volume="0.0" bus="Voice"]
 Mary: Could just be your imagination.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose10.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose10.ogg" volume="0.0" bus="Voice"]
 Rose: Or someone being a show-off.
 [style name="visualNovelMary"]
 [background arg="res://DialogicStuff/School2Dark.png" fade="1.0"]
 [background arg="res://DialogicStuff/school2.png" fade="1.0"]
 [wait time="1.5"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary13.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary13.ogg" volume="0.0" bus="Voice"]
 Mary: Definitely someone being a show-off.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary14.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary14.ogg" volume="0.0" bus="Voice"]
 Mary: Life's gotten pretty normal since then, huh?
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose11.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose11.ogg" volume="0.0" bus="Voice"]
 Rose: Yeah. The classes have been boring the heck outa me!
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary15.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary15.ogg" volume="0.0" bus="Voice"]
 Mary: sounds like a you problem.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose12.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose12.ogg" volume="0.0" bus="Voice"]
 Rose (Rose_LookAside): eh what did you say?
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary16.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary16.ogg" volume="0.0" bus="Voice"]
 Mary: must have been the wind
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose13.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose13.ogg" volume="0.0" bus="Voice"]
 Rose (Rose_Grin): Well... Normal is... nice. Though sometimes I miss our adventures.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary17.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary17.ogg" volume="0.0" bus="Voice"]
 Mary: Even the dangerous parts?
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose14.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose14.ogg" volume="0.0" bus="Voice"]
 Rose: Well... maybe not those. But we were a pretty good team.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary18.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary18.ogg" volume="0.0" bus="Voice"]
 Mary: Were?
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose15.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose15.ogg" volume="0.0" bus="Voice"]
 Rose (Rose_Grin): Are! Definitely are!
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose16.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose16.ogg" volume="0.0" bus="Voice"]
 Rose: Besides, who else would put up with your constant studying?
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary19.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary19.ogg" volume="0.0" bus="Voice"]
 Mary (Mary_serious): Hey, one of us has to be responsible!
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose17.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose17.ogg" volume="0.0" bus="Voice"]
 Rose: And one of us has to make sure you actually have fun sometimes.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary20.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary20.ogg" volume="0.0" bus="Voice"]
 Mary (Mary_happy): I have fun!
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose18.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose18.ogg" volume="0.0" bus="Voice"]
 Rose: Reading textbooks doesn't count, sis.
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary21.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary21.ogg" volume="0.0" bus="Voice"]
 Mary (Mary_happy): Come on, we'll be late for class.
 [style name="visualNovelRose"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose19.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Rose19.ogg" volume="0.0" bus="Voice"]
 Rose (Rose_Grin): Let's race! Loser buys lunch!
 leave Rose
 [style name="visualNovelMary"]
-[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary22.ogg" volume="0.0"]
+[voice path="res://DialogicStuff/Audio/voiceLines/gameEnd/Mary22.ogg" volume="0.0" bus="Voice"]
 Mary: Hey, wait up!
 leave Mary
 [wait time="4.0"]

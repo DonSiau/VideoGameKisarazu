@@ -39,7 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://cdg8x6nkkr0b2" path="res://assets/sprites/player wall slide 48x48.png" id="39_mugs4"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ba3j5"]
-a = Vector2(-1184, 114)
+a = Vector2(-2006, 115)
 b = Vector2(1705, 100)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3ndx0"]
@@ -1744,7 +1744,7 @@ position = Vector2(2277, -1318)
 
 [node name="player" parent="." instance=ExtResource("2_rdemd")]
 z_index = 5
-position = Vector2(2330, -212)
+position = Vector2(2427, -1735)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 offset = Vector2(0, -35)
